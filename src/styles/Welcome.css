@@ -1,0 +1,138 @@
+.circles-container {
+    position: relative;
+    height: 100vh;
+}
+
+.circle1,
+.circle2,
+.circle3,
+.circle4 {
+    position: absolute;
+    z-index: 1;
+}
+
+.circle1 {
+    width: 60em;
+    height: 14em;
+    background-color: #ff758f;
+    border-bottom-right-radius: 100%;
+    top: 0;
+    left: 0;
+}
+
+.circle2 {
+    width: 30em;
+    height: 7em;
+    background-color: #457b9d;
+    border-bottom-left-radius: 100%;
+    top: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    padding-top: 2em;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.circle3 {
+    width: 70em;
+    height: 20em;
+    background-color: #457b9d;
+    border-top-right-radius: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.circle4 {
+    width: 55em;
+    height: 20em;
+    background-color: #ff758f;
+    border-top-left-radius: 100%;
+    bottom: 0;
+    right: 0;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 50%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.226);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 2;
+}
+
+.mini1,
+.mini2,
+.mini3,
+.mini4,
+.mini5,
+.mini6 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+}
+
+.mini1 {
+    background-color: #ff758f;
+    top: 50%;
+    left: 10%;
+}
+
+.mini2 {
+    background-color: #457b9d;
+    bottom: 10%;
+    right: 10%;
+}
+
+.mini3 {
+    background-color: #457b9d;
+    top: 17%;
+    left: 25%;
+}
+
+.mini4 {
+    background-color: #ff758f;
+    top: 30%;
+    right: 35%;
+}
+
+.mini5 {
+    background-color: #457b9d;
+    bottom: 35%;
+    right: 30%;
+}
+
+.mini6 {
+    background-color: #ff758f;
+    bottom: 26%;
+    left: 30%;
+}
+
+.contact {
+    color: white;
+    padding-top: 2em;
+    padding-left: 2em;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.social-icons {
+    margin-top: 20px;
+    margin-left: 8em;
+}
+
+.social-icon {
+    font-size: 24px;
+    margin: 0 13px;
+    color: white
+}
