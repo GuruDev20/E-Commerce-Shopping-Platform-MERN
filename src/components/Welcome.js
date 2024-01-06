@@ -1,34 +1,62 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import '../styles/Welcome.css';
-
+import '../styles/Welcome.css'
+import { GiShoppingBag } from "react-icons/gi";
+import { FaShoppingCart } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
+import { Link } from 'react-router-dom';
+import View from '../components/views/view1'
 function Welcome() {
   return (
-    <div className='circles-container'>
-      <div className='circle1'></div>
-      <div className='mini1'></div>
-      <div className='mini3'></div>
-      <div className='mini6'></div>
-      <div className='circle2'>Shopping Website</div>
-      <div className='mini2'></div>
-      <div className='content'></div>
-      <div className='mini1'></div>
-      <div className='mini4'></div>
-      <div className='circle3'>
-        <h2 className='contact'>Contact Us</h2>
-        <div className='social-icons'>
-          <FontAwesomeIcon icon={faFacebook} className='social-icon' />
-          <FontAwesomeIcon icon={faTwitter} className='social-icon' />
-          <FontAwesomeIcon icon={faInstagram} className='social-icon' />
+    <div>
+        <div className='header'>
+          <div className='icon'>
+            <GiShoppingBag size={50} />
+            <span>Shopify</span>
+          </div>
+          <div className='navbar'>
+            <ul>
+              <li>
+                <Link to="/" className='nav-link' reloadDocument>Shop</Link>
+              </li>
+              <li>
+                <Link to="/cloths" className='nav-link'>Fashion & Clothing</Link>
+              </li>
+              <li>
+                <Link to="/foods" className='nav-link'>Foods & Drinks</Link>
+              </li>
+              <li>
+                <Link to="/home" className='nav-link'>Home & Garden</Link>
+              </li>
+              <li>
+                <Link to="/health" className='nav-link'>Health & Beauty</Link>
+              </li>
+              <li>
+                <Link to="/furntiures" className='nav-link'>Furnitures</Link>
+              </li>
+              <li>
+                <Link to="/gifts" className='nav-link'>Gifts & Toys</Link>
+              </li>
+            </ul>
+          </div>
+          <div className='loginbutton'>
+            <button className='login'>Login</button>
+          </div>
+          <div className='whislist'>
+            <CiHeart size={40} color='#e56b6f'/>
+          </div>
+          <div className='cart'>
+            <FaShoppingCart size={30}/>
+          </div>
         </div>
-      </div>
-      <div className='mini2'></div>
-      <div className='mini1'></div>
-      <div className='mini5'></div>
-      <div className='circle4'></div>
+        <div className='view1'>
+          <View/>
+        </div>
+        <div className='latest'></div>
+        <div className='view2'></div>
+        <div className='view3'></div>
+        <div className='footer'></div>
     </div>
-  );
+  )
 }
 
 export default Welcome;
