@@ -5,6 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import View from '../components/views/view1'
+import Latest from '../components/views/latest'
 function Welcome() {
   return (
     <div>
@@ -48,10 +49,12 @@ function Welcome() {
             <FaShoppingCart size={30}/>
           </div>
         </div>
-        <div className='view1'>
+        <div className='view1 reveal'>
           <View/>
         </div>
-        <div className='latest'></div>
+        <div id='latest'>
+          <Latest/>
+        </div>
         <div className='view2'></div>
         <div className='view3'></div>
         <div className='footer'></div>

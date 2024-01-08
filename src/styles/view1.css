@@ -1,0 +1,38 @@
+.content{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap:10px;
+    height: 45em;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.explore-btn{
+    border: 1px solid #ef233c;
+    color: white;
+    background-color: #ef233c;
+    padding: 14px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    width: 10em;
+    margin-top: 20px;
+}
+.welcome{
+    font-size: 5em;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.explore{
+    padding-top: 20px;
+    font-size: 3em;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.shopping{
+    mix-blend-mode: multiply;
+}
+.right{
+    margin-right: 20px;
+}
