@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 55% 45%;
     gap:10px;
-    height: 45em;
+    height: 52em;
 }
 .left{
     display: flex;
@@ -32,6 +32,8 @@
 }
 .shopping{
     mix-blend-mode: multiply;
+    width: 45em;
+    height: 45em;
 }
 .right{
     margin-right: 20px;

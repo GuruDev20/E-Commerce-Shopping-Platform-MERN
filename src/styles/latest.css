@@ -1,0 +1,33 @@
+.bg{
+    height: 52em;
+    background-color: #d1f8d5;
+}
+.bg-content{
+    text-align: center;
+    padding-top: 5em;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow:2px 2px grey;
+}
+.cards{
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.bg-card{
+    width:18em;
+    height: 25em;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 2px 2px rgb(194, 193, 193);
+}
+
+.reveal {
+    transform: translateY(100px);
+    transition: all 2s ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+}

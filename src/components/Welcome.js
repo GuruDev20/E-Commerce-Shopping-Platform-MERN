@@ -49,7 +49,7 @@ function Welcome() {
             <FaShoppingCart size={30}/>
           </div>
         </div>
-        <div className='view1 reveal'>
+        <div className='view1'>
           <View/>
         </div>
         <div id='latest'>
