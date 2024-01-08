@@ -1,0 +1,37 @@
+.women-coll {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 55em;
+    margin-top: 4em;
+}
+
+.women-right {
+    background-color: white;
+    margin-top: 2em;
+    margin-left: 340px;
+    font-size: 3em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.women-left {
+    margin-top: 3em;
+    margin-left: 5em;
+}
+
+.reveal {
+    transform: translateX(100px);
+    transition: all 2s ease;
+}
+
+.reveal.active {
+    transform: translateX(0);
+}
+
+.rev {
+    transform: translateX(-100px);
+    transition: all 2s ease;
+}
+
+.rev.active {
+    transform: translateX(0);
+}

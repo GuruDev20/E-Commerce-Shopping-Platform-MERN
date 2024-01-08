@@ -13,3 +13,12 @@
     transform: scale(1);
     opacity: 1;
 }
+
+.rev {
+    transform: translateX(-100px);
+    transition: all 2s ease;
+}
+
+.rev.active {
+    transform: translateX(0);
+}

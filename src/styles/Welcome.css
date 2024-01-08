@@ -1,6 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .header {
@@ -96,15 +101,17 @@ li:hover::before {
     margin-left: 10px;
 }
 
-.login:hover{
+.login:hover {
     background-color: #e56b6f;
     color: white;
     border: none;
 }
-.nav-link{
+
+.nav-link {
     text-decoration: none;
 }
+
 .nav-link:hover,
 .nav-link:focus {
-  color: #0d3b66;
+    color: #0d3b66;
 }

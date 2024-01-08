@@ -4,8 +4,11 @@ import { GiShoppingBag } from "react-icons/gi";
 import { FaShoppingCart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { Link } from 'react-router-dom';
-import View from '../components/views/view1'
-import Latest from '../components/views/latest'
+import Main from './views/Main'
+import Men from './views/Men'
+import Women from './views/Women';
+import Others from './views/Other'
+import Footer from './views/Footer'
 function Welcome() {
   return (
     <div>
@@ -50,14 +53,20 @@ function Welcome() {
           </div>
         </div>
         <div className='view1'>
-          <View/>
+          <Main/>
         </div>
-        <div id='latest'>
-          <Latest/>
+        <div className='view2'>
+          <Men/>
         </div>
-        <div className='view2'></div>
-        <div className='view3'></div>
-        <div className='footer'></div>
+        <div className='view3'>
+          <Women/>
+        </div>
+        <div className='view4'>
+          <Others/>
+        </div>
+        <div className='footer'>
+          <Footer/>
+        </div>
     </div>
   )
 }
