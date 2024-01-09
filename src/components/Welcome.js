@@ -43,7 +43,7 @@ function Welcome() {
             </ul>
           </div>
           <div className='loginbutton'>
-            <button className='login'>Login</button>
+            <Link to='/loginregister'  className='nav-link'><button className='login'>Login</button></Link>
           </div>
           <div className='whislist'>
             <CiHeart size={40} color='#e56b6f'/>
