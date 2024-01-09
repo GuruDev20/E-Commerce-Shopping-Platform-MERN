@@ -1,20 +1,33 @@
-.mens-coll{
+.mens-coll {
+    position: relative;
     display: grid;
     grid-template-columns: 40% 60%;
     height: 55em;
     margin-top: 4em;
 }
-.men-left{
+
+.men-left {
     background-color: white;
     margin-top: 2em;
     padding-left: 3em;
     font-size: 3em;
     font-family: 'Poppins', sans-serif;
 }
-.men-right{
+
+.men-right {
     margin-top: 3em;
     margin-left: 5em;
 }
+
+.carousel-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130%;
+    max-width: 1550px;
+}
+
 .reveal {
     transform: translateX(100px);
     transition: all 2s ease;
@@ -23,6 +36,7 @@
 .reveal.active {
     transform: translateX(0);
 }
+
 .rev {
     transform: translateX(-100px);
     transition: all 2s ease;
@@ -30,4 +44,19 @@
 
 .rev.active {
     transform: translateX(0);
+}
+.men-carousel-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    text-align: center;
+}
+
+.card-img {
+    height: 90%;
+    width:90%; 
+    object-fit: cover;
 }
