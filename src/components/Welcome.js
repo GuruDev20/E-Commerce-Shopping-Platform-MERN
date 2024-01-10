@@ -5,10 +5,8 @@ import { FaShoppingCart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import Main from './views/Main'
-import Men from './views/Men'
+import Men from './views/Men';
 import Women from './views/Women';
-import Others from './views/Other'
-import Footer from './views/Footer'
 function Welcome() {
   return (
     <div>
@@ -52,21 +50,9 @@ function Welcome() {
             <FaShoppingCart size={30}/>
           </div>
         </div>
-        <div className='view1'>
-          <Main/>
-        </div>
-        <div className='view2'>
-          <Men/>
-        </div>
-        <div className='view3'>
-          <Women/>
-        </div>
-        <div className='view4'>
-          <Others/>
-        </div>
-        <div className='footer'>
-          <Footer/>
-        </div>
+        <div><Main/></div>
+        <div><Men/></div>
+        <div><Women/></div>
     </div>
   )
 }

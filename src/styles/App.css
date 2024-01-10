@@ -2,7 +2,12 @@
     margin: 0;
     padding: 0;
 }
-
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
 .reveal {
     transform: scale(0.9);
     opacity: 0;

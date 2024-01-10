@@ -1,17 +1,15 @@
 import React from 'react'
 import '../../styles/Women.css'
-import Women from '../../assets/women1.jpg'
-function View3() {
+import Womenimage from '../../assets/women1.jpg'
+function Women() {
   return (
-    <div>
-      <div className='women-coll'>
-        <div className='women-left rev'>
-          <img src={Women} alt="women" className='women-img'/>
-        </div>
-        <div className='women-right reveal'>Women's Collection</div>
+    <div className='women-container'>
+      <div className='women-left rev'>
+          <img src={Womenimage} alt='womenimage' className='womenimage' />
       </div>
+      <div className='women-right reveal'>Women's Collections</div>
     </div>
   )
 }
 
-export default View3
+export default Women

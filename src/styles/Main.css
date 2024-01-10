@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 55% 45%;
     gap:10px;
-    height: 53em;
+    min-height: 830px;
 }
 .left{
     display: flex;
