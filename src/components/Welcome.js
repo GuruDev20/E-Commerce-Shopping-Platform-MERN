@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import Main from './views/Main'
 import Men from './views/Men';
 import Women from './views/Women';
+import Newarrivals from './views/Newarrivals'
+import Footer from './views/Footer'
 function Welcome() {
   return (
     <div>
@@ -53,6 +55,8 @@ function Welcome() {
         <div><Main/></div>
         <div><Men/></div>
         <div><Women/></div>
+        <div><Newarrivals/></div>
+        <div><Footer/></div>
     </div>
   )
 }

@@ -1,12 +1,23 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../../styles/Women.css'
-import Womenimage from '../../assets/women1.jpg'
+import '../../styles/Women.css';
+import Womenimage from '../../assets/women1.jpg';
 function Women() {
-  const sliderRef = useRef(null);
+    const sliderRef = useRef(null);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (sliderRef.current) {
+                sliderRef.current.slickNext();
+            }
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     const settings = {
         infinite: true,
         speed: 500,
@@ -26,6 +37,8 @@ function Women() {
                 },
             },
         ],
+        autoplay: true,
+        autoplaySpeed: 6000,
     };
     return (
       <div className='women-container'>

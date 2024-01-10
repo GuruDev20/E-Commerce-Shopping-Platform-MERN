@@ -1,7 +1,6 @@
 .women-container{
     display: grid;
     grid-template-columns: 50% 50%;
-    background-color: green;
     min-height: 910px;
     overflow: hidden;
 }

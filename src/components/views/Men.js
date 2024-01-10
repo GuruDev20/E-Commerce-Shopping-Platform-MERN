@@ -1,13 +1,23 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Slider from 'react-slick';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../../styles/Men.css';
 import Menimage from '../../assets/men1.jpg';
-
 function Men() {
     const sliderRef = useRef(null);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (sliderRef.current) {
+                sliderRef.current.slickNext();
+            }
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     const settings = {
         infinite: true,
         speed: 500,
@@ -27,6 +37,8 @@ function Men() {
                 },
             },
         ],
+        autoplay: true,
+        autoplaySpeed: 6000,
     };
 
     return (
