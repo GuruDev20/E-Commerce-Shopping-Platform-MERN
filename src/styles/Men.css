@@ -39,7 +39,15 @@
 .rev.active {
     transform: translateX(0);
 }
+.revv {
+    transform: translateY(100px);
+    transition: all 3s ease;
+}
 
+.revv.active {
+    transform: translateY(0);
+    opacity: 1;
+}
 .men-center {
     padding: 6em 0;
     display: flex;
@@ -103,3 +111,11 @@
     display: none;
 }
 
+.bottomrev {
+    transform: scale(0.9);
+    transition: all 3s ease;
+}
+
+.bottomrev.active {
+    transform: scale(1);
+}

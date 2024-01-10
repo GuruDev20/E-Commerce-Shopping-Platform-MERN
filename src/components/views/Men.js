@@ -8,7 +8,6 @@ import Menimage from '../../assets/men1.jpg';
 
 function Men() {
     const sliderRef = useRef(null);
-
     const settings = {
         infinite: true,
         speed: 500,
@@ -36,7 +35,7 @@ function Men() {
             <div className='men-right reveal'>
                 <img src={Menimage} alt='menimage' className='menimage' />
             </div>
-            <div className='men-slider'>
+            <div className='men-slider revv'>
                 <Slider {...settings} className='men-center' ref={sliderRef}>
                     <div className='cards'>
                         <img src={Menimage} alt='menimage' className='card-img' />
