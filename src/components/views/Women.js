@@ -13,7 +13,7 @@ function Women() {
             if (sliderRef.current) {
                 sliderRef.current.slickNext();
             }
-        }, 4000);
+        }, 6000);
 
         return () => clearInterval(interval);
     }, []);

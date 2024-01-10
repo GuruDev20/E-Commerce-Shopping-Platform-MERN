@@ -1,6 +1,68 @@
 .newarrivals-container{
-    display: grid;
-    grid-template-columns: 50% 50%;
     min-height: 910px;
     overflow: hidden;
+}
+.new-content{
+    text-align: center;
+    font-size: 48px;
+    margin-top: 3em;
+    font-family: 'Poppins', sans-serif;
+}
+.new-des{
+    text-align: center;
+    font-size: 24px;
+    margin: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+.revv {
+    transform: translateY(100px);
+    transition: all 3s ease;
+}
+
+.revv.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.new-slider{
+    position: absolute;
+    left: 20%;
+    top: 330%;
+    width: 60%;
+    height: 100%;
+}
+.new-center {
+    padding: 4em 0;
+    display: flex;
+    justify-content: center;
+}
+.news {
+    padding: 0 10px;
+}
+
+.new-img {
+    width: 90%;
+    height: 90%;
+}
+.item-des,.item-price{
+    padding-left: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.new-arrows {
+    position: absolute;
+    left: 50%;
+    bottom: 47%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 70px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px;
+    color: black;
+}
+
+.new-arrows .new-arrow {
+    font-size: 24px;
+    cursor: pointer;
 }
