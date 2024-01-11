@@ -17,10 +17,12 @@
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
+    height: 100%;
 }
 
 .others {
     flex: 0 0 calc((100% - 60px) / 3); 
+    padding-top: 100px;
 }
 .otherimg {
     width: 60%;
@@ -39,4 +41,30 @@
 
 .others-slider::-webkit-scrollbar-thumb {
     background-color: #ccc;
+}
+.others-card-content{
+    text-align: center;
+    padding-left: 70px;
+}
+.others:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
+    margin-left: 40px;
+    transition: opacity 0.3s ease;
+}
+
+.others.hovered {
+    filter: brightness(0.8);
 }

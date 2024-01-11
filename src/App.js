@@ -7,7 +7,6 @@ import Home from "../src/components/utils/Home";
 import Health from "../src/components/utils/Health";
 import Furntiures from "./components/utils/Furntiure";
 import Gifts from "../src/components/utils/Gifts";
-import LoginRegister from "./components/LoginRegister";
 function App() {
   window.addEventListener("scroll", reveal);
   function reveal() {
@@ -46,7 +45,6 @@ function App() {
       <Route path="/health" element={<Health />} />
       <Route path="/furntiures" element={<Furntiures />} />
       <Route path="/gifts" element={<Gifts />} />
-      <Route path="/loginregister" element={<LoginRegister />} />
     </Routes>
   );
 }
