@@ -1,0 +1,42 @@
+.others-container {
+    min-height: 910px;
+    overflow: hidden;
+}
+
+.others-content {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 3em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.others-slider {
+    margin-top: 5em;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+}
+
+.others {
+    flex: 0 0 calc((100% - 60px) / 3); 
+}
+.otherimg {
+    width: 60%;
+    height: auto;
+    margin-left: 10em;
+}
+
+.others-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.others-slider::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.others-slider::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
