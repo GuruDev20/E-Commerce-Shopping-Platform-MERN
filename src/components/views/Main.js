@@ -8,7 +8,7 @@ function view1() {
         <div className='left'>
             <h1 className='welcome'>Welcome to Shopify</h1>
             <h2 className='explore'>Explore More...</h2>
-            <Link to='men-container' smooth={true} duration={700}><button className='explore-btn'>Explore</button></Link>
+            <Link to='footer-container' smooth={true} duration={700}><button className='explore-btn'>Explore</button></Link>
         </div>
         <div className='right'>
           <img src={shopping} alt='shopping' className='shopping'/>

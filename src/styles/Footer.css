@@ -1,6 +1,101 @@
-.footer-container{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    min-height: 910px;
+.footer-container {
+    min-height: 450px;
     overflow: hidden;
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-header {
+    margin-top: 3em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.foot-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 2em 0;
+}
+
+.foot-left, .foot-center, .foot-right {
+    margin-top: 4em;
+    padding: 0 10px;
+}
+
+.foot-left {
+    margin-left: 3em;
+}
+
+.contact {
+    margin-bottom: 20px;
+}
+
+.mobile, .address {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.mobile-number, .address-line {
+    margin-left: 10px;
+}
+
+.center-head {
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    margin-left: 19em;
+}
+
+.social ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.social ul li {
+    margin-right: 10px;
+}
+
+.footer-copy {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+}
+
+.left-head {
+    margin-left: 7em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.right-head {
+    margin-left: 7em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.search-products {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 7em;
+}
+
+.search {
+    width: 80%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.vertical-divider {
+    border-left: 1px solid #ccc;
+    height: 250px;
+    margin: 2em 0;
+}
+.foot-center ul{
+    margin-right: 4em;
 }

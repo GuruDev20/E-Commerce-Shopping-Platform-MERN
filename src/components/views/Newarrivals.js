@@ -44,42 +44,49 @@ function Newarrivals() {
     <div className='newarrivals-container'>
       <div className='new-content'>New Arrivals</div>
       <div className='new-des'>Welcome to our New Arrival section. Here you can get the wide range of fresh new collection of products that will surely add flavour to your wardrobe. Check out Rene's new collection to find your favourite style.</div>
-      <div className='new-slider revv'>
+      <div className='new-slider'>
         <Slider {...settings} className='new-center' ref={sliderRef}>
             <div className='news'>
                 <img src={menimage} alt='neimage' className='new-img' />
                 <h3 className='item-des'>Shirt</h3>
                 <h3 className='item-price'>100</h3>
+                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
             </div>
             <div className='news'>
                 <img src={menimage} alt='neimage' className='new-img' />
                 <h3 className='item-des'>Shirt</h3>
                 <h3 className='item-price'>100</h3>
+                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
             </div>
             <div className='news'>
                 <img src={menimage} alt='neimage' className='new-img' />
                 <h3 className='item-des'>Shirt</h3>
                 <h3 className='item-price'>100</h3>
+                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
             </div>
             <div className='news'>
                 <img src={menimage} alt='neimage' className='new-img' />
                 <h3 className='item-des'>Shirt</h3>
                 <h3 className='item-price'>100</h3>
+                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
             </div>
             <div className='news'>
                 <img src={menimage} alt='neimage' className='new-img' />
                 <h3 className='item-des'>Shirt</h3>
                 <h3 className='item-price'>100</h3>
+                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
             </div>
             <div className='news'>
                 <img src={menimage} alt='neimage' className='new-img' />
                 <h3 className='item-des'>Shirt</h3>
                 <h3 className='item-price'>100</h3>
+                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
             </div>
             <div className='news'>
                 <img src={menimage} alt='neimage' className='new-img' />
                 <h3 className='item-des'>Shirt</h3>
                 <h3 className='item-price'>100</h3>
+                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
             </div>
         </Slider>
         <div className='new-arrows'>

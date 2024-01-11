@@ -14,19 +14,10 @@
     margin: 1.5em;
     font-family: 'Poppins', sans-serif;
 }
-.revv {
-    transform: translateY(100px);
-    transition: all 3s ease;
-}
-
-.revv.active {
-    transform: translateY(0);
-    opacity: 1;
-}
 .new-slider{
     position: absolute;
     left: 20%;
-    top: 330%;
+    top: 340%;
     width: 60%;
     height: 100%;
 }
@@ -43,14 +34,17 @@
     width: 90%;
     height: 90%;
 }
-.item-des,.item-price{
-    padding-left: 10px;
+.item-des{
+    padding-top: 20px;
+}
+.item-des,.item-price,.item-ratings{
+    padding-left: 20px;
     font-family: 'Poppins', sans-serif;
 }
 .new-arrows {
     position: absolute;
     left: 50%;
-    bottom: 47%;
+    bottom: 45%;
     transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
