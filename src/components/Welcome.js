@@ -24,22 +24,41 @@ function Welcome() {
                 <Link to="/" className='nav-link' reloadDocument>Shop</Link>
               </li>
               <li>
-                <Link to="/cloths" className='nav-link'>Fashion & Clothing</Link>
+                  <div className='dropdown'>
+                    <Link to="/cloths/men-items" className='nav-link'>Mens</Link>
+                    <Link to="/cloths/women-items" className='nav-link'>Womens</Link>
+                    <Link to="/cloths/kids-items" className='nav-link'>Kids</Link>
+                    <Link to="/cloths/men-accessories-items" className='nav-link'>Men's Accessories</Link>
+                    <Link to="/cloths/women-accessories-items" className='nav-link'>Women's Accessories</Link>
+                    <Link to="/cloths/beauty" className='nav-link'>Beauty Products</Link>
+                  </div>
+                  <div className='nav-link-items'>Fashion & Clothing</div>
               </li>
               <li>
-                <Link to="/foods" className='nav-link'>Foods & Drinks</Link>
+                <div className='dropdown'>
+                  <Link to='/foods/breakfast' className='nav-link'>Breakfast</Link>
+                  <Link to='/foods/lunch' className='nav-link'>Lunch</Link>
+                  <Link to='/foods/dinner' className='nav-link'>Dinner</Link>
+                  <Link to='/foods/hotdrinks' className='nav-link'>Hot Drinks</Link>
+                  <Link to='/foods/softdrinks' className='nav-link'>Soft Drinks</Link>
+                </div>
+                <div className='nav-link-items'>Foods & Drinks</div>
               </li>
               <li>
-                <Link to="/home" className='nav-link'>Home & Garden</Link>
+                <div className='dropdown'>
+                  <Link to='/home/plants' className='nav-link'>Plants</Link>
+                  <Link to='/home/lights' className='nav-link'>Lights</Link>
+                  <Link to='/home/decoration' className='nav-link'>Decoration</Link>
+                </div>
+                <div className='nav-link-items'>Home & Garden</div>
               </li>
               <li>
-                <Link to="/health" className='nav-link'>Health & Beauty</Link>
-              </li>
-              <li>
-                <Link to="/furntiures" className='nav-link'>Furnitures</Link>
-              </li>
-              <li>
-                <Link to="/gifts" className='nav-link'>Gifts & Toys</Link>
+                <div className='dropdown'>
+                  <Link to='/health/skincare' className='nav-link'>Skincare</Link>
+                  <Link to='/health/moisture' className='nav-link'>Moisturisers</Link>
+                  <Link to='/health/dailyproductus' className='nav-link'>Daily Products</Link>
+                </div>
+                <div className='nav-link-items'>Health & Beauty</div>
               </li>
             </ul>
           </div>

@@ -5,8 +5,6 @@ import Dresses from "../src/components/utils/Dresses";
 import Foods from "../src/components/utils/Foods";
 import Home from "../src/components/utils/Home";
 import Health from "../src/components/utils/Health";
-import Furntiures from "./components/utils/Furntiure";
-import Gifts from "../src/components/utils/Gifts";
 function App() {
   window.addEventListener("scroll", reveal);
   function reveal() {
@@ -43,8 +41,6 @@ function App() {
       <Route path="/foods" element={<Foods />} />
       <Route path="/home" element={<Home />} />
       <Route path="/health" element={<Health />} />
-      <Route path="/furntiures" element={<Furntiures />} />
-      <Route path="/gifts" element={<Gifts />} />
     </Routes>
   );
 }

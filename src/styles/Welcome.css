@@ -35,6 +35,7 @@ span {
     display: flex;
     justify-content: center;
     margin-left: 60px;
+    transition: margin-top 0.3s ease-in-out;
 }
 
 ul {
@@ -44,13 +45,30 @@ ul {
     justify-content: center;
     padding: 0;
 }
-
 li {
+    position: relative;
     margin-right: 20px;
     padding: 10px;
-    position: relative;
     cursor: pointer;
-    overflow: hidden;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 12px;
+    width: 200px;
+    gap: 15px;
+    transform: translateX(-50%);
+}
+li:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 li:hover {
@@ -102,8 +120,9 @@ li:hover::before {
     border: none;
 }
 
-.nav-link {
+.nav-link ,.nav-link-items{
     text-decoration: none;
+    color: #0d3b66;
 }
 
 .nav-link:hover,
