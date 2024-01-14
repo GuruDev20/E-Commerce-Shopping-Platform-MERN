@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Health() {
+function Health(props) {
   return (
-    <div>Health</div>
+    <div>{props.sort}</div>
   )
 }
 

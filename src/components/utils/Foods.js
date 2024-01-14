@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Foods() {
+function Foods(props) {
   return (
-    <div>Foods</div>
+    <div>{props.sort}</div>
   )
 }
 

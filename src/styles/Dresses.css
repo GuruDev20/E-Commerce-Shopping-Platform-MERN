@@ -1,0 +1,15 @@
+.cloth-products{
+    min-height: 910px;
+    overflow: hidden;
+}
+.cloths-product-container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-gap: 10px;
+}
+.cloths-filter{
+    background-color: red;
+}
+.cloths-filter-content{
+    background-color: red;
+}

@@ -1,8 +1,13 @@
 import React from 'react'
-
-function Dresses() {
+import '../../styles/Dresses.css'
+function Dresses(props) {
   return (
-    <div>Dresses</div>
+    <div className='cloth-products'> 
+        <div className='cloths-product-container'>
+          <div className='cloths-filter'></div>
+          <div className='cloths-filter-content'></div>
+        </div>
+    </div>
   )
 }
 
