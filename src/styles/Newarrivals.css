@@ -1,50 +1,58 @@
-.newarrivals-container{
+.newarrivals-container {
     min-height: 910px;
     overflow: hidden;
 }
-.new-content{
+
+.new-content {
     text-align: center;
     font-size: 48px;
     margin-top: 3em;
     font-family: 'Poppins', sans-serif;
 }
-.new-des{
+
+.new-des {
     text-align: center;
     font-size: 24px;
     margin: 1.5em;
     font-family: 'Poppins', sans-serif;
 }
-.new-slider{
-    position: absolute;
-    left: 20%;
-    top: 430%;
-    width: 60%;
-    height: 100%;
+
+.new-slider {
+    position: relative;
+    width: 100%;
 }
+
 .new-center {
     padding: 4em 0;
     display: flex;
     justify-content: center;
 }
+
 .news {
     padding: 0 10px;
+    text-align: center;
 }
 
 .new-img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: auto;
 }
-.item-des{
+
+.item-des {
     padding-top: 20px;
 }
-.item-des,.item-price,.item-ratings{
+
+.item-des,
+.item-price,
+.item-ratings {
     padding-left: 20px;
     font-family: 'Poppins', sans-serif;
 }
+
 .new-arrows {
     position: absolute;
     left: 50%;
-    bottom: 45%;
+    bottom: 5%;
     transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
@@ -59,4 +67,13 @@
 .new-arrows .new-arrow {
     font-size: 24px;
     cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .new-slider {
+        width: 90%;
+        padding-left: 40px;
+    }
+    .new-arrows {
+        display: none;
+    }
 }
