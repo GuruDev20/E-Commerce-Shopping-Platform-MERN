@@ -1,9 +1,9 @@
 .footer-container {
-    min-height: 450px;
-    overflow: hidden;
-    background-color: #f8f8f8;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 450px;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .footer-header {
@@ -99,3 +99,70 @@
 .foot-center ul{
     margin-right: 4em;
 }
+@media (max-width: 768px) {
+    .foot-container {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas:
+        "header header"
+        "contact contact"
+        "center center"
+        "right search";
+    }
+  
+    .foot-left,
+    .foot-center,
+    .foot-right {
+      margin: 0;
+      text-align: center;
+    }
+  
+    .foot-left {
+      grid-area: contact;
+    }
+    .left-head{
+        padding-right: 120px;
+        padding-bottom: 30px;
+    }
+    .mobile,.address{
+        text-align: center;
+        padding-left: 200px;
+    }
+    .vertical-divider {
+      border-left: none;
+      border-top: 1px solid #ccc;
+      height: 10px;
+      width: 100%;
+      margin: 2em 0;
+    }
+    .foot-center{
+        display: none;
+    }
+  
+    .foot-right {
+      grid-area: right;
+    }
+  
+    .search-products {
+      grid-area: search;
+      margin-top: 20px;
+      margin-bottom: 1em;
+    }
+  
+    .search {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .footer-copy {
+      margin-top: 1em;
+    }
+    .right-head{
+        padding-left: 50px;
+    }
+    .social{
+        padding-left: 150px;
+    }
+  }
+  
+  
