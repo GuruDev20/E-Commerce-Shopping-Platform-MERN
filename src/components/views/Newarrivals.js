@@ -1,5 +1,5 @@
 import React,{ useRef, useEffect } from 'react'
-import '../../styles/Newarricals.css'
+import '../../styles/Newarrivals.css'
 import menimage from '../../assets/men1.jpg'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';

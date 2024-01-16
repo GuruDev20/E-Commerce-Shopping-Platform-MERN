@@ -21,9 +21,11 @@
 }
 
 .others {
-    flex: 0 0 calc((100% - 60px) / 3); 
+    flex: 0 0 calc((100% - 60px) / 3);
     padding-top: 100px;
+    box-sizing: border-box;
 }
+
 .otherimg {
     width: 60%;
     height: auto;
@@ -42,10 +44,12 @@
 .others-slider::-webkit-scrollbar-thumb {
     background-color: #ccc;
 }
-.others-card-content{
+
+.others-card-content {
     text-align: center;
     padding-left: 70px;
 }
+
 .others:hover .overlay {
     opacity: 1;
 }
@@ -67,4 +71,21 @@
 
 .others.hovered {
     filter: brightness(0.8);
+}
+
+@media screen and (max-width: 768px) {
+    .others {
+        flex: 0 0 calc((100% - 20px) / 2);
+        padding-top: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .otherimg {
+        width: 100%;
+        margin-left: 0;
+    }
+    .overlay{
+        left: 40%;
+    }
 }
