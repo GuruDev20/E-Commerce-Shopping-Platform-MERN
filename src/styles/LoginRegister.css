@@ -135,3 +135,9 @@
   color: red;
 }
 
+@media (max-width: 768px) {
+  .login-container,
+  .register-container{
+    left: 18%;
+  }
+}
