@@ -1,0 +1,85 @@
+/* LoginRegister.css */
+
+.login-container,
+.register-container {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 25em;
+  background-color: whitesmoke;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.login-inputs,
+.register-inputs {
+  text-align: center;
+}
+
+.login-header,
+.register-header {
+  font-size: 30px;
+}
+
+.login-email,
+.login-password,
+.register-username,
+.register-email,
+.register-password,
+.register-mobile {
+  width: 80%;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.login-submit,
+.register-submit {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  width: 8em;
+}
+
+.login-submit:hover,
+.register-submit:hover {
+  background-color: #45a049;
+}
+
+.login-optionals,
+.register-optionals {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.no-account,
+.have-account {
+  display: inline-block;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.forget-password {
+  margin-bottom: 5px;
+}
+
+.login-to-register,
+.register-to-login {
+  color: blue;
+  cursor: pointer;
+  display: inline;
+  padding-left: 5px;
+}

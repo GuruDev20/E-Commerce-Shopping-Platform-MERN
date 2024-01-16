@@ -5,6 +5,7 @@ import Dresses from "../src/components/utils/Dresses";
 import Foods from "../src/components/utils/Foods";
 import Home from "../src/components/utils/Home";
 import Health from "../src/components/utils/Health";
+import LoginRegister from "./components/Login.Register";
 function App() {
   window.addEventListener("scroll", reveal);
   function reveal() {
@@ -54,6 +55,7 @@ function App() {
       <Route path="/health/skincare" element={<Health sort="Skin Care"/>} />
       <Route path="/health/moisture" element={<Health sort="Moisturizer"/>} />
       <Route path="/health/dailyproducts" element={<Health sort="Daily Products"/>} />
+      <Route path="/loginregister" element={<LoginRegister/>} />
     </Routes>
   );
 }

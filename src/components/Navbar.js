@@ -48,7 +48,7 @@ function Navbar() {
               <li>
                 <div className='dropdown'>
                   <Link to='/health/skincare' className='nav-link'>Skincare</Link>
-                  <Link to='/health/moisture' className='nav-link'>Moisturisers</Link>
+                  <Link to='/health/moisture' className='nav-link'>Moisturizers</Link>
                   <Link to='/health/dailyproductus' className='nav-link'>Daily Products</Link>
                 </div>
                 <div className='nav-link-items'>Health & Beauty</div>
