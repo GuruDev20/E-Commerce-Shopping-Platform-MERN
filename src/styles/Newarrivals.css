@@ -52,7 +52,6 @@
 .new-arrows {
     position: absolute;
     left: 50%;
-    bottom: 5%;
     transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
@@ -62,6 +61,7 @@
     border-radius: 50%;
     padding: 10px;
     color: black;
+    padding-left: 40px;
 }
 
 .new-arrows .new-arrow {

@@ -45,6 +45,137 @@ ul {
     justify-content: center;
     padding: 0;
 }
+li {
+    position: relative;
+    margin-right: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 12px;
+    width: 200px;
+    gap: 15px;
+    transform: translateX(-50%);
+}
+li:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li:hover {
+    color: maroon;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: maroon;
+    bottom: 0;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-out;
+}
+
+li:hover::before {
+    width: 100%;
+}
+
+.loginbutton {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.login {
+    border: 1px solid #0d3b66;
+    color: #0d3b66;
+    background-color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.whislist,
+.cart {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.login:hover {
+    background-color: #e56b6f;
+    color: white;
+    border: none;
+}
+
+.nav-link ,.nav-link-items{
+    text-decoration: none;
+    color: #0d3b66;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #0d3b66;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+}
+
+.icon {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.icon svg {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    color: #0d3b66;
+}
+
+span {
+    font-size: 22px;
+}
+
+.navbar {
+    font-weight: 500;
+    font-size: 18px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+    transition: margin-top 0.3s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
 
 li {
     position: relative;
