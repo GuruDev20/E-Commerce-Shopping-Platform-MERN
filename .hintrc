@@ -9,7 +9,8 @@
         "ignore": [
           "-webkit-text-size-adjust",
           "-webkit-overflow-scrolling",
-          "scrollbar-width"
+          "scrollbar-width",
+          "min-height: auto"
         ]
       }
     ]
