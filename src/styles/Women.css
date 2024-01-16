@@ -105,3 +105,30 @@
 .slick-next {
     display: none;
 }
+
+@media (max-width: 768px) {
+    .women-container {
+        grid-template-columns: 100%;
+    }
+
+    .women-right {
+        padding-left: 1em;
+        padding-top: 1em;
+        text-align: center;
+    }
+
+    .women-left {
+        display: none;
+    }
+
+    .women-slider {
+        left: 5%;
+        top: 270%;
+        width: 90%;
+        padding-left: 25px;
+    }
+    .slider-arrow.left,
+    .slider-arrow.right {
+        display: none;
+    }
+}
