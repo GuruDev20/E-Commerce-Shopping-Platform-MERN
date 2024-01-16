@@ -109,7 +109,9 @@
         "center center"
         "right search";
     }
-  
+    .footer-header{
+        padding-left: 50px;
+    }
     .foot-left,
     .foot-center,
     .foot-right {
@@ -121,7 +123,7 @@
       grid-area: contact;
     }
     .left-head{
-        padding-right: 120px;
+        padding-right: 70px;
         padding-bottom: 30px;
     }
     .mobile,.address{
@@ -158,10 +160,10 @@
       margin-top: 1em;
     }
     .right-head{
-        padding-left: 50px;
+        padding-left: 70px;
     }
     .social{
-        padding-left: 150px;
+        padding-left: 190px;
     }
   }
   
