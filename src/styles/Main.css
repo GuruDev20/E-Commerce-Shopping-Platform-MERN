@@ -1,16 +1,18 @@
-.content{
+.content {
     display: grid;
     grid-template-columns: 55% 45%;
-    gap:10px;
+    gap: 10px;
     min-height: 830px;
 }
-.left{
+
+.left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.explore-btn{
+
+.explore-btn {
     border: 1px solid #ef233c;
     color: white;
     background-color: #ef233c;
@@ -21,20 +23,43 @@
     width: 10em;
     margin-top: 20px;
 }
-.welcome{
+
+.welcome {
     font-size: 5em;
     font-family: 'Nunito Sans', sans-serif;
 }
-.explore{
+
+.explore {
     padding-top: 20px;
     font-size: 3em;
     font-family: 'Nunito Sans', sans-serif;
 }
-.shopping{
+
+.shopping {
     mix-blend-mode: multiply;
     width: 45em;
     height: 45em;
 }
-.right{
+
+.right {
     margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 100%;
+        min-height: auto;
+    }
+
+    .right {
+        margin-top: 20px;
+        margin-right: 0;
+    }
+    .shopping{
+        width: 35em;
+        height: 35em;
+    }
+    .left, .right {
+        text-align: center;
+    }
 }

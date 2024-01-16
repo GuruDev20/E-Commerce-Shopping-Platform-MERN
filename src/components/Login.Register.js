@@ -53,12 +53,7 @@ function LoginRegister() {
     updateSubmitButtonState();
   };
   const updateSubmitButtonState = () => {
-    setIsSubmitDisabled(
-      !emailValidation.isValid ||
-      !passwordValidation.isValid ||
-      !usernameValidation.isValid ||
-      !mobileValidation.isValid
-    );
+    setIsSubmitDisabled(!emailValidation.isValid ||!passwordValidation.isValid ||!usernameValidation.isValid ||!mobileValidation.isValid);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -72,7 +67,6 @@ function LoginRegister() {
     setMobileValidation({ isValid: null, message: '' });
   };
   
-
   return (
     <div>
       {isLoginForm ? (

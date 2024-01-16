@@ -45,12 +45,14 @@ ul {
     justify-content: center;
     padding: 0;
 }
+
 li {
     position: relative;
     margin-right: 20px;
     padding: 10px;
     cursor: pointer;
 }
+
 .dropdown {
     display: none;
     position: absolute;
@@ -64,6 +66,7 @@ li {
     gap: 15px;
     transform: translateX(-50%);
 }
+
 li:hover .dropdown {
     display: flex;
     flex-direction: column;
@@ -120,7 +123,8 @@ li:hover::before {
     border: none;
 }
 
-.nav-link ,.nav-link-items{
+.nav-link,
+.nav-link-items {
     text-decoration: none;
     color: #0d3b66;
 }
@@ -128,4 +132,85 @@ li:hover::before {
 .nav-link:hover,
 .nav-link:focus {
     color: #0d3b66;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .icon {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        margin: 0;
+        margin-top: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        padding: 12px;
+        width: 200px;
+        gap: 15px;
+        transform: translateX(-50%);
+        display: none;
+    }
+
+    .navbar li:hover .dropdown {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar li:hover {
+        color: maroon;
+    }
+
+    .navbar li::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: maroon;
+        bottom: 0;
+        left: 50%;
+        transform-origin: 50% 50%;
+        transform: translateX(-50%);
+        transition: width 0.3s ease-out;
+    }
+
+    .navbar li:hover::before {
+        width: 100%;
+    }
+
+    .dropdown a {
+        width: 100%;
+    }
+
+    .loginbutton {
+        margin: 20px 0;
+    }
 }
