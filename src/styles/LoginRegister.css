@@ -1,15 +1,25 @@
-/* LoginRegister.css */
-
-.login-container,
-.register-container {
+.login-container {
   position: absolute;
-  top: 30%;
-  left: 40%;
+  top: 20%;
+  left: 38%;
   width: 25em;
   background-color: whitesmoke;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  height: 50vh;
+}
+
+.register-container {
+  position: absolute;
+  top: 15%;
+  left: 38%;
+  width: 25em;
+  background-color: whitesmoke;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  height: 65vh;
 }
 
 .login-inputs,
@@ -20,6 +30,8 @@
 .login-header,
 .register-header {
   font-size: 30px;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .login-email,
@@ -46,8 +58,8 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 25px;
+  margin-bottom: 28px;
   font-size: 16px;
   width: 8em;
 }
@@ -63,6 +75,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 20px;
+}
+
+.no-account {
+  margin-top: 20px;
 }
 
 .no-account,
@@ -83,3 +100,38 @@
   display: inline;
   padding-left: 5px;
 }
+
+.validation-message {
+  font-size: 12px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+}
+
+.validation-message::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.validation-message.valid::before {
+  content: '\2714';
+  color: green;
+}
+
+.validation-message.invalid::before {
+  content: '\2718';
+  color: red;
+}
+
+.validation-message.valid {
+  color: green;
+}
+
+.validation-message.invalid {
+  color: red;
+}
+
