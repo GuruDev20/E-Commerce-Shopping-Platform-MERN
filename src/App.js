@@ -1,10 +1,10 @@
 import React from "react";
 import Welcome from "../src/components/Welcome";
 import { Routes, Route } from "react-router-dom";
-import Dresses from "../src/components/utils/Dresses";
-import Foods from "../src/components/utils/Foods";
-import Home from "../src/components/utils/Home";
-import Health from "../src/components/utils/Health";
+import Dresses from "../src/components/views/Dresses";
+import Foods from "../src/components/views/Foods";
+import Home from "../src/components/views/Home";
+import Health from "../src/components/views/Health";
 import LoginRegister from "./components/Login.Register";
 function App() {
   window.addEventListener("scroll", reveal);

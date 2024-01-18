@@ -265,6 +265,9 @@ li:hover::before {
     color: #0d3b66;
 }
 
+.profile{
+    padding-right: 20px;
+}
 @media (max-width: 768px) {
     .header {
         flex-direction: column;

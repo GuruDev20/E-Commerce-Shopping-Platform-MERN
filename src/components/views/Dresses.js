@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/Dresses.css'
 import Navbar from '../Navbar'
-import Footer from '../../components/views/Footer'
+import Footer from './Footer'
 function Dresses(props) {
   return (
     <div className='cloth-products'> 

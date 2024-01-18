@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .login-container {
   position: absolute;
   top: 20%;
@@ -8,6 +12,8 @@
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   height: 50vh;
+  animation: zoomIn 2s ease-in-out forwards;
+  transform-origin: center;
 }
 
 .register-container {
@@ -52,7 +58,7 @@
 
 .login-submit,
 .register-submit {
-  background-color: #4caf50;
+  background-color: #03045e;
   color: white;
   padding: 15px 25px;
   border-radius: 10px;
@@ -66,7 +72,7 @@
 
 .login-submit:hover,
 .register-submit:hover {
-  background-color: #45a049;
+  background-color: #00509d;
 }
 
 .login-optionals,
@@ -95,7 +101,7 @@
 
 .login-to-register,
 .register-to-login {
-  color: blue;
+  color: #03045e;
   cursor: pointer;
   display: inline;
   padding-left: 5px;
@@ -136,8 +142,62 @@
 }
 
 @media (max-width: 768px) {
+
   .login-container,
-  .register-container{
+  .register-container {
     left: 18%;
+  }
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.circle1 {
+  width: 70%;
+  height: 140%;
+  background-color: #ff8fab;
+  border-radius: 50%;
+  position: absolute;
+  left: -20%;
+  top: -50%;
+  animation: circle1Animation 2s ease-in-out forwards;
+}
+
+.circle2 {
+  width: 70%;
+  height: 140%;
+  border-radius: 50%;
+  background-color: #0077b6;
+  position: absolute;
+  right: 50%;
+  bottom: 20%;
+  overflow: hidden;
+  animation: circle2Animation 2s ease-in-out forwards;
+}
+@keyframes circle1Animation {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    top: -50%;
+    left: -20%;
+  }
+}
+
+@keyframes circle2Animation {
+  from {
+    top: 100%;
+    left: 100%;
+  }
+
+  to {
+    top: 20%;
+    left: 50%;
   }
 }
