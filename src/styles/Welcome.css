@@ -348,3 +348,6 @@ li:hover::before {
         margin: 20px 0;
     }
 }
+.profile{
+    padding-right: 20px;
+}

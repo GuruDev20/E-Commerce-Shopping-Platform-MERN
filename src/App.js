@@ -2,9 +2,6 @@ import React from "react";
 import Welcome from "../src/components/Welcome";
 import { Routes, Route } from "react-router-dom";
 import Dresses from "../src/components/views/Dresses";
-import Foods from "../src/components/views/Foods";
-import Home from "../src/components/views/Home";
-import Health from "../src/components/views/Health";
 import LoginRegister from "./components/Login.Register";
 function App() {
   window.addEventListener("scroll", reveal);
@@ -38,23 +35,22 @@ function App() {
     <Routes>
       <Route path="/" element={<Welcome />} />
       <Route path="/shop" element={<Welcome />} />
-      <Route path="/cloths/men-items" element={<Dresses sort="Mens"/>} />
-      <Route path="/cloths/women-items" element={<Dresses sort="Womens"/>} />
-      <Route path="/cloths/kids-items" element={<Dresses sort="Kids"/>} />
-      <Route path="/cloths/men-accessories-items" element={<Dresses sort="Men-Accessories"/>} />
-      <Route path="/cloths/women-accessories-items" element={<Dresses sort="Women-Accessories"/>} />
-      <Route path="/cloths/beauty" element={<Dresses sort="Beauty"/>} />
-      <Route path="/foods/breakfast" element={<Foods sort="BreakFast"/>} />
-      <Route path="/foods/lunch" element={<Foods sort="Lunch"/>} />
-      <Route path="/foods/Dinner" element={<Foods sort="Dinner"/>} />
-      <Route path="/foods/softdrinks" element={<Foods sort="Soft Drinks"/>} />
-      <Route path="/foods/hotdrinks" element={<Foods sort="Hot Drinks"/>} />
-      <Route path="/home/plants" element={<Home sort="Plants"/>} />
-      <Route path="/home/lights" element={<Home sort="Lights"/>} />
-      <Route path="/home/decoration" element={<Home sort="Decorations"/>} />
-      <Route path="/health/skincare" element={<Health sort="Skin Care"/>} />
-      <Route path="/health/moisture" element={<Health sort="Moisturizer"/>} />
-      <Route path="/health/dailyproducts" element={<Health sort="Daily Products"/>} />
+      <Route path="/cloths/men-top-wear" element={<Dresses sort="Mens-Top-wear"/>} />
+      <Route path="/cloths/men-bottom-wear" element={<Dresses sort="Mens-Bottom-wear"/>} />
+      <Route path="/cloths/men-footwear" element={<Dresses sort="Mens-Footwear"/>} />
+      <Route path="/cloths/men-gadgets" element={<Dresses sort="Mens-Gadgets"/>} />
+      <Route path="/cloths/men-accessories" element={<Dresses sort="Mens-Accessories"/>} />
+      <Route path="/cloths/women-fusion-wear" element={<Dresses sort="Womens-Fusion-wear"/>} />
+      <Route path="/cloths/women-western-wear" element={<Dresses sort="Womens-Western-wear"/>} />
+      <Route path="/cloths/women-footwear" element={<Dresses sort="Womens-Footwear"/>} />
+      <Route path="/cloths/women-gadgets" element={<Dresses sort="Womens-Gadgets"/>} />
+      <Route path="/cloths/women-accessories" element={<Dresses sort="Womens-Accessories"/>} />
+      <Route path="/cloths/kids-boys" element={<Dresses sort="Kids-Boys"/>} />
+      <Route path="/cloths/kids-girls" element={<Dresses sort="Kids-Girls"/>} />
+      <Route path="/cloths/kids-footwear" element={<Dresses sort="Kids-Footwear"/>} />
+      <Route path="/cloths/kids-toys" element={<Dresses sort="Kids-Toys"/>} />
+      <Route path="/cloths/kids-infant" element={<Dresses sort="Kids-Baby"/>} />
+      <Route path="/cloths/newarrivals" element={<Dresses sort="NewArrivals"/>} />
       <Route path="/loginregister" element={<LoginRegister/>} />
     </Routes>
   );
