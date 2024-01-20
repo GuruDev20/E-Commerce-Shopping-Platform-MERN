@@ -59,18 +59,33 @@
     width: 100%;
     box-sizing: border-box;
 }
-
+.color{
+    cursor: pointer;
+}
+.colors-present{
+    height: 10px;
+    width: 30px;
+    margin-right: 10px;
+    border: 2px solid white;
+    outline: 2px solid rgb(95, 94, 94);
+}
 .cloths-filter-content {
     background-color: red;
     padding: 20px;
 }
 
 .dropdown-content {
+    display: flex;
+    flex-direction: column;
     max-height: auto;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
 }
-
+.color-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
 .filters>div.active .dropdown-content {
     max-height: 300px;
 }
