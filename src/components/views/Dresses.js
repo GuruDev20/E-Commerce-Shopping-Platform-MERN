@@ -4,7 +4,7 @@ import Navbar from '../Navbar';
 import Footer from './Footer';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 import DropdownContent from './DropdownContent';
-
+import { IoClose } from "react-icons/io5";
 const categoriesData = {
   'Mens-Top-wear': ['Casual Shirts', 'Formal Shirts', 'Blazers', 'T-Shirts', 'Jackets'],
   'Mens-Bottom-wear': ['Jeans', 'Casual trousers', 'Formal Trousers', 'Shorts', 'Track Pants'],
@@ -42,12 +42,28 @@ function Dresses(props) {
   const [showSizeDropdown, setShowSizeDropdown] = useState(false);
   const [showColorDropdown, setShowColorDropdown] = useState(false);
   const [showPatternDropdown, setShowPatternDropdown] = useState(false);
-
-  const renderCategoryItem = (item) => <div className='category-item'>{item}</div>;
-  const renderSizeItem = (item) => <div className='size-item'>{item}</div>;
-  const renderColorItem = (item, index) => (<div key={index} className='color-item'><div className='colors-present' style={{ background: item.toLowerCase() }}></div>{item}</div>);
-  const renderPatternItem = (item) => <div className='pattern-item'>{item}</div>;
-
+  const [selectedCategory, setSelectedCategory] = useState([]);
+  const [selectedSize, setSelectedSize] = useState([]);
+  const [selectedColor, setSelectedColor] = useState([]);
+  const [selectedPattern, setSelectedPattern] = useState([]);
+  const renderCategoryItem = (item) => <div className='category-item'>{item}<input type='checkbox' value={item} className='checkbox-right' onChange={() => handleCheckboxChange(item, selectedCategory, setSelectedCategory)}/></div>;
+  const renderSizeItem = (item) => <div className='size-item'>{item}<input type='checkbox' value={item} className='checkbox-right'onChange={() => handleCheckboxChange(item, selectedSize, setSelectedSize)}/></div>;
+  const renderColorItem = (item, index) => (<div key={index} className='color-item'><div className='colors-present' style={{ background: item.toLowerCase() }}></div>{item}<input type='checkbox' value={item} className='checkbox-right' onChange={() => handleCheckboxChange(item, selectedColor, setSelectedColor)}/></div>);
+  const renderPatternItem = (item) => <div className='pattern-item'>{item}<input type='checkbox' value={item} className='checkbox-right' onChange={() => handleCheckboxChange(item, selectedPattern, setSelectedPattern)}/></div>;
+  const handleCheckboxChange = (item, selectedList, setSelectedList) => {
+    const updatedList = selectedList.includes(item)
+      ? selectedList.filter((selectedItem) => selectedItem !== item)
+      : [...selectedList, item];
+    setSelectedList(updatedList);
+  };
+  const deleteSelectedItem = (item,selectedList, setSelectedList) => {
+    const updatedList = selectedList.filter((selectedItem) => selectedItem !== item);
+    setSelectedList(updatedList);
+    const checkbox = document.querySelector(`input[type="checkbox"][value="${item}"]`);
+    if (checkbox) {
+      checkbox.checked = false;
+    }
+  };
   return (
     <div className='cloth-products'>
       <Navbar />
@@ -57,6 +73,20 @@ function Dresses(props) {
       <div className='cloths-product-container'>
         <div className='cloths-filter'>
           <h2 className='shop-title'>Shop By</h2>
+          <div className='selected-list'>
+            {selectedCategory.map((item) => (
+              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedCategory, setSelectedCategory)}/></span>
+            ))}
+            {selectedSize.map((item) => (
+              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedSize, setSelectedCategory)}/></span>
+            ))}
+            {selectedColor.map((item) => (
+              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedColor, setSelectedCategory)}/></span>
+            ))}
+            {selectedPattern.map((item) => (
+              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedPattern, setSelectedCategory)}/></span>
+            ))}
+          </div>
           <div className='filters'>
             <div className='category' onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}>
               Categories{showCategoryDropdown ? <IoMdArrowDropup className='drop-icon' /> : <IoMdArrowDropdown className='drop-icon' />}

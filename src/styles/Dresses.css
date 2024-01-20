@@ -32,6 +32,7 @@
 .filters {
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
 }
 
 .filters>div {
@@ -62,13 +63,6 @@
 .color{
     cursor: pointer;
 }
-.colors-present{
-    height: 10px;
-    width: 30px;
-    margin-right: 10px;
-    border: 2px solid white;
-    outline: 2px solid rgb(95, 94, 94);
-}
 .cloths-filter-content {
     background-color: red;
     padding: 20px;
@@ -81,11 +75,21 @@
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
 }
-.color-item{
+.color-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 5px;
 }
+
+.colors-present {
+    height: 10px;
+    width: 30px;
+    margin-right: 10px;
+    border: 2px solid white;
+    outline: 2px solid rgb(95, 94, 94);
+}
+
 .filters>div.active .dropdown-content {
     max-height: 300px;
 }
@@ -100,4 +104,39 @@
     color: white;
     font-size: 24px;
     margin-left: auto;
+}
+.category-item,
+.size-item,
+.color-item,
+.pattern-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+}
+.checkbox-right {
+  margin-left: auto;
+}
+.selected-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.selected{
+    font-size: 18px;
+    border-radius: 20px;
+    color: white;
+    display: inline;
+    margin-right: 4px;
+    background-color: coral;
+    flex-shrink: 1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+.close{
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 6px;
 }
