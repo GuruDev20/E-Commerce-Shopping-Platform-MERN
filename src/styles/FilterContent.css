@@ -1,0 +1,10 @@
+.filter-result{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+}
+.card-img{
+  padding: 20px;
+}
+.filter-img{
+  width: 360px;
+}

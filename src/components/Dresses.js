@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/Dresses.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import FilterContent from './Filter.Content';
 import Filter from './Filter';
 function Dresses(props) {
   return (
@@ -11,14 +10,7 @@ function Dresses(props) {
       <div className='cloths-search'>
         <input type='search' placeholder='Search products' className='cloths-field-search' />
       </div>
-      <div className='cloths-product-container'>
-        <div className='cloths-filter'>
-          <Filter sort={props.sort}/>
-        </div>
-        <div className='cloths-filter-content'>
-          <FilterContent val={props.sort}/>
-        </div>
-      </div>
+      <div><Filter sort={props.sort}/></div>
       <Footer />
     </div>
   );

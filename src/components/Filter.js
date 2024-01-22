@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 import DropdownContent from './DropdownContent';
 import { IoClose } from "react-icons/io5";
-
+import FilterContent from './Filter.Content';
+import '../styles/Dresses.css'
+import '../styles/FilterContent.css'
 const categoriesData = {
   'Mens-Top-wear': ['Casual Shirts', 'Formal Shirts', 'Blazers', 'T-Shirts', 'Jackets'],
   'Mens-Bottom-wear': ['Jeans', 'Casual trousers', 'Formal Trousers', 'Shorts', 'Track Pants'],
@@ -35,15 +37,6 @@ const patternData={
   'Mens-Accessories':['Solid','Textured','Striped','Woven Design','Checked','Handmade'],
 };
 
-const imageData = [
-  { type: 'Casual Shirts', category: 'Top wear', price: '1000', size: ['S', 'M', 'L'], pattern: 'Striped', color: 'Red' },
-  { type: 'Formal Shirts', category: 'Top wear', price: '1000', size: ['S', 'M', 'L'], pattern: 'Striped', color: 'Red' },
-  { type: 'Casual Shirts', category: 'Top wear', price: '1000', size: ['S', 'M', 'L'], pattern: 'Striped', color: 'Red' },
-  { type: 'Casual Shirts', category: 'Top wear', price: '1000', size: ['S', 'M', 'L'], pattern: 'Striped', color: 'Red' },
-  { type: 'Casual Shirts', category: 'Top wear', price: '1000', size: ['S', 'M', 'L'], pattern: 'Striped', color: 'Red' },
-  { type: 'Casual Shirts', category: 'Top wear', price: '1000', size: ['S', 'M', 'L'], pattern: 'Striped', color: 'Red' },
-];
-export {imageData};
 function Filter(props) {
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
   const [showPriceDropdown, setShowPriceDropdown] = useState(false);
@@ -54,7 +47,6 @@ function Filter(props) {
   const [selectedSize, setSelectedSize] = useState([]);
   const [selectedColor, setSelectedColor] = useState([]);
   const [selectedPattern, setSelectedPattern] = useState([]);
-
   const [checkedItems, setCheckedItems] = useState({
     category: [],
     size: [],
@@ -138,7 +130,8 @@ function Filter(props) {
     }
   };
   return (
-    <div>
+    <div className='cloths-product-container'>
+      <div className='cloths-filter'>
         <h2 className='shop-title'>Shop By</h2>
           <div className='selected-list'>
             {selectedCategory.map((item) => (
@@ -184,6 +177,10 @@ function Filter(props) {
             </div>
             {showPatternDropdown && <DropdownContent items={patternData[props.sort]} renderItem={renderPatternItem} />}
           </div>
+        </div>
+        <div>
+          <FilterContent val={checkedItems} />
+        </div>
     </div>
   )
 }

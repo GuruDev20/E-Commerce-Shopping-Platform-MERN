@@ -19,36 +19,36 @@ function Navbar() {
               </li>
               <li>
                   <div className='dropdown'>
-                    <Link to="/cloths/men-top-wear" className='nav-link'>Top wear</Link>
-                    <Link to="/cloths/men-bottom-wear" className='nav-link'>Bottom wear</Link>
-                    <Link to="/cloths/men-footwear" className='nav-link'>Footwear</Link>
-                    <Link to="/cloths/men-gadgets" className='nav-link'>Gadgets</Link>
-                    <Link to="/cloths/men-accessories" className='nav-link'>Accessories</Link>
+                    <Link to="/cloths/men-top-wear" className='nav-link' reloadDocument>Top wear</Link>
+                    <Link to="/cloths/men-bottom-wear" className='nav-link' reloadDocument>Bottom wear</Link>
+                    <Link to="/cloths/men-footwear" className='nav-link' reloadDocument>Footwear</Link>
+                    <Link to="/cloths/men-gadgets" className='nav-link' reloadDocument>Gadgets</Link>
+                    <Link to="/cloths/men-accessories" className='nav-link' reloadDocument>Accessories</Link>
                   </div>
                   <div className='nav-link-items'>Mens</div>
               </li>
               <li>
                 <div className='dropdown'>
-                  <Link to='/cloths/women-fusion-wear' className='nav-link'>Fusion wear</Link>
-                  <Link to='/cloths/women-western-wear' className='nav-link'>Western wear</Link>
-                  <Link to='/cloths/women-footwear' className='nav-link'>Footwear</Link>
-                  <Link to='/cloths/women-gadgets' className='nav-link'>Gadgets</Link>
-                  <Link to='/cloths/women-accessories' className='nav-link'>Accessories</Link>
+                  <Link to='/cloths/women-fusion-wear' className='nav-link' reloadDocument>Fusion wear</Link>
+                  <Link to='/cloths/women-western-wear' className='nav-link' reloadDocument>Western wear</Link>
+                  <Link to='/cloths/women-footwear' className='nav-link' reloadDocument>Footwear</Link>
+                  <Link to='/cloths/women-gadgets' className='nav-link' reloadDocument>Gadgets</Link>
+                  <Link to='/cloths/women-accessories' className='nav-link' reloadDocument>Accessories</Link>
                 </div>
                 <div className='nav-link-items'>Womens</div>
               </li>
               <li>
                 <div className='dropdown'>
-                  <Link to='/cloths/kids-boys' className='nav-link'>Boys</Link>
-                  <Link to='/cloths/kids-girls' className='nav-link'>Girls</Link>
-                  <Link to='/cloths/kids-footwear' className='nav-link'>Foot wear</Link>
-                  <Link to='/cloths/kids-toys' className='nav-link'>Toys</Link>
-                  <Link to='/cloths/kids-infant' className='nav-link'>Baby</Link>
+                  <Link to='/cloths/kids-boys' className='nav-link' reloadDocument>Boys</Link>
+                  <Link to='/cloths/kids-girls' className='nav-link' reloadDocument>Girls</Link>
+                  <Link to='/cloths/kids-footwear' className='nav-link' reloadDocument>Foot wear</Link>
+                  <Link to='/cloths/kids-toys' className='nav-link' reloadDocument>Toys</Link>
+                  <Link to='/cloths/kids-infant' className='nav-link' reloadDocument>Baby</Link>
                 </div>
                 <div className='nav-link-items'>Kids</div>
               </li>
               <li>
-                  <Link to='/cloths/newarrivals' className='nav-link'>New Arrivals</Link>
+                  <Link to='/cloths/newarrivals' className='nav-link' reloadDocument>New Arrivals</Link>
               </li>
             </ul>
           </div>
