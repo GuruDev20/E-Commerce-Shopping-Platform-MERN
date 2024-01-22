@@ -55,21 +55,83 @@ function Filter(props) {
   const [selectedColor, setSelectedColor] = useState([]);
   const [selectedPattern, setSelectedPattern] = useState([]);
 
-  const renderCategoryItem = (item) => <div className='category-item'>{item}<input type='checkbox' value={item} className='checkbox-right' onChange={() => handleCheckboxChange(item, selectedCategory, setSelectedCategory)}/></div>;
-  const renderSizeItem = (item) => <div className='size-item'>{item}<input type='checkbox' value={item} className='checkbox-right' onChange={() => handleCheckboxChange(item, selectedSize, setSelectedSize)}/></div>;
-  const renderColorItem = (item, index) => (<div key={index} className='color-item'><div className='colors-present' style={{ background: item.toLowerCase() }}></div>{item}<input type='checkbox' value={item} className='checkbox-right' onChange={() => handleCheckboxChange(item, selectedColor, setSelectedColor)}/></div>);
-  const renderPatternItem = (item) => <div className='pattern-item'>{item}<input type='checkbox' value={item} className='checkbox-right' onChange={() => handleCheckboxChange(item, selectedPattern, setSelectedPattern)}/></div>;
+  const [checkedItems, setCheckedItems] = useState({
+    category: [],
+    size: [],
+    color: [],
+    pattern: [],
+  });
 
-  const handleCheckboxChange = (item, selectedList, setSelectedList) => {
+  const renderCategoryItem = (item) => (
+    <div className='category-item'>
+      {item}
+      <input
+        type='checkbox'
+        value={item}
+        className='checkbox-right'
+        onChange={() => handleCheckboxChange(item, selectedCategory, setSelectedCategory, 'category')}
+        checked={checkedItems.category.includes(item)}
+      />
+    </div>
+  );
+
+  const renderSizeItem = (item) => (
+    <div className='size-item'>
+      {item}
+      <input
+        type='checkbox'
+        value={item}
+        className='checkbox-right'
+        onChange={() => handleCheckboxChange(item, selectedSize, setSelectedSize, 'size')}
+        checked={checkedItems.size.includes(item)}
+      />
+    </div>
+  );
+
+  const renderColorItem = (item, index) => (
+    <div key={index} className='color-item'>
+      <div className='colors-present' style={{ background: item.toLowerCase() }}></div>
+      {item}
+      <input
+        type='checkbox'
+        value={item}
+        className='checkbox-right'
+        onChange={() => handleCheckboxChange(item, selectedColor, setSelectedColor, 'color')}
+        checked={checkedItems.color.includes(item)}
+      />
+    </div>
+  );
+
+  const renderPatternItem = (item) => (
+    <div className='pattern-item'>
+      {item}
+      <input
+        type='checkbox'
+        value={item}
+        className='checkbox-right'
+        onChange={() => handleCheckboxChange(item, selectedPattern, setSelectedPattern, 'pattern')}
+        checked={checkedItems.pattern.includes(item)}
+      />
+    </div>
+  );
+
+  const handleCheckboxChange = (item, selectedList, setSelectedList, filterType) => {
     const updatedList = selectedList.includes(item)
       ? selectedList.filter((selectedItem) => selectedItem !== item)
       : [...selectedList, item];
     setSelectedList(updatedList);
+
+    const updatedCheckedItems = { ...checkedItems, [filterType]: updatedList };
+    setCheckedItems(updatedCheckedItems);
   };
 
-  const deleteSelectedItem = (item, selectedList, setSelectedList) => {
+  const deleteSelectedItem = (item, selectedList, setSelectedList, filterType) => {
     const updatedList = selectedList.filter((selectedItem) => selectedItem !== item);
     setSelectedList(updatedList);
+
+    const updatedCheckedItems = { ...checkedItems, [filterType]: updatedList };
+    setCheckedItems(updatedCheckedItems);
+
     const checkbox = document.querySelector(`input[type="checkbox"][value="${item}"]`);
     if (checkbox) {
       checkbox.checked = false;
@@ -80,16 +142,16 @@ function Filter(props) {
         <h2 className='shop-title'>Shop By</h2>
           <div className='selected-list'>
             {selectedCategory.map((item) => (
-              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedCategory, setSelectedCategory)}/></span>
+              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedCategory, setSelectedCategory,'category')}/></span>
             ))}
             {selectedSize.map((item) => (
-              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedSize, setSelectedSize)}/></span>
+              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedSize, setSelectedSize,'size')}/></span>
             ))}
             {selectedColor.map((item) => (
-              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedColor, setSelectedColor)}/></span>
+              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedColor, setSelectedColor,'color')}/></span>
             ))}
             {selectedPattern.map((item) => (
-              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedPattern, setSelectedPattern)}/></span>
+              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedPattern, setSelectedPattern,'pattern')}/></span>
             ))}
           </div>
           <div className='filters'>
