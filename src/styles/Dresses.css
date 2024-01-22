@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: 20% 80%;
     grid-gap: 10px;
+    background-color: #edf2f4;
 }
 
 .cloths-filter {
@@ -26,9 +27,11 @@
     outline: none;
     margin-bottom: 1.5em;
 }
-.shop-title{
+
+.shop-title {
     padding-bottom: 30px;
 }
+
 .filters {
     display: flex;
     flex-direction: column;
@@ -54,18 +57,21 @@
     flex-direction: column;
 }
 
-.dropdown-content>div,.dropdown-content>input {
+.dropdown-content>div,
+.dropdown-content>input {
     padding: 10px;
     border-bottom: 1px solid #ccc;
     width: 100%;
     box-sizing: border-box;
 }
-.color{
+
+.color {
     cursor: pointer;
 }
+
 .cloths-filter-content {
-    background-color: red;
     padding: 20px;
+    font-size: 34px;
 }
 
 .dropdown-content {
@@ -75,6 +81,7 @@
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
 }
+
 .color-item {
     display: flex;
     align-items: center;
@@ -93,49 +100,61 @@
 .filters>div.active .dropdown-content {
     max-height: 300px;
 }
-.category,.price,.size,.color,.pattern{
+
+.category,
+.price,
+.size,
+.color,
+.pattern {
     color: white;
-    background-color: crimson;
+    background-color: #1d3557;
 }
-.price-range{
+
+.price-range {
     width: 270px;
 }
+
 .drop-icon {
     color: white;
     font-size: 24px;
     margin-left: auto;
 }
+
 .category-item,
 .size-item,
 .color-item,
 .pattern-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
 }
+
 .checkbox-right {
-  margin-left: auto;
+    margin-left: auto;
 }
-.selected-list{
+
+.selected-list {
     display: flex;
     flex-wrap: wrap;
 }
-.selected{
+
+.selected {
     font-size: 18px;
     border-radius: 20px;
     color: white;
     display: inline;
     margin-right: 4px;
-    background-color: coral;
+    background-color: #ff4d6d;
     flex-shrink: 1;
     padding: 10px;
     display: flex;
     align-items: center;
     margin-bottom: 4px;
 }
-.close{
+
+.close {
     cursor: pointer;
     font-size: 18px;
     margin-left: 6px;

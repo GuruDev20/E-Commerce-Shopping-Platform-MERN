@@ -3,8 +3,8 @@ import Slider from 'react-slick';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../../styles/Men.css';
-import Menimage from '../../assets/men1.jpg';
+import '../styles/Men.css';
+import Menimage from '../assets/men1.jpg';
 function Men() {
     const sliderRef = useRef(null);
 

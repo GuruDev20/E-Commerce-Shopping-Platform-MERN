@@ -12,8 +12,8 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   height: 50vh;
-  animation: zoomIn 2s ease-in-out forwards;
-  transform-origin: center;
+  /* animation: zoomIn 2s ease-in-out forwards;
+  transform-origin: center; */
 }
 
 .register-container {

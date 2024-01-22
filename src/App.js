@@ -1,8 +1,9 @@
 import React from "react";
 import Welcome from "../src/components/Welcome";
 import { Routes, Route } from "react-router-dom";
-import Dresses from "../src/components/views/Dresses";
+import Dresses from "../src/components/Dresses";
 import LoginRegister from "./components/Login.Register";
+import More from '../src/components/More'
 function App() {
   window.addEventListener("scroll", reveal);
   function reveal() {
@@ -52,6 +53,7 @@ function App() {
       <Route path="/cloths/kids-infant" element={<Dresses sort="Kids-Baby"/>} />
       <Route path="/cloths/newarrivals" element={<Dresses sort="NewArrivals"/>} />
       <Route path="/loginregister" element={<LoginRegister/>} />
+      <Route path='/cloths/men-top-wear/more/:index' element={<More/>}/>
     </Routes>
   );
 }

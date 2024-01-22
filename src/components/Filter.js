@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import '../../styles/Dresses.css';
-import Navbar from '../Navbar';
-import Footer from './Footer';
 import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 import DropdownContent from './DropdownContent';
 import { IoClose } from "react-icons/io5";
+
 const categoriesData = {
   'Mens-Top-wear': ['Casual Shirts', 'Formal Shirts', 'Blazers', 'T-Shirts', 'Jackets'],
   'Mens-Bottom-wear': ['Jeans', 'Casual trousers', 'Formal Trousers', 'Shorts', 'Track Pants'],
@@ -35,8 +33,18 @@ const patternData={
   'Mens-Footwear':['Solid','Textured','Woven Design'],
   'Mens-Gadgets':['Steel','Leather','Rubber','Solid'],
   'Mens-Accessories':['Solid','Textured','Striped','Woven Design','Checked','Handmade'],
-}
-function Dresses(props) {
+};
+
+const imageData = [
+  { type: 'Casual Shirts', category: 'Top wear', price: '1000', size: ['S', 'M', 'L'], pattern: 'Striped', color: 'Red' },
+  { type: 'Formal Shirts', category: 'Top wear', price: '1000', size: ['S', 'M', 'L'], pattern: 'Striped', color: 'Red' },
+  { type: 'Casual Shirts', category: 'Top wear', price: '1000', size: ['S', 'M', 'L'], pattern: 'Striped', color: 'Red' },
+  { type: 'Casual Shirts', category: 'Top wear', price: '1000', size: ['S', 'M', 'L'], pattern: 'Striped', color: 'Red' },
+  { type: 'Casual Shirts', category: 'Top wear', price: '1000', size: ['S', 'M', 'L'], pattern: 'Striped', color: 'Red' },
+  { type: 'Casual Shirts', category: 'Top wear', price: '1000', size: ['S', 'M', 'L'], pattern: 'Striped', color: 'Red' },
+];
+export {imageData};
+function Filter(props) {
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
   const [showPriceDropdown, setShowPriceDropdown] = useState(false);
   const [showSizeDropdown, setShowSizeDropdown] = useState(false);
@@ -46,17 +54,20 @@ function Dresses(props) {
   const [selectedSize, setSelectedSize] = useState([]);
   const [selectedColor, setSelectedColor] = useState([]);
   const [selectedPattern, setSelectedPattern] = useState([]);
+
   const renderCategoryItem = (item) => <div className='category-item'>{item}<input type='checkbox' value={item} className='checkbox-right' onChange={() => handleCheckboxChange(item, selectedCategory, setSelectedCategory)}/></div>;
-  const renderSizeItem = (item) => <div className='size-item'>{item}<input type='checkbox' value={item} className='checkbox-right'onChange={() => handleCheckboxChange(item, selectedSize, setSelectedSize)}/></div>;
+  const renderSizeItem = (item) => <div className='size-item'>{item}<input type='checkbox' value={item} className='checkbox-right' onChange={() => handleCheckboxChange(item, selectedSize, setSelectedSize)}/></div>;
   const renderColorItem = (item, index) => (<div key={index} className='color-item'><div className='colors-present' style={{ background: item.toLowerCase() }}></div>{item}<input type='checkbox' value={item} className='checkbox-right' onChange={() => handleCheckboxChange(item, selectedColor, setSelectedColor)}/></div>);
   const renderPatternItem = (item) => <div className='pattern-item'>{item}<input type='checkbox' value={item} className='checkbox-right' onChange={() => handleCheckboxChange(item, selectedPattern, setSelectedPattern)}/></div>;
+
   const handleCheckboxChange = (item, selectedList, setSelectedList) => {
     const updatedList = selectedList.includes(item)
       ? selectedList.filter((selectedItem) => selectedItem !== item)
       : [...selectedList, item];
     setSelectedList(updatedList);
   };
-  const deleteSelectedItem = (item,selectedList, setSelectedList) => {
+
+  const deleteSelectedItem = (item, selectedList, setSelectedList) => {
     const updatedList = selectedList.filter((selectedItem) => selectedItem !== item);
     setSelectedList(updatedList);
     const checkbox = document.querySelector(`input[type="checkbox"][value="${item}"]`);
@@ -65,26 +76,20 @@ function Dresses(props) {
     }
   };
   return (
-    <div className='cloth-products'>
-      <Navbar />
-      <div className='cloths-search'>
-        <input type='search' placeholder='Search products' className='cloths-field-search' />
-      </div>
-      <div className='cloths-product-container'>
-        <div className='cloths-filter'>
-          <h2 className='shop-title'>Shop By</h2>
+    <div>
+        <h2 className='shop-title'>Shop By</h2>
           <div className='selected-list'>
             {selectedCategory.map((item) => (
               <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedCategory, setSelectedCategory)}/></span>
             ))}
             {selectedSize.map((item) => (
-              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedSize, setSelectedCategory)}/></span>
+              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedSize, setSelectedSize)}/></span>
             ))}
             {selectedColor.map((item) => (
-              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedColor, setSelectedCategory)}/></span>
+              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedColor, setSelectedColor)}/></span>
             ))}
             {selectedPattern.map((item) => (
-              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedPattern, setSelectedCategory)}/></span>
+              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedPattern, setSelectedPattern)}/></span>
             ))}
           </div>
           <div className='filters'>
@@ -117,12 +122,8 @@ function Dresses(props) {
             </div>
             {showPatternDropdown && <DropdownContent items={patternData[props.sort]} renderItem={renderPatternItem} />}
           </div>
-        </div>
-        <div className='cloths-filter-content'>{props.sort}</div>
-      </div>
-      <Footer />
     </div>
-  );
+  )
 }
 
-export default Dresses;
+export default Filter

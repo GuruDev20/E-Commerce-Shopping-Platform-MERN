@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../../styles/Others.css';
-import Menimg from '../../assets/men1.jpg';
+import '../styles/Others.css';
+import Menimg from '../assets/men1.jpg';
 
 function Others() {
     const categories = [

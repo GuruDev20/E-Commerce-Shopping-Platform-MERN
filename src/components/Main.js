@@ -1,7 +1,7 @@
 import React from 'react'
-import '../../styles/Main.css'
+import '../styles/Main.css'
 import { Link } from 'react-scroll';
-import shopping from '../../assets/shop.svg';
+import shopping from '../assets/shop.svg';
 function view1() {
   return (
     <div className='content'>

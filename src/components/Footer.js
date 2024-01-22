@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/Footer.css';
+import '../styles/Footer.css';
 import { BsTelephone } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
