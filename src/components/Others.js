@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/Others.css';
-import Menimg from '../assets/men1.jpg';
-
+import Menimg from '../assets/Mens/men1.jpg';
 function Others() {
     const categories = [
-        { id: 1, name: 'Mens' },
+        { id: 1, name: 'Mens'},
         { id: 2, name: 'Womens' },
         { id: 3, name: 'Kids' },
         { id: 4, name: 'Accessories' },

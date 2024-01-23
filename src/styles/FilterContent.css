@@ -1,45 +1,93 @@
-.card-container{
+.card-container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 2rem;
+  justify-content: space-between;
   z-index: -2;
 }
-.card-list{
+
+.card-list {
   margin: 20px;
   border: 2px solid #ededed;
   padding: 20px;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
-.card-img-result{
-  width: 13rem;
+
+.card-img-result {
+  width: 18rem;
   margin-bottom: 1rem;
 }
-.card-title{
+
+.card-title {
   margin-bottom: 1rem;
   padding-left: 10px;
 }
-.card-reviews{
+
+.card-reviews {
   margin-bottom: 1rem;
   display: flex;
   padding-left: 10px;
 }
-.ratings-start{
+
+.ratings-start {
   color: #d5ab55;
 }
-.total-reviews{
+
+.total-reviews {
   font-size: 0.9rem;
   margin-left: 10px;
 }
-.card-price{
+
+.card-price {
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
   padding-left: 10px;
 }
-.bag-icon{
+
+.bag-icon {
   color: #535353;
-  padding-left: 100px;
+  padding-left: 160px;
 }
-.deleted-price{
+
+.deleted-price {
   padding-right: 10px;
+}
+
+.card-list:hover {
+  transform: scale(1.05);
+}
+
+.link-to-more {
+  text-decoration: none;
+  color: black;
+}
+
+.explore-more-results {
+  display: flex;
+  flex-direction: row;
+}
+
+.explore-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+.explore-more-results {
+  background-color: #ef476f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.explore-more-results:hover {
+  background-color: #fb6f92;
 }

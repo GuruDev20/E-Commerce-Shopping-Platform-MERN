@@ -4,7 +4,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/Women.css';
-import Womenimage from '../assets/women1.jpg'
+import Womenimage from '../assets/Womens/women1.jpg'
 function Women() {
     const sliderRef = useRef(null);
 

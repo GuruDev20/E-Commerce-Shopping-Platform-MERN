@@ -1,6 +1,6 @@
 import React,{ useRef, useEffect } from 'react'
 import '../styles/Newarrivals.css'
-import menimage from '../assets/men1.jpg'
+import menimage from '../assets/Mens/men1.jpg'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
