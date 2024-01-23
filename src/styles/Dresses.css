@@ -8,6 +8,7 @@
     grid-template-columns: 20% 80%;
     grid-gap: 10px;
     background-color: #edf2f4;
+    min-height: 910px;
 }
 
 .cloths-filter {

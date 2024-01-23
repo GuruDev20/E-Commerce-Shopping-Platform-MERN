@@ -1,10 +1,45 @@
-.filter-result{
-    display: grid;
-    grid-template-columns: auto auto auto ;
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  z-index: -2;
 }
-.card-img{
+.card-list{
+  margin: 20px;
+  border: 2px solid #ededed;
   padding: 20px;
+  cursor: pointer;
 }
-.filter-img{
-  width: 360px;
+.card-img-result{
+  width: 13rem;
+  margin-bottom: 1rem;
+}
+.card-title{
+  margin-bottom: 1rem;
+  padding-left: 10px;
+}
+.card-reviews{
+  margin-bottom: 1rem;
+  display: flex;
+  padding-left: 10px;
+}
+.ratings-start{
+  color: #d5ab55;
+}
+.total-reviews{
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+.card-price{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+.bag-icon{
+  color: #535353;
+  padding-left: 100px;
+}
+.deleted-price{
+  padding-right: 10px;
 }

@@ -7,11 +7,7 @@ function Others() {
         { id: 1, name: 'Mens' },
         { id: 2, name: 'Womens' },
         { id: 3, name: 'Kids' },
-        { id: 4, name: 'Watches' },
-        { id: 5, name: 'Foods & Drinks' },
-        { id: 6, name: 'Home & Gardens' },
-        { id: 7, name: 'Toys & Gifts' },
-        { id: 8, name: 'Accessories' },
+        { id: 4, name: 'Accessories' },
     ];
 
     const [hoveredStates, setHoveredStates] = useState(Array(categories.length).fill(false));

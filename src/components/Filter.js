@@ -179,7 +179,7 @@ function Filter(props) {
           </div>
         </div>
         <div>
-          <FilterContent val={checkedItems} />
+          <FilterContent val={checkedItems}/>
         </div>
     </div>
   )
