@@ -51,8 +51,6 @@ function App() {
       <Route path="/cloths/kids-boys" element={<Dresses sort="Kids-Boys"/>} />
       <Route path="/cloths/kids-girls" element={<Dresses sort="Kids-Girls"/>} />
       <Route path="/cloths/kids-footwear" element={<Dresses sort="Kids-Footwear"/>} />
-      <Route path="/cloths/kids-toys" element={<Dresses sort="Kids-Toys"/>} />
-      <Route path="/cloths/kids-infant" element={<Dresses sort="Kids-Baby"/>} />
       <Route path="/cloths/newarrivals" element={<Dresses sort="NewArrivals"/>} />
       <Route path="/loginregister" element={<LoginRegister/>} />
       <Route path="/cloths/men-top-wear/details" element={<ProductDetails/>} />

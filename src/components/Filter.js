@@ -9,8 +9,8 @@ const categoriesData = {
   'Mens-Top-wear': ['Casual Shirts', 'Formal Shirts', 'Blazers', 'T-Shirts', 'Jackets'],
   'Mens-Bottom-wear': ['Jeans', 'Casual trousers', 'Formal Trousers', 'Shorts', 'Track Pants'],
   'Mens-Footwear': ['Sport Shoes', 'Casual Shoes', 'Formal Shoes', 'Sneakers', 'Sandals', 'Socks'],
-  'Mens-Gadgets': ['Smart Wearables', 'Fitness gadgets', 'Headphones'],
-  'Mens-Accessories': ['Wallets', 'Belts', 'Trimmers', 'Perfumes', 'Rings & Wristwear'],
+  'Mens-Gadgets': ['Smart Wearables', 'Fitness gadgets'],
+  'Mens-Accessories': ['Wallets', 'Belts', 'Perfumes', 'Rings & Wristwear'],
 };
 
 const sizesData = {
@@ -24,16 +24,16 @@ const sizesData = {
 const colorsData = {
   'Mens-Top-wear': ['Red', 'Blue', 'Yellow', 'Green', 'White', 'Black', 'Maroon', 'Teal','Pink', 'Grey', 'Navy'],
   'Mens-Bottom-wear': ['Blue', 'White', 'Black', 'Khaki', 'Cream', 'Teal', 'Grey', 'Navy'],
-  'Mens-Footwear': ['Blue', 'White', 'Black', 'Khaki', 'Cream', 'Teal', 'Grey', 'Navy'],
+  'Mens-Footwear': ['Blue', 'White', 'Black', 'Khaki', 'Cream', 'Teal', 'Grey', 'Navy','Brown'],
   'Mens-Gadgets': ['Blue', 'White', 'Black', 'Gold', 'Cream', 'Teal', 'Grey', 'Navy', 'Burgundy', 'Brown'],
-  'Mens-Accessories': ['Red','Blue', 'White', 'Black', 'Khaki', 'Cream', 'Teal', 'Grey', 'Navy'],
+  'Mens-Accessories': ['Red','Blue', 'White', 'Black', 'Khaki', 'Cream', 'Teal', 'Grey', 'Navy','Brown'],
 };
 
 const patternData={
   'Mens-Top-wear':['Stripe','Checked','Floral','Solid','Printed'],
   'Mens-Bottom-wear':['Solid','Checked','Stripe','Printed'],
   'Mens-Footwear':['Solid','Textured','Woven Design'],
-  'Mens-Gadgets':['Steel','Leather','Rubber','Solid'],
+  'Mens-Gadgets':['Steel','Leather','Rubber'],
   'Mens-Accessories':['Solid','Textured','Striped','Woven Design','Checked','Handmade'],
 };
 
