@@ -68,8 +68,6 @@ function LoginRegister() {
       `}</style>
       {isLoginForm ? (
         <div>
-          {/* <div className='circle1'></div>
-          <div className='circle2'></div> */}
           <div className='login-container'>
             <div className='login-inputs'>
               <form onSubmit={handleSubmit}>
@@ -90,8 +88,6 @@ function LoginRegister() {
         </div>
       ) : (
         <div>
-          {/* <div className='circle3'></div>
-          <div className='circle4'></div> */}
         <div className='register-container'>
           <div className='register-inputs'>
             <form onSubmit={handleSubmit}>

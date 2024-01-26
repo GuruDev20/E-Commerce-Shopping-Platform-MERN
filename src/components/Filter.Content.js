@@ -8,6 +8,15 @@ import { bottom_wear_collection } from './data/Men.Bottomwear';
 import {mens_footwear} from './data/Mens.Footwear';
 import {mens_gadgets} from './data/Mens.Gadgets';
 import {men_accessories} from './data/Mens.Accesories';
+import {women_top_wear} from './data/Women.Topwear';
+import {women_bottom_wear} from './data/Women.Bottomwear';
+import {women_foot_wear} from './data/Women.Footwear';
+import { women_gadgets } from './data/Women.Gadgets';
+import { women_accessories } from './data/Women.Accessories';
+import {kids_boys} from './data/Boys';
+import {kids_girls} from './data/Girls';
+import {kids_footwear} from './data/Footwear';
+import {new_arrivals} from './data/Newarrivals';
 function FilterContent({ val,category }) {
   const itemsPerPage = 12;
   const [visibleItems, setVisibleItems] = useState(itemsPerPage);
@@ -24,6 +33,24 @@ function FilterContent({ val,category }) {
         return mens_gadgets;
       case 'Mens-Accessories':
         return men_accessories;
+      case 'Womens-Top-wear':
+        return women_top_wear;
+      case 'Womens-Bottom-wear':
+        return women_bottom_wear;
+      case 'Womens-Footwear':
+        return women_foot_wear;
+      case 'Womens-Gadgets':
+        return women_gadgets;
+      case 'Womens-Accessories':
+        return women_accessories;
+      case 'Kids-Boys':
+        return kids_boys;
+      case 'Kids-Girls':
+        return kids_girls;
+      case 'Kids-Footwear':
+        return kids_footwear;
+      case 'NewArrivals':
+        return new_arrivals;
       default:
         return [];
     }
@@ -41,13 +68,12 @@ function FilterContent({ val,category }) {
 
 
   const visibleItemsData = filteredItems.slice(0, visibleItems);
-
   const handleExploreMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + itemsPerPage);
   };
 
   return (
-    <>
+    <div>
       <section className='card-container'>
         {visibleItemsData.map((item) => (
           <Link to='/cloths/men-top-wear/details' className='link-to-more' key={item.id}>
@@ -83,7 +109,7 @@ function FilterContent({ val,category }) {
         </button>
         </div>
       )}
-    </>
+    </div>
   );
 }
 export default FilterContent;

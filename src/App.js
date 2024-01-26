@@ -43,8 +43,8 @@ function App() {
       <Route path="/cloths/men-footwear" element={<Dresses sort="Mens-Footwear"/>} />
       <Route path="/cloths/men-gadgets" element={<Dresses sort="Mens-Gadgets"/>} />
       <Route path="/cloths/men-accessories" element={<Dresses sort="Mens-Accessories"/>} />
-      <Route path="/cloths/women-fusion-wear" element={<Dresses sort="Womens-Fusion-wear"/>} />
-      <Route path="/cloths/women-western-wear" element={<Dresses sort="Womens-Western-wear"/>} />
+      <Route path="/cloths/women-top-wear" element={<Dresses sort="Womens-Top-wear"/>} />
+      <Route path="/cloths/women-bottom-wear" element={<Dresses sort="Womens-Bottom-wear"/>} />
       <Route path="/cloths/women-footwear" element={<Dresses sort="Womens-Footwear"/>} />
       <Route path="/cloths/women-gadgets" element={<Dresses sort="Womens-Gadgets"/>} />
       <Route path="/cloths/women-accessories" element={<Dresses sort="Womens-Accessories"/>} />
