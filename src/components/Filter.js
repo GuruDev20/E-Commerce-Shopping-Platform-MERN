@@ -11,6 +11,14 @@ const categoriesData = {
   'Mens-Footwear': ['Sport Shoes', 'Casual Shoes', 'Formal Shoes', 'Sneakers', 'Sandals', 'Socks'],
   'Mens-Gadgets': ['Smart Wearables', 'Fitness gadgets'],
   'Mens-Accessories': ['Wallets', 'Belts', 'Perfumes', 'Rings & Wristwear'],
+  'Womens-Top-wear':['Kurtas','Sarees','Ethnic wear','Tops','T-Shirts','Sweatshirts','Jackets'],
+  'Womens-Bottom-wear':['Leggings','Jeans','Palazzos','Salwars'],
+  'Womens-Footwear':['Flats','Casual Shoes','Heels','Sport Shoes'],
+  'Womens-Gadgets':['Smart Wearables', 'Fitness gadgets'],
+  'Womens-Accessories':['Handbags','Wallets','Perfumes','Belts'],
+  'Kids-Boys':['T-Shirts','Shirts','Shorts','Jeans','Trousers','Sweatshirts'],
+  'Kids-Girls':['T-Shirts','Tops','Shorts','Jeans','Trousers','Sweatshirts'],
+  'Kids-Footwear':['Sport Shoes', 'Casual Shoes', 'Formal Shoes', 'Sneakers', 'Heels'],
 };
 
 const sizesData = {
@@ -19,6 +27,14 @@ const sizesData = {
   'Mens-Footwear': ['6', '7', '8', '9', '10'],
   'Mens-Gadgets': ['Onesize', '20mm', '22mm', '24mm'],
   'Mens-Accessories': ['Onesize', '36', '38', '40', '42', '44'],
+  'Womens-Top-wear': ['S', 'M', 'L', 'XL', 'XXL'],
+  'Womens-Bottom-wear': ['28', '30', '32', '34', '36', '38', '40'],
+  'Womens-Footwear': ['6', '7', '8', '9', '10'],
+  'Womens-Gadgets': ['Onesize', '20mm', '22mm', '24mm'],
+  'Womens-Accessories': ['Onesize', '36', '38', '40', '42', '44'],
+  'Kids-Boys': ['S', 'M', 'L','22','24','26','28','30'],
+  'Kids-Girls': ['S', 'M', 'L','22','24','26','28','30'],
+  'Kids-Footwear': ['4','5','6', '7', '8', '9'],
 };
 
 const colorsData = {
@@ -27,6 +43,14 @@ const colorsData = {
   'Mens-Footwear': ['Blue', 'White', 'Black', 'Khaki', 'Cream', 'Teal', 'Grey', 'Navy','Brown'],
   'Mens-Gadgets': ['Blue', 'White', 'Black', 'Gold', 'Cream', 'Teal', 'Grey', 'Navy', 'Burgundy', 'Brown'],
   'Mens-Accessories': ['Red','Blue', 'White', 'Black', 'Khaki', 'Cream', 'Teal', 'Grey', 'Navy','Brown'],
+  'Womens-Top-wear': ['Red', 'Blue', 'Yellow', 'Green', 'White', 'Black', 'Maroon', 'Teal','Pink', 'Grey', 'Navy','Purple',],
+  'Womens-Bottom-wear': ['Blue', 'White', 'Black', 'Khaki', 'Cream', 'Teal', 'Grey', 'Navy'],
+  'Womens-Footwear': ['Blue', 'White', 'Black', 'Khaki', 'Cream', 'Teal', 'Grey', 'Navy','Brown'],
+  'Womens-Gadgets': ['Blue', 'White', 'Black', 'Gold', 'Cream', 'Teal', 'Grey', 'Navy', 'Burgundy', 'Brown'],
+  'Womens-Accessories': ['Red','Blue', 'White', 'Black', 'Khaki', 'Cream', 'Teal', 'Grey', 'Navy','Brown'],
+  'Kids-Boys': ['Red', 'Blue', 'Yellow', 'Green', 'White', 'Black', 'Maroon', 'Teal','Pink', 'Grey', 'Navy','Purple',],
+  'Kids-Girls': ['Red', 'Blue', 'Yellow', 'Green', 'White', 'Black', 'Maroon', 'Teal','Pink', 'Grey', 'Navy','Purple',],
+  'Kids-Footwear': ['Blue', 'White', 'Black', 'Khaki', 'Cream', 'Teal', 'Grey', 'Navy','Brown'],
 };
 
 const patternData={
@@ -35,6 +59,14 @@ const patternData={
   'Mens-Footwear':['Solid','Textured','Woven Design'],
   'Mens-Gadgets':['Steel','Leather','Rubber'],
   'Mens-Accessories':['Solid','Textured','Striped','Woven Design','Checked','Handmade'],
+  'Womens-Top-wear':['Stripe','Checked','Floral','Solid','Printed'],
+  'Womens-Bottom-wear':['Solid','Checked','Stripe','Printed'],
+  'Womens-Footwear':['Solid','Textured','Woven Design'],
+  'Womens -Gadgets':['Steel','Leather','Rubber'],
+  'Womens-Accessories':['Solid','Textured','Striped','Woven Design','Checked','Handmade'],
+  'Kids-Boys':['Stripe','Checked','Floral','Solid','Printed'],
+  'Kids-Girls':['Solid','Checked','Stripe','Printed'],
+  'Kids-Footwear':['Solid','Textured','Woven Design'],
 };
 
 function Filter(props) {

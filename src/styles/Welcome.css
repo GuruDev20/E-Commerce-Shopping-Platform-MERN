@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
 }
@@ -128,7 +128,7 @@ li:hover::before {
 .nav-link:hover,
 .nav-link:focus {
     color: #0d3b66;
-}
+} */
 * {
     margin: 0;
     padding: 0;
