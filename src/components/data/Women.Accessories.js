@@ -1,2 +1,81 @@
-const women_accessories=[];
+import Women61 from '../../assets/Womens/Women61.png';
+import Women62 from '../../assets/Womens/Women62.png';
+import Women63 from '../../assets/Womens/Women63.png';
+import Women64 from '../../assets/Womens/Women64.png';
+import Women65 from '../../assets/Womens/Women65.png';
+import Women66 from '../../assets/Womens/Women66.png';
+const women_accessories=[
+    {
+        id:1,
+        image:Women61,
+        category:'',
+        brand:'',
+        name:'',
+        price:'',
+        previous_price:'',
+        size:'',
+        color:'',
+        pattern:'',
+    },
+    {
+        id:2,
+        image:Women62,
+        category:'',
+        brand:'',
+        name:'',
+        price:'',
+        previous_price:'',
+        size:'',
+        color:'',
+        pattern:'',
+    },
+    {
+        id:3,
+        image:Women63,
+        category:'',
+        brand:'',
+        name:'',
+        price:'',
+        previous_price:'',
+        size:'',
+        color:'',
+        pattern:'',
+    },
+    {
+        id:4,
+        image:Women64,
+        category:'',
+        brand:'',
+        name:'',
+        price:'',
+        previous_price:'',
+        size:'',
+        color:'',
+        pattern:'',
+    },
+    {
+        id:5,
+        image:Women65,
+        category:'',
+        brand:'',
+        name:'',
+        price:'',
+        previous_price:'',
+        size:'',
+        color:'',
+        pattern:'',
+    },
+    {
+        id:6,
+        image:Women66,
+        category:'',
+        brand:'',
+        name:'',
+        price:'',
+        previous_price:'',
+        size:'',
+        color:'',
+        pattern:'',
+    },
+];
 export {women_accessories};
