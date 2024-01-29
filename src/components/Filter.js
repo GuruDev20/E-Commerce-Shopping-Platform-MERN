@@ -62,7 +62,7 @@ const patternData={
   'Womens-Top-wear':['Stripe','Checked','Floral','Solid','Printed'],
   'Womens-Bottom-wear':['Solid','Checked','Stripe','Printed'],
   'Womens-Footwear':['Solid','Textured','Woven Design'],
-  'Womens -Gadgets':['Steel','Leather','Rubber'],
+  'Womens-Gadgets':['Steel','Leather','Rubber'],
   'Womens-Accessories':['Solid','Textured','Striped','Woven Design','Checked','Handmade'],
   'Kids-Boys':['Stripe','Checked','Floral','Solid','Printed'],
   'Kids-Girls':['Solid','Checked','Stripe','Printed'],
