@@ -16,9 +16,9 @@ const categoriesData = {
   'Womens-Footwear':['Flats','Casual Shoes','Heels','Sport Shoes'],
   'Womens-Gadgets':['Smart Wearables', 'Fitness gadgets'],
   'Womens-Accessories':['Handbags','Perfumes'],
-  'Kids-Boys':['T-Shirts','Shirts','Shorts','Jeans','Trousers','Sweatshirts'],
-  'Kids-Girls':['T-Shirts','Tops','Shorts','Jeans','Trousers','Sweatshirts'],
-  'Kids-Footwear':['Sport Shoes', 'Casual Shoes', 'Formal Shoes', 'Sneakers', 'Heels'],
+  'Kids-Boys':['T-Shirts','Shirts','Shorts','Jeans','Sweatshirts'],
+  'Kids-Girls':['T-Shirts','Tops','Jeans','Sweatshirts'],
+  'Kids-Footwear':['Sport Shoes', 'Casual Shoes'],
 };
 
 const sizesData = {
