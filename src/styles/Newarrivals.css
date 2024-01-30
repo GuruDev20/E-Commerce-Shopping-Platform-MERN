@@ -23,19 +23,19 @@
 }
 
 .new-center {
-    padding: 4em 0;
+    padding: 5em 0;
     display: flex;
     justify-content: center;
 }
 
 .news {
-    padding: 0 10px;
+    padding: 0 20px;
     text-align: center;
 }
 
 .new-img {
-    width: 100%;
-    height: auto;
+  width: 18rem;
+  margin-bottom: 1rem;
 }
 
 .item-des {

@@ -48,6 +48,7 @@
 .others-card-content {
     text-align: center;
     padding-left: 70px;
+    padding-top: 12px;
 }
 
 .others:hover .overlay {

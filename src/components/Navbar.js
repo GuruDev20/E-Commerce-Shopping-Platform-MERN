@@ -46,7 +46,7 @@ function Navbar() {
                 <div className='nav-link-items'>Kids</div>
               </li>
               <li>
-                  <Link to='/cloths/newarrivals' className='nav-link' reloadDocument>New Arrivals</Link>
+                  <Link to='/newarrivals' className='nav-link' reloadDocument>New Arrivals</Link>
               </li>
             </ul>
           </div>

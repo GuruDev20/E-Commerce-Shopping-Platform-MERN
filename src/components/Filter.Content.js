@@ -16,7 +16,6 @@ import { women_accessories } from './data/Women.Accessories';
 import {kids_boys} from './data/Boys';
 import {kids_girls} from './data/Girls';
 import {kids_footwear} from './data/Footwear';
-import {new_arrivals} from './data/Newarrivals';
 function FilterContent({ val,category }) {
   const itemsPerPage = 12;
   const [visibleItems, setVisibleItems] = useState(itemsPerPage);
@@ -49,8 +48,6 @@ function FilterContent({ val,category }) {
         return kids_girls;
       case 'Kids-Footwear':
         return kids_footwear;
-      case 'NewArrivals':
-        return new_arrivals;
       default:
         return [];
     }

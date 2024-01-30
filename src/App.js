@@ -6,6 +6,7 @@ import LoginRegister from "./components/Login.Register";
 import ProductDetails from "../src/components/ProductDetails";
 import Cart from "./components/Cart";
 import WhistList from "../src/components/WhistList";
+import Latest from "./components/Latest";
 function App() {
   window.addEventListener("scroll", reveal);
   function reveal() {
@@ -51,7 +52,7 @@ function App() {
       <Route path="/cloths/kids-boys" element={<Dresses sort="Kids-Boys"/>} />
       <Route path="/cloths/kids-girls" element={<Dresses sort="Kids-Girls"/>} />
       <Route path="/cloths/kids-footwear" element={<Dresses sort="Kids-Footwear"/>} />
-      <Route path="/cloths/newarrivals" element={<Dresses sort="NewArrivals"/>} />
+      <Route path="/newarrivals" element={<Latest />} />
       <Route path="/loginregister" element={<LoginRegister/>} />
       <Route path="/cloths/men-top-wear/details" element={<ProductDetails/>} />
       <Route path="/cart" element={<Cart/>} />

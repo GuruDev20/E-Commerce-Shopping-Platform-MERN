@@ -1,6 +1,10 @@
 import React,{ useRef, useEffect } from 'react'
 import '../styles/Newarrivals.css'
-import menimage from '../assets/Mens/men1.jpg'
+import Men1 from '../assets/new/Men1.png'
+import Men2 from '../assets/new/Men2.png'
+import Women1 from '../assets/new/Women1.png'
+import Women3 from '../assets/new/Women3.png'
+import Girl from '../assets/new/Girl.png'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -47,46 +51,19 @@ function Newarrivals() {
       <div className='new-slider'>
         <Slider {...settings} className='new-center' ref={sliderRef}>
             <div className='news'>
-                <img src={menimage} alt='neimage' className='new-img' />
-                <h3 className='item-des'>Shirt</h3>
-                <h3 className='item-price'>100</h3>
-                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
+                <img src={Men1} alt='neimage' className='new-img' />
             </div>
             <div className='news'>
-                <img src={menimage} alt='neimage' className='new-img' />
-                <h3 className='item-des'>Shirt</h3>
-                <h3 className='item-price'>100</h3>
-                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
+                <img src={Women1} alt='neimage' className='new-img' />
             </div>
             <div className='news'>
-                <img src={menimage} alt='neimage' className='new-img' />
-                <h3 className='item-des'>Shirt</h3>
-                <h3 className='item-price'>100</h3>
-                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
+                <img src={Men2} alt='neimage' className='new-img' />
             </div>
             <div className='news'>
-                <img src={menimage} alt='neimage' className='new-img' />
-                <h3 className='item-des'>Shirt</h3>
-                <h3 className='item-price'>100</h3>
-                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
+                <img src={Girl} alt='neimage' className='new-img' />
             </div>
             <div className='news'>
-                <img src={menimage} alt='neimage' className='new-img' />
-                <h3 className='item-des'>Shirt</h3>
-                <h3 className='item-price'>100</h3>
-                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
-            </div>
-            <div className='news'>
-                <img src={menimage} alt='neimage' className='new-img' />
-                <h3 className='item-des'>Shirt</h3>
-                <h3 className='item-price'>100</h3>
-                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
-            </div>
-            <div className='news'>
-                <img src={menimage} alt='neimage' className='new-img' />
-                <h3 className='item-des'>Shirt</h3>
-                <h3 className='item-price'>100</h3>
-                <div className='item-ratings'>⭐⭐⭐⭐⭐</div>
+                <img src={Women3} alt='neimage' className='new-img' />
             </div>
         </Slider>
         <div className='new-arrows'>
