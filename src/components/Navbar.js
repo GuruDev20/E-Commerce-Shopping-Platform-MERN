@@ -1,11 +1,17 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../styles/Welcome.css'
 import { GiShoppingBag } from "react-icons/gi";
 import { FaShoppingCart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { Link} from 'react-router-dom';
 import { IoPersonCircleSharp } from "react-icons/io5";
+import { CgProfile } from "react-icons/cg";
+import { MdLogout } from "react-icons/md";
 function Navbar() {
+  const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(false);
+  const toggleProfileDropdown = () => {
+    setProfileDropdownOpen(!isProfileDropdownOpen);
+  };
   return (
     <div className='header'>
           <div className='icon'>
@@ -50,15 +56,27 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          {false?
-          <div className='profile'>
-            <IoPersonCircleSharp size={40}/>
-          </div>:
-          (<div className='loginbutton'>
-            <Link to='/loginregister'  className='nav-link'>
-              <button className='login'>Login</button>
-            </Link>
-          </div>
+          {true ? (
+            <div className='profile'>
+              <IoPersonCircleSharp size={40} onClick={toggleProfileDropdown} />
+              {isProfileDropdownOpen && (
+                <div className='profile-dropdown'>
+                  <Link to='/myprofile' className='nav-link-details'>
+                    Profile<CgProfile size={25}/>
+                  </Link>
+                  <div className='divider'></div>
+                  <Link to='/logout' className='nav-link-details'>
+                    Logout<MdLogout size={25}/>
+                  </Link>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className='loginbutton'>
+              <Link to='/loginregister' className='nav-link'>
+                <button className='login'>Login</button>
+              </Link>
+            </div>
           )}
           <div className='whislist'>
             <Link to ='/whislist' reloadDocument className='nav-link'><CiHeart size={40} color='#e56b6f'/></Link>

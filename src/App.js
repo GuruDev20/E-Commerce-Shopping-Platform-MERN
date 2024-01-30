@@ -7,6 +7,7 @@ import ProductDetails from "../src/components/ProductDetails";
 import Cart from "./components/Cart";
 import WhistList from "../src/components/WhistList";
 import Latest from "./components/Latest";
+import Profile from './components/Profile'
 function App() {
   window.addEventListener("scroll", reveal);
   function reveal() {
@@ -57,6 +58,7 @@ function App() {
       <Route path="/cloths/men-top-wear/details" element={<ProductDetails/>} />
       <Route path="/cart" element={<Cart/>} />
       <Route path='/whislist' element={<WhistList/>} />
+      <Route path='/myprofile' element={<Profile/>} />
     </Routes>
   );
 }
