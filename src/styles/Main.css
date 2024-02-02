@@ -36,7 +36,7 @@
 }
 
 .shopping {
-    mix-blend-mode: multiply;
+    mix-blend-mode:multiply ;
     width: 45em;
     height: 45em;
 }

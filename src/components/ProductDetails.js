@@ -58,7 +58,17 @@ function ProductDetails() {
   const handleImageClick = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % item.image.length);
   };
+  const addToCart = () => {
+    console.log("Adding " + id);
+  };
 
+  const addToWishlist = () => {
+    console.log("Wishlist " + id);
+  };
+
+  const buyNow = () => {
+    console.log("Buy " + id);
+  };
   return (
     <div>
       <Navbar />
@@ -103,11 +113,11 @@ function ProductDetails() {
           </div>
           <div className="product-buttons">
             <div className="two-button-same-line">
-              <button className="addToBag"><FaShoppingCart size={25} className="button-icon "/>Add to bag</button>
-              <button className="whislist-product"><CiHeart size={25} className="button-icon "/>WishList</button>
+              <button className="addToBag" onClick={addToCart}><FaShoppingCart size={25} className="button-icon "/>Add to bag</button>
+              <button className="whislist-product" onClick={addToWishlist}><CiHeart size={25} className="button-icon "/>WishList</button>
             </div>
             <div className="buy-button">
-              <button className="buy">Buy Now</button>
+              <button className="buy" onClick={buyNow}>Buy Now</button>
             </div>
           </div>
           <div className="horizontal-divider"></div>

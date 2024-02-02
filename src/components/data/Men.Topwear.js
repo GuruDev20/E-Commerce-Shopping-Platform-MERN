@@ -13,11 +13,9 @@ import Men4_2 from '../../assets/Mens/Men4.2.png';
 import Men6 from '../../assets/Mens/Men6.png';
 import Men6_1 from '../../assets/Mens/Men6.1.png';
 import Men6_2 from '../../assets/Mens/Men6.2.png';
-import Men6_3 from '../../assets/Mens/Men6.3.png';
 import Men8 from '../../assets/Mens/Men8.png';
 import Men8_1 from '../../assets/Mens/Men8.1.png';
 import Men8_2 from '../../assets/Mens/Men8.2.png';
-import Men8_3 from '../../assets/Mens/Men8.3.png';
 import Men17 from '../../assets/Mens/Men17.png';
 import Men17_1 from '../../assets/Mens/Men17.1.png';
 import Men17_2 from '../../assets/Mens/Men17.2.png';
@@ -33,26 +31,21 @@ import Men21_2 from '../../assets/Mens/Men21.2.png';
 import Men23 from '../../assets/Mens/Men23.png';
 import Men23_1 from '../../assets/Mens/Men23.1.png';
 import Men23_2 from '../../assets/Mens/Men23.2.png';
-import Men23_3 from '../../assets/Mens/Men23.3.png';
 import Men25 from '../../assets/Mens/Men25.png';
 import Men25_1 from '../../assets/Mens/Men25.1.png';
 import Men25_2 from '../../assets/Mens/Men25.2.png';
-import Men25_3 from '../../assets/Mens/Men25.3.png';
 import Men27 from '../../assets/Mens/Men27.png';
 import Men27_1 from '../../assets/Mens/Men27.1.png';
 import Men27_2 from '../../assets/Mens/men27.2.png';
-import Men27_3 from '../../assets/Mens/Men27.3.png';
 import Men28 from '../../assets/Mens/Men28.png';
 import Men28_1 from '../../assets/Mens/Men28.1.png';
 import Men28_2 from '../../assets/Mens/Men28.2.png';
-import Men28_3 from '../../assets/Mens/Men28.3.png';
 import Men29 from '../../assets/Mens/Men29.png';
 import Men29_1 from '../../assets/Mens/Men29.1.png';
 import Men29_2 from '../../assets/Mens/Men29.2.png';
 import Men32 from '../../assets/Mens/Men32.png';
 import Men32_1 from '../../assets/Mens/Men32.1.png';
 import Men32_2 from '../../assets/Mens/Men32.2.png';
-import Men32_3 from '../../assets/Mens/Men32.3.png';
 import Men33 from '../../assets/Mens/Men33.png';
 import Men33_1 from '../../assets/Mens/Men33.1.png';
 import Men33_2 from '../../assets/Mens/Men33.2.png';
@@ -110,7 +103,7 @@ const top_wear_collection=[
   },
   {
     id:6,
-    image:[Men6,Men6_1,Men6_2,Men6_3],
+    image:[Men6,Men6_1,Men6_2],
     category:'Casual Shirts',
     brand:'The Indian Garage Co',
     name:'Mens slim fit & casual shirt',
@@ -122,7 +115,7 @@ const top_wear_collection=[
   },
   {
     id:8,
-    image:[Men8,Men8_1,Men8_2,Men8_3],
+    image:[Men8,Men8_1,Men8_2],
     category:'Casual Shirts',
     brand:'HERE & NOW',
     name:'Mens slim fit & casual shirt',
@@ -182,7 +175,7 @@ const top_wear_collection=[
   },
   {
     id:23,
-    image:[Men23,Men23_1,Men23_2,Men23_3],
+    image:[Men23,Men23_1,Men23_2],
     category:'Formal Shirts',
     brand:'RoadSter',
     name:'Mens Formal shirt',
@@ -194,7 +187,7 @@ const top_wear_collection=[
   },
   {
     id:25,
-    image:[Men25,Men25_1,Men25_2,Men25_3],
+    image:[Men25,Men25_1,Men25_2],
     category:'Formal Shirts',
     brand:'WROGN',
     name:'Mens Formal shirt',
@@ -206,7 +199,7 @@ const top_wear_collection=[
   },
   {
     id:27,
-    image:[Men27,Men27_1,Men27_2,Men27_3],
+    image:[Men27,Men27_1,Men27_2],
     category:'Blazers',
     brand:'The Indian Garage Co',
     name:'Mens Occasional Suit',
@@ -218,7 +211,7 @@ const top_wear_collection=[
   },
   {
     id:28,
-    image:[Men28,Men28_1,Men28_2,Men28_3],
+    image:[Men28,Men28_1,Men28_2],
     category:'Blazers',
     brand:'The Indian Garage Co',
     name:'Mens Occasional Suit',
@@ -242,7 +235,7 @@ const top_wear_collection=[
   },
   {
     id:32,
-    image:[Men32,Men32_1,Men32_2,Men32_3],
+    image:[Men32,Men32_1,Men32_2],
     category:'Blazers',
     brand:'The Indian Garage Co',
     name:'Mens Occasional Suit',
