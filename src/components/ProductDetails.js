@@ -1,4 +1,6 @@
 import React from "react";
+import Navbar from './Navbar'
+import Footer from './Footer'
 import { useParams } from "react-router-dom";
 import { top_wear_collection } from './data/Men.Topwear';
 import { bottom_wear_collection } from './data/Men.Bottomwear';
@@ -51,10 +53,12 @@ function ProductDetails() {
   const item = getCollection(category).find((item) => item.id ===Number(id));
   return (
     <div>
+      <Navbar/>
       <h3>{item.brand}</h3>
       <h5>{item.name}</h5>
       <img src={item.image[0]} alt="" />
       <h3>{category}</h3>
+      <Footer />
     </div>
   );
 }
