@@ -10,7 +10,7 @@ const categoriesData = {
   'Mens-Bottom-wear': ['Jeans', 'Casual trousers', 'Formal Trousers', 'Shorts', 'Track Pants'],
   'Mens-Footwear': ['Sport Shoes', 'Casual Shoes', 'Formal Shoes', 'Sneakers', 'Sandals', 'Socks'],
   'Mens-Gadgets': ['Smart Wearables', 'Fitness gadgets'],
-  'Mens-Accessories': ['Wallets', 'Belts', 'Perfumes', 'Rings & Wristwear'],
+  'Mens-Accessories': ['Wallets', 'Belts', 'Perfumes'],
   'Womens-Top-wear':['Kurtas','Sarees','Tops','T-Shirts','Sweatshirts','Jackets'],
   'Womens-Bottom-wear':['Leggings','Jeans','Palazzos','Salwars'],
   'Womens-Footwear':['Flats','Casual Shoes','Heels','Sport Shoes'],

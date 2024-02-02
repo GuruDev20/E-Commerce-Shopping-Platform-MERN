@@ -18,7 +18,7 @@ import Girls16 from '../../assets/kids/Girls16.png';
 const kids_girls=[
     {
         id:1,
-        image:Girls1,
+        image:[Girls1],
         category:'T-Shirts',
         brand:'H & M',
         name:'Girls Printed Crop T-Shirt',
@@ -30,7 +30,7 @@ const kids_girls=[
     },
     {
         id:2,
-        image:Girls2,
+        image:[Girls2],
         category:'Tops',
         brand:'Here & Now',
         name:'Girls Printed Crop Top',
@@ -42,7 +42,7 @@ const kids_girls=[
     },
     {
         id:3,
-        image:Girls3,
+        image:[Girls3],
         category:'Tops',
         brand:'Jack & Jones',
         name:'Girls Printed Crop Top',
@@ -54,7 +54,7 @@ const kids_girls=[
     },
     {
         id:4,
-        image:Girls4,
+        image:[Girls4],
         category:'T-Shirts',
         brand:'H & M',
         name:'Girls Printed Crop T-Shirt',
@@ -66,7 +66,7 @@ const kids_girls=[
     },
     {
         id:5,
-        image:Girls5,
+        image:[Girls5],
         category:'Tops',
         brand:'H & M',
         name:'Girls Printed Crop Top',
@@ -78,7 +78,7 @@ const kids_girls=[
     },
     {
         id:6,
-        image:Girls6,
+        image:[Girls6],
         category:'T-Shirts',
         brand:'Here & Now',
         name:'Girls Printed Crop T-Shirt',
@@ -90,7 +90,7 @@ const kids_girls=[
     },
     {
         id:7,
-        image:Girls7,
+        image:[Girls7],
         category:'T-Shirts',
         brand:'Jack & Jones',
         name:'Girls Printed Crop T-Shirt',
@@ -102,7 +102,7 @@ const kids_girls=[
     },
     {
         id:8,
-        image:Girls8,
+        image:[Girls8],
         category:'T-Shirts',
         brand:'Jack & Jones',
         name:'Girls Printed Crop T-Shirt',
@@ -114,7 +114,7 @@ const kids_girls=[
     },
     {
         id:9,
-        image:Girls9,
+        image:[Girls9],
         category:'T-Shirts',
         brand:'H & M',
         name:'Girls Printed Crop T-Shirt',
@@ -126,7 +126,7 @@ const kids_girls=[
     },
     {
         id:10,
-        image:Girls10,
+        image:[Girls10],
         category:'Jeans',
         brand:'Here & Now',
         name:'Girls Printed Jeans',
@@ -138,7 +138,7 @@ const kids_girls=[
     },
     {
         id:11,
-        image:Girls11,
+        image:[Girls11],
         category:'Jeans',
         brand:'Here & Now',
         name:'Girls Printed Jeans',
@@ -150,7 +150,7 @@ const kids_girls=[
     },
     {
         id:12,
-        image:Girls12,
+        image:[Girls12],
         category:'Jeans',
         brand:'H & M',
         name:'Girls Printed Jeans',
@@ -162,7 +162,7 @@ const kids_girls=[
     },
     {
         id:13,
-        image:Girls13,
+        image:[Girls13],
         category:'Jeans',
         brand:'Jack & Jones',
         name:'Girls Printed Jeans',
@@ -174,7 +174,7 @@ const kids_girls=[
     },
     {
         id:14,
-        image:Girls14,
+        image:[Girls14],
         category:'Sweatshirts',
         brand:'H & M',
         name:'Girls Printed Sweatshirts',
@@ -186,7 +186,7 @@ const kids_girls=[
     },
     {
         id:15,
-        image:Girls15,
+        image:[Girls15],
         category:'Sweatshirts',
         brand:'HRX',
         name:'Girls Printed Sweatshirts',
@@ -198,7 +198,7 @@ const kids_girls=[
     },
     {
         id:16,
-        image:Girls16,
+        image:[Girls16],
         category:'Sweatshirts',
         brand:'HRX',
         name:'Girls Printed Sweatshirts',

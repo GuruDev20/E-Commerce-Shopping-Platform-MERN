@@ -11,7 +11,7 @@ import Foot10 from '../../assets/kids/Foot10.png'
 const kids_footwear=[
     {
         id:1,
-        image:Foot1,
+        image:[Foot1],
         category:'Sport Shoes',
         brand:'BIRDE',
         name:'Color blocked Sneakers',
@@ -23,7 +23,7 @@ const kids_footwear=[
     },
     {
         id:2,
-        image:Foot2,
+        image:[Foot2],
         category:'Sport Shoes',
         brand:'YK',
         name:'Color blocked Sneakers',
@@ -35,7 +35,7 @@ const kids_footwear=[
     },
     {
         id:3,
-        image:Foot3,
+        image:[Foot3],
         category:'Sport Shoes',
         brand:'BIRDE',
         name:'Color blocked Sneakers',
@@ -47,7 +47,7 @@ const kids_footwear=[
     },
     {
         id:4,
-        image:Foot4,
+        image:[Foot4],
         category:'Casual Shoes',
         brand:'YK',
         name:'Color blocked Sneakers',
@@ -59,7 +59,7 @@ const kids_footwear=[
     },
     {
         id:5,
-        image:Foot5,
+        image:[Foot5],
         category:'Sport Shoes',
         brand:'BIRDE',
         name:'Color blocked Sneakers',
@@ -71,7 +71,7 @@ const kids_footwear=[
     },
     {
         id:6,
-        image:Foot6,
+        image:[Foot6],
         category:'Casual Shoes',
         brand:'BIRDE',
         name:'Color blocked Sneakers',
@@ -83,7 +83,7 @@ const kids_footwear=[
     },
     {
         id:7,
-        image:Foot7,
+        image:[Foot7],
         category:'Casual Shoes',
         brand:'YK',
         name:'Color blocked Sneakers',
@@ -95,7 +95,7 @@ const kids_footwear=[
     },
     {
         id:8,
-        image:Foot8,
+        image:[Foot8],
         category:'Casual Shoes',
         brand:'YK',
         name:'Color blocked Sneakers',
@@ -107,7 +107,7 @@ const kids_footwear=[
     },
     {
         id:9,
-        image:Foot9,
+        image:[Foot9],
         category:'Casual Shoes',
         brand:'BIRDE',
         name:'Color blocked Sneakers',
@@ -119,7 +119,7 @@ const kids_footwear=[
     },
     {
         id:10,
-        image:Foot10,
+        image:[Foot10],
         category:'Casual Shoes',
         brand:'YK',
         name:'Color blocked Sneakers',

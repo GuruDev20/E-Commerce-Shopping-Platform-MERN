@@ -27,7 +27,7 @@ import Boys31 from '../../assets/kids/Boys31.png'
 const kids_boys=[
     {
         id:2,
-        image:Boys2,
+        image:[Boys2],
         category:'T-Shirts',
         brand:'Here & Now',
         name:'Boys Slim Fit T-shirt',
@@ -39,7 +39,7 @@ const kids_boys=[
     },
     {
         id:3,
-        image:Boys3,
+        image:[Boys3],
         category:'T-Shirts',
         brand:'H & M',
         name:'Boys Slim Fit T-shirt',
@@ -51,7 +51,7 @@ const kids_boys=[
     },
     {
         id:4,
-        image:Boys4,
+        image:[Boys4],
         category:'T-Shirts',
         brand:'H & M',
         name:'Boys Slim Fit T-shirt',
@@ -63,7 +63,7 @@ const kids_boys=[
     },
     {
         id:5,
-        image:Boys5,
+        image:[Boys5],
         category:'T-Shirts',
         brand:'H & M',
         name:'Boys Slim Fit T-shirt',
@@ -75,7 +75,7 @@ const kids_boys=[
     },
     {
         id:6,
-        image:Boys6,
+        image:[Boys6],
         category:'T-Shirts',
         brand:'Here & Now',
         name:'Boys Slim Fit T-shirt',
@@ -87,7 +87,7 @@ const kids_boys=[
     },
     {
         id:7,
-        image:Boys7,
+        image:[Boys7],
         category:'T-Shirts',
         brand:'HRX',
         name:'Boys Slim Fit T-shirt',
@@ -99,7 +99,7 @@ const kids_boys=[
     },
     {
         id:8,
-        image:Boys8,
+        image:[Boys8],
         category:'T-Shirts',
         brand:'HRX',
         name:'Boys Slim Fit T-shirt',
@@ -111,7 +111,7 @@ const kids_boys=[
     },
     {
         id:9,
-        image:Boys9,
+        image:[Boys9],
         category:'T-Shirts',
         brand:'jack & Jones',
         name:'Boys Slim Fit T-shirt',
@@ -123,7 +123,7 @@ const kids_boys=[
     },
     {
         id:10,
-        image:Boys10,
+        image:[Boys10],
         category:'T-Shirts',
         brand:'Jack & Jones',
         name:'Boys Slim Fit T-shirt',
@@ -135,7 +135,7 @@ const kids_boys=[
     },
     {
         id:11,
-        image:Boys11,
+        image:[Boys11],
         category:'Shirts',
         brand:'H & M',
         name:'Boys Slim Fit shirt',
@@ -147,7 +147,7 @@ const kids_boys=[
     },
     {
         id:12,
-        image:Boys12,
+        image:[Boys12],
         category:'Shirts',
         brand:'H & M',
         name:'Boys Slim Fit shirt',
@@ -159,7 +159,7 @@ const kids_boys=[
     },
     {
         id:13,
-        image:Boys13,
+        image:[Boys13],
         category:'Shirts',
         brand:'Here & Now',
         name:'Boys Slim Fit shirt',
@@ -171,7 +171,7 @@ const kids_boys=[
     },
     {
         id:14,
-        image:Boys14,
+        image:[Boys14],
         category:'Shirts',
         brand:'Mast & Harbour',
         name:'Boys Slim Fit shirt',
@@ -183,7 +183,7 @@ const kids_boys=[
     },
     {
         id:15,
-        image:Boys15,
+        image:[Boys15],
         category:'Shirts',
         brand:'Mast & Harbour',
         name:'Boys Slim Fit shirt',
@@ -195,7 +195,7 @@ const kids_boys=[
     },
     {
         id:16,
-        image:Boys16,
+        image:[Boys16],
         category:'Shirts',
         brand:'H & M',
         name:'Boys Slim Fit shirt',
@@ -207,7 +207,7 @@ const kids_boys=[
     },
     {
         id:17,
-        image:Boys17,
+        image:[Boys17],
         category:'Shorts',
         brand:'Here & Now',
         name:'Boys Shorts',
@@ -219,7 +219,7 @@ const kids_boys=[
     },
     {
         id:18,
-        image:Boys18,
+        image:[Boys18],
         category:'Shorts',
         brand:'HRX',
         name:'Boys Shorts',
@@ -231,7 +231,7 @@ const kids_boys=[
     },
     {
         id:19,
-        image:Boys19,
+        image:[Boys19],
         category:'Shorts',
         brand:'HRX',
         name:'Boys Shorts',
@@ -243,7 +243,7 @@ const kids_boys=[
     },
     {
         id:20,
-        image:Boys20,
+        image:[Boys20],
         category:'Shorts',
         brand:'HRX',
         name:'Boys Shorts',
@@ -255,7 +255,7 @@ const kids_boys=[
     },
     {
         id:21,
-        image:Boys21,
+        image:[Boys21],
         category:'Jeans',
         brand:'H & M',
         name:'Boys Jeans',
@@ -267,7 +267,7 @@ const kids_boys=[
     },
     {
         id:22,
-        image:Boys22,
+        image:[Boys22],
         category:'Jeans',
         brand:'Here & Now',
         name:'Boys Jeans',
@@ -279,7 +279,7 @@ const kids_boys=[
     },
     {
         id:23,
-        image:Boys23,
+        image:[Boys23],
         category:'Jeans',
         brand:'Here & Now',
         name:'Boys Jeans',
@@ -291,7 +291,7 @@ const kids_boys=[
     },
     {
         id:24,
-        image:Boys26,
+        image:[Boys26],
         category:'Jeans',
         brand:'Jack & Jones',
         name:'Boys Jeans',
@@ -303,7 +303,7 @@ const kids_boys=[
     },
     {
         id:25,
-        image:Boys30,
+        image:[Boys30],
         category:'Sweatshirts',
         brand:'HRX',
         name:'Boys Sweatshirts',
@@ -315,7 +315,7 @@ const kids_boys=[
     },
     {
         id:26,
-        image:Boys31,
+        image:[Boys31],
         category:'Sweatshirts',
         brand:'H & M',
         name:'Boys Jeans',

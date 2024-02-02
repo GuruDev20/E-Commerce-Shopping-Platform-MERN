@@ -1,44 +1,41 @@
 import Men37 from '../../assets/Mens/Men37.png'
+import Men37_1 from '../../assets/Mens/Men37.1.png'
+import Men37_2 from '../../assets/Mens/Men37.2.png'
 import Men38 from '../../assets/Mens/Men38.png'
-import Men39 from '../../assets/Mens/Men39.png'
-import Men40 from '../../assets/Mens/Men40.png'
-import Men41 from '../../assets/Mens/Men41.png'
-import Men42 from '../../assets/Mens/Men42.png'
-import Men43 from '../../assets/Mens/Men43.png'
-import Men44 from '../../assets/Mens/Men44.png'
-import Men45 from '../../assets/Mens/Men45.png'
-import Men46 from '../../assets/Mens/Men46.png'
+import Men38_1 from '../../assets/Mens/Men38.1.png'
+import Men38_2 from '../../assets/Mens/Men38.2.png'
 import Men47 from '../../assets/Mens/Men47.png'
-import Men48 from '../../assets/Mens/Men48.png'
-import Men49 from '../../assets/Mens/Men49.png'
-import Men50 from '../../assets/Mens/Men50.png'
+import Men47_1 from '../../assets/Mens/Men47.1.png'
+import Men47_2 from '../../assets/Mens/Men47.2.png'
 import Men51 from '../../assets/Mens/Men51.png'
-import Men52 from '../../assets/Mens/Men52.png'
-import Men53 from '../../assets/Mens/Men53.png'
+import Men51_1 from '../../assets/Mens/Men51.1.png'
+import Men51_2 from '../../assets/Mens/Men51.2.png'
 import Men54 from '../../assets/Mens/Men54.png'
-import Men55 from '../../assets/Mens/Men55.png'
+import Men54_1 from '../../assets/Mens/Men54.1.png'
+import Men54_2 from '../../assets/Mens/Men54.2.png'
 import Men56 from '../../assets/Mens/Men56.png'
-import Men57 from '../../assets/Mens/Men57.png'
-import Men58 from '../../assets/Mens/Men58.png'
+import Men56_1 from '../../assets/Mens/Men56.1.png'
+import Men56_2 from '../../assets/Mens/Men56.2.png'
 import Men59 from '../../assets/Mens/Men59.png'
-import Men60 from '../../assets/Mens/Men60.png'
+import Men59_1 from '../../assets/Mens/Men59.1.png'
+import Men59_2 from '../../assets/Mens/Men59.2.png'
 import Men61 from '../../assets/Mens/Men61.png'
-import Men62 from '../../assets/Mens/Men62.png'
+import Men61_1 from '../../assets/Mens/Men61.1.png'
+import Men61_2 from '../../assets/Mens/Men61.2.png'
 import Men63 from '../../assets/Mens/Men63.png'
-import Men64 from '../../assets/Mens/Men64.png'
-import Men65 from '../../assets/Mens/Men65.png'
-import Men66 from '../../assets/Mens/Men66.png'
+import Men63_1 from '../../assets/Mens/Men63.1.png'
+import Men63_2 from '../../assets/Mens/Men63.2.png'
 import Men67 from '../../assets/Mens/Men67.png'
-import Men68 from '../../assets/Mens/Men68.png'
-import Men69 from '../../assets/Mens/Men69.png'
-import Men70 from '../../assets/Mens/Men70.png'
+import Men67_1 from '../../assets/Mens/Men67.1.png'
+import Men67_2 from '../../assets/Mens/Men67.2.png'
 import Men71 from '../../assets/Mens/Men71.png'
-import Men72 from '../../assets/Mens/Men72.png'
+import Men71_1 from '../../assets/Mens/Men71.1.png'
+import Men71_2 from '../../assets/Mens/Men71.2.png'
 
 const bottom_wear_collection=[
     {
         id:1,
-        image:Men37,
+        image:[Men37,Men37_1,Men37_2],
         category:'Jeans',
         brand:'WROGN',
         name:'Mens Slim Fit Jeans',
@@ -50,7 +47,7 @@ const bottom_wear_collection=[
     },
     {
         id:2,
-        image:Men38,
+        image:[Men38,Men38_1,Men38_2],
         category:'Jeans',
         brand:'HIGHLANDER',
         name:'Mens Slim Fit Jeans',
@@ -61,152 +58,20 @@ const bottom_wear_collection=[
         pattern:'Solid',
     },
     {
-        id:3,
-        image:Men39,
-        category:'Jeans',
-        brand:'Levis',
-        name:'Mens Slim Fit Jeans',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34','36','38'],
-        color:['Blue'],
-        pattern:'Solid',
-    },
-    {
-        id:4,
-        image:Men40,
-        category:'Jeans',
-        brand:'WROGN',
-        name:'Mens Slim Fit Jeans',
-        price:'1000',
-        previous_price:'1200',
-        size:['34','36','38','40'],
-        color:['Blue'],
-        pattern:'Solid',
-    },
-    {
-        id:5,
-        image:Men41,
-        category:'Jeans',
-        brand:'HIGHLANDER',
-        name:'Mens Slim Fit Jeans',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34','36','38','40'],
-        color:['Blue'],
-        pattern:'Solid',
-    },
-    {
-        id:6,
-        image:Men42,
-        category:'Jeans',
-        brand:'Levis',
-        name:'Mens Slim Fit Jeans',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34','36','38'],
-        color:['White'],
-        pattern:'Solid',
-    },
-    {
-        id:7,
-        image:Men43,
-        category:'Jeans',
-        brand:'WROGN',
-        name:'Mens Slim Fit Jeans',
-        price:'1000',
-        previous_price:'1200',
-        size:['30','32','34','36','38','40'],
-        color:['Black','Grey'],
-        pattern:'Solid',
-    },
-    {
-        id:8,
-        image:Men44,
-        category:'Casual trousers',
-        brand:'Indian Terrain',
-        name:'Mens Slim Fit Trousers',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34','36','38','40'],
-        color:['Cream'],
-        pattern:'Solid',
-    },
-    {
-        id:9,
-        image:Men45,
-        category:'Casual trousers',
-        brand:'Allen Solly',
-        name:'Mens Slim Fit Trousers',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34','36'],
-        color:['Grey'],
-        pattern:'Solid',
-    },
-    {
-        id:10,
-        image:Men46,
-        category:'Casual trousers',
-        brand:'Indian Terrain',
-        name:'Mens Slim Fit Trousers',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34'],
-        color:['Cream'],
-        pattern:'Solid',
-    },
-    {
         id:11,
-        image:Men47,
+        image:[Men47,Men47_1,Men47_2],
         category:'Casual trousers',
         brand:'HIGHLANDER',
         name:'Mens Slim Fit Trousers',
         price:'1000',
         previous_price:'1200',
         size:['28','30','32','34','36','38'],
-        color:['Teal'],
-        pattern:'Solid',
-    },
-    {
-        id:12,
-        image:Men48,
-        category:'Casual trousers',
-        brand:'Indian Terrain',
-        name:'Mens Slim Fit Trousers',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34','36','38','40'],
-        color:['Grey'],
-        pattern:'Solid',
-    },
-    {
-        id:13,
-        image:Men49,
-        category:'Casual trousers',
-        brand:'Allen Solly',
-        name:'Mens Slim Fit Trousers',
-        price:'1000',
-        previous_price:'1200',
-        size:['34','36','38','40'],
-        color:['Navy','Blue'],
-        pattern:'Solid',
-    },
-    {
-        id:14,
-        image:Men50,
-        category:'Casual trousers',
-        brand:'HIGHLANDER',
-        name:'Mens Slim Fit Trousers',
-        price:'1000',
-        previous_price:'1200',
-        size:['36','38','40'],
         color:['Teal'],
         pattern:'Solid',
     },
     {
         id:15,
-        image:Men51,
+        image:[Men51,Men51_1,Men51_2],
         category:'Casual trousers',
         brand:'Indian Terrain',
         name:'Mens Slim Fit Trousers',
@@ -216,33 +81,10 @@ const bottom_wear_collection=[
         color:['Cream'],
         pattern:'Solid',
     },
-    {
-        id:16,
-        image:Men52,
-        category:'Casual trousers',
-        brand:'Indian Terrain',
-        name:'Mens Slim Fit Trousers',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34'],
-        color:['Cream'],
-        pattern:'Solid',
-    },
-    {
-        id:17,
-        image:Men53,
-        category:'Casual trousers',
-        brand:'HIGHLANDER',
-        name:'Mens Slim Fit Trousers',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34','36','38','40'],
-        color:['Black'],
-        pattern:'Solid',
-    },
+    
     {
         id:18,
-        image:Men54,
+        image:[Men54,Men54_1,Men54_2],
         category:'Formal Trousers',
         brand:'Park Avenue',
         name:'Mens Slim Fit Casual Trousers',
@@ -253,20 +95,8 @@ const bottom_wear_collection=[
         pattern:'Checked',
     },
     {
-        id:19,
-        image:Men55,
-        category:'Formal Trousers',
-        brand:'Louis Philippe',
-        name:'Mens Slim Fit Casual Trousers',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34','36','38'],
-        color:['Cream'],
-        pattern:'',
-    },
-    {
         id:20,
-        image:Men56,
+        image:[Men56,Men56_1,Men56_2],
         category:'Formal Trousers',
         brand:'Van Heusen',
         name:'Mens Slim Fit Casual Trousers',
@@ -277,32 +107,8 @@ const bottom_wear_collection=[
         pattern:'Solid',
     },
     {
-        id:21,
-        image:Men57,
-        category:'Formal Trousers',
-        brand:'Park Avenue',
-        name:'Mens Slim Fit Casual Trousers',
-        price:'1000',
-        previous_price:'1200',
-        size:['34','36','38','40'],
-        color:['Grey'],
-        pattern:'Solid',
-    },
-    {
-        id:22,
-        image:Men58,
-        category:'Shorts',
-        brand:'Puma',
-        name:'Mens Slim Fit Shorts',
-        price:'1000',
-        previous_price:'1200',
-        size:['34','36','38','40'],
-        color:['Navy','Blue'],
-        pattern:'Solid',
-    },
-    {
         id:23,
-        image:Men59,
+        image:[Men59,Men59_1,Men59_2],
         category:'Shorts',
         brand:'ADIDAS',
         name:'Mens Slim Fit Shorts',
@@ -310,35 +116,11 @@ const bottom_wear_collection=[
         previous_price:'1200',
         size:['32','34','36','38','40'],
         color:['White'],
-        pattern:'Solid',
-    },
-    {
-        id:24,
-        image:Men60,
-        category:'Shorts',
-        brand:'Puma',
-        name:'Mens Slim Fit Shorts',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34','36','38','40'],
-        color:['Black'],
-        pattern:'Solid',
-    },
-    {
-        id:25,
-        image:Men61,
-        category:'Shorts',
-        brand:'ADIDAS',
-        name:'Mens Slim Fit Shorts',
-        price:'1000',
-        previous_price:'1200',
-        size:['34','36','38','40'],
-        color:['Black'],
         pattern:'Solid',
     },
     {
         id:26,
-        image:Men62,
+        image:[Men61,Men61_1,Men61_2],
         category:'Shorts',
         brand:'HIGHLANDER',
         name:'Mens Slim Fit Shorts',
@@ -349,32 +131,8 @@ const bottom_wear_collection=[
         pattern:'Solid',
     },
     {
-        id:27,
-        image:Men63,
-        category:'Shorts',
-        brand:'Puma',
-        name:'Mens Slim Fit Shorts',
-        price:'1000',
-        previous_price:'1200',
-        size:['32','34','36','38','40'],
-        color:['Grey'],
-        pattern:'Solid',
-    },
-    {
-        id:28,
-        image:Men64,
-        category:'Shorts',
-        brand:'ADIDAS',
-        name:'Mens Slim Fit Shorts',
-        price:'1000',
-        previous_price:'1200',
-        size:['32','34','36','38','40'],
-        color:['White'],
-        pattern:'Solid',
-    },
-    {
         id:29,
-        image:Men65,
+        image:[Men63,Men63_1,Men63_2],
         category:'Shorts',
         brand:'HIGHLANDER',
         name:'Mens Slim Fit Shorts',
@@ -385,20 +143,8 @@ const bottom_wear_collection=[
         pattern:'Solid',
     },
     {
-        id:30,
-        image:Men66,
-        category:'Track Pants',
-        brand:'Puma',
-        name:'Mens Slim Fit Track Pants',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34','36'],
-        color:['Black'],
-        pattern:'Solid',
-    },
-    {
         id:31,
-        image:Men67,
+        image:[Men67,Men67_1,Men67_2],
         category:'Track Pants',
         brand:'HIGHLANDER',
         name:'Mens Slim Fit Track Pants',
@@ -409,44 +155,8 @@ const bottom_wear_collection=[
         pattern:'Solid',
     },
     {
-        id:32,
-        image:Men68,
-        category:'Track Pants',
-        brand:'Puma',
-        name:'Mens Slim Fit Track Pants',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34','36','38'],
-        color:['Teal'],
-        pattern:'Solid',
-    },
-    {
-        id:33,
-        image:Men69,
-        category:'Track Pants',
-        brand:'ADIDAS',
-        name:'Mens Slim Fit Track Pants',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34','36','38','40'],
-        color:['Black'],
-        pattern:'Solid',
-    },
-    {
-        id:34,
-        image:Men70,
-        category:'Track Pants',
-        brand:'ADIDAS',
-        name:'Mens Slim Fit Track Pants',
-        price:'1000',
-        previous_price:'1200',
-        size:['28','30','32','34'],
-        color:['Blue'],
-        pattern:'Solid',
-    },
-    {
         id:35,
-        image:Men71,
+        image:[Men71,Men71_1,Men71_2],
         category:'Track Pants',
         brand:'Puma',
         name:'Mens Slim Fit Track Pants',
@@ -454,18 +164,6 @@ const bottom_wear_collection=[
         previous_price:'1200',
         size:['32','34','36','38','40'],
         color:['Black'],
-        pattern:'Solid',
-    },
-    {
-        id:36,
-        image:Men72,
-        category:'Track Pants',
-        brand:'HIGHLANDER',
-        name:'Mens Slim Fit Track Pants',
-        price:'1000',
-        previous_price:'1200',
-        size:['30','32','34','36','38','40'],
-        color:['Cream'],
         pattern:'Solid',
     },
 ]

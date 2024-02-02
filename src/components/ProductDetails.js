@@ -53,7 +53,7 @@ function ProductDetails() {
     <div>
       <h3>{item.brand}</h3>
       <h5>{item.name}</h5>
-      <img src={item.image} alt="" />
+      <img src={item.image[0]} alt="" />
       <h3>{category}</h3>
     </div>
   );

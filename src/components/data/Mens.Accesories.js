@@ -1,21 +1,15 @@
 import Men106 from '../../assets/Mens/Men106.png';
 import Men107 from '../../assets/Mens/Men107.png';
 import Men108 from '../../assets/Mens/Men108.png';
-import Men109 from '../../assets/Mens/Men109.png';
-import Men110 from '../../assets/Mens/Men110.png';
 import Men111 from '../../assets/Mens/Men111.png';
 import Men112 from '../../assets/Mens/Men112.png';
 import Men113 from '../../assets/Mens/Men113.png';
 import Men114 from '../../assets/Mens/Men114.png';
-import Men115 from '../../assets/Mens/Men115.png';
-import Men116 from '../../assets/Mens/Men116.png';
-import Men117 from '../../assets/Mens/Men117.png';
-import Men118 from '../../assets/Mens/Men118.png';
 
 const men_accessories=[
     {
         id:1,
-        image:Men106,
+        image:[Men106],
         category:'Wallets',
         brand:'PUMA',
         name:'Textured Leather Wallet',
@@ -27,7 +21,7 @@ const men_accessories=[
     },
     {
         id:2,
-        image:Men107,
+        image:[Men107],
         category:'Wallets',
         brand:'ONES',
         name:'Textured Leather Wallet',
@@ -39,7 +33,7 @@ const men_accessories=[
     },
     {
         id:3,
-        image:Men108,
+        image:[Men108],
         category:'Belts',
         brand:'Roadster',
         name:'Textured Leather Belt',
@@ -48,34 +42,10 @@ const men_accessories=[
         size:['Onesize','36','38','40','42','44'],
         color:['Black'],
         pattern:'Textured',
-    },
-    {
-        id:4,
-        image:Men109,
-        category:'Belts',
-        brand:'Park Avenue',
-        name:'Textured Leather Belt',
-        price:'530',
-        previous_price:'650',
-        size:['Onesize','36','38','40','42','44'],
-        color:['Black'],
-        pattern:'Textured',
-    },
-    {
-        id:5,
-        image:Men110,
-        category:'Belts',
-        brand:'Roadster',
-        name:'Textured Leather Belt',
-        price:'530',
-        previous_price:'650',
-        size:['Onesize','36','38','40','42','44'],
-        color:['Black','Brown'],
-        pattern:'Striped',
     },
     {
         id:6,
-        image:Men111,
+        image:[Men111],
         category:'Belts',
         brand:'Park Avenue',
         name:'Textured Leather Belt',
@@ -87,7 +57,7 @@ const men_accessories=[
     },
     {
         id:7,
-        image:Men112,
+        image:[Men112],
         category:'Perfumes',
         brand:'ENVY',
         name:'Mens Natural Body Spray',
@@ -99,7 +69,7 @@ const men_accessories=[
     },
     {
         id:8,
-        image:Men113,
+        image:[Men113],
         category:'Perfumes',
         brand:'ENVY',
         name:'Mens Natural Body Spray',
@@ -111,7 +81,7 @@ const men_accessories=[
     },
     {
         id:9,
-        image:Men114,
+        image:[Men114],
         category:'Perfumes',
         brand:'AQUA',
         name:'Mens Natural Body Spray',
@@ -119,54 +89,6 @@ const men_accessories=[
         previous_price:'650',
         size:['Onesize','36','38','40','42','44'],
         color:['Blue'],
-        pattern:'Solid',
-    },
-    {
-        id:10,
-        image:Men115,
-        category:'Rings & Wristwear',
-        brand:'Roadster',
-        name:'Mens Stainless Steel Ring',
-        price:'530',
-        previous_price:'650',
-        size:['Onesize','36','38','40','42','44'],
-        color:['Black'],
-        pattern:'Solid',
-    },
-    {
-        id:11,
-        image:Men116,
-        category:'Rings & Wristwear',
-        brand:'Roadster',
-        name:'Mens Stainless Steel Bracelet',
-        price:'530',
-        previous_price:'650',
-        size:['Onesize','36','38','40','42','44'],
-        color:['Black'],
-        pattern:'Solid',
-    },
-    {
-        id:12,
-        image:Men117,
-        category:'Rings & Wristwear',
-        brand:'Roadster',
-        name:'Mens Stainless Steel Bracelet',
-        price:'530',
-        previous_price:'650',
-        size:['Onesize','36','38','40','42','44'],
-        color:['Black'],
-        pattern:'Solid',
-    },
-    {
-        id:13,
-        image:Men118,
-        category:'Rings & Wristwear',
-        brand:'Roadster',
-        name:'Mens Stainless Steel Ring',
-        price:'530',
-        previous_price:'650',
-        size:['Onesize','36','38','40','42','44'],
-        color:['Black'],
         pattern:'Solid',
     },
 ]

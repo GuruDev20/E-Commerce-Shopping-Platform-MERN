@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import '../styles/Others.css';
 import Women10 from '../assets/Womens/Women10.png'
 import Boys11 from '../assets/kids/Boys11.png'
-import Men13 from '../assets/Mens/Men13.png'
+import Men7 from '../assets/Mens/Men7.png'
 import Girls3 from '../assets/kids/Girls3.png'
 import Men3 from '../assets/new/Men3.png'
 import { Link } from 'react-router-dom';
 
 function Others() {
     const categories = [
-        { id: 1, name: 'Mens', img: Men13, category: 'men-top-wear' },
+        { id: 1, name: 'Mens', img: Men7, category: 'men-top-wear' },
         { id: 2, name: 'Womens', img: Women10, category: 'women-top-wear' },
         { id: 3, name: 'Boys', img: Boys11, category: 'kids-boys' },
         { id: 4, name: 'Girls', img: Girls3, category: 'kids-girls' },

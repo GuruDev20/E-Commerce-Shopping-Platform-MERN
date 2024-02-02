@@ -1,25 +1,11 @@
-import Women61 from '../../assets/Womens/Women61.png';
 import Women62 from '../../assets/Womens/Women62.png';
 import Women63 from '../../assets/Womens/Women63.png';
 import Women64 from '../../assets/Womens/Women64.png';
 import Women65 from '../../assets/Womens/Women65.png';
-import Women66 from '../../assets/Womens/Women66.png';
 const women_accessories=[
     {
-        id:1,
-        image:Women61,
-        category:'Handbags',
-        brand:'H & M',
-        name:'Solid Shoulder Bag',
-        price:'1300',
-        previous_price:'1499',
-        size:['Onesize'],
-        color:['Grey'],
-        pattern:'Woven Design',
-    },
-    {
         id:2,
-        image:Women62,
+        image:[Women62],
         category:'Handbags',
         brand:'Mast & Harbour',
         name:'Solid Shoulder Bag',
@@ -31,7 +17,7 @@ const women_accessories=[
     },
     {
         id:3,
-        image:Women63,
+        image:[Women63],
         category:'Handbags',
         brand:'Mast & Harbour',
         name:'Solid Shoulder Bag',
@@ -43,7 +29,7 @@ const women_accessories=[
     },
     {
         id:4,
-        image:Women64,
+        image:[Women64],
         category:'Perfumes',
         brand:'Dressberry',
         name:'Womens Perfume',
@@ -55,7 +41,7 @@ const women_accessories=[
     },
     {
         id:5,
-        image:Women65,
+        image:[Women65],
         category:'Perfumes',
         brand:'Dressberry',
         name:'Womens Perfume',
@@ -63,18 +49,6 @@ const women_accessories=[
         previous_price:'1499',
         size:['Onesize'],
         color:['Black'],
-        pattern:'Handmade',
-    },
-    {
-        id:6,
-        image:Women66,
-        category:'Perfumes',
-        brand:'RENEE',
-        name:'Womens Perfume',
-        price:'1300',
-        previous_price:'1499',
-        size:['Onesize'],
-        color:['Purple'],
         pattern:'Handmade',
     },
 ];

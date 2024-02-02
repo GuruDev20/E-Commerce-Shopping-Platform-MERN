@@ -1,27 +1,12 @@
-import Men99 from '../../assets/Mens/Men99.png';
 import Men100 from '../../assets/Mens/Men100.png';
-import Men101 from '../../assets/Mens/Men101.png';
-import Men102 from '../../assets/Mens/Men102.png';
 import Men103 from '../../assets/Mens/Men103.png';
 import Men104 from '../../assets/Mens/Men104.png';
 import Men105 from '../../assets/Mens/Men105.png';
 
 const mens_gadgets=[
     {
-        id:1,
-        image:Men99,
-        category:'Smart Wearables',
-        brand:'Fastrack',
-        name:'Bluetooth Smartwatch',
-        price:'1399',
-        previous_price:'1599',
-        size:['Onesize','20mm','22mm','24mm'],
-        color:['Black'],
-        pattern:'Steel',
-    },
-    {
         id:2,
-        image:Men100,
+        image:[Men100],
         category:'Smart Wearables',
         brand:'Fastrack',
         name:'Bluetooth Smartwatch',
@@ -29,35 +14,11 @@ const mens_gadgets=[
         previous_price:'1599',
         size:['Onesize','20mm','22mm','24mm'],
         color:['Black'],
-        pattern:'Rubber',
-    },
-    {
-        id:3,
-        image:Men101,
-        category:'Smart Wearables',
-        brand:'Noise',
-        name:'Bluetooth Smartwatch',
-        price:'1399',
-        previous_price:'1599',
-        size:['Onesize','20mm','22mm','24mm'],
-        color:['Blue'],
-        pattern:'Rubber',
-    },
-    {
-        id:4,
-        image:Men102,
-        category:'Smart Wearables',
-        brand:'Fastrack',
-        name:'Bluetooth Smartwatch',
-        price:'1399',
-        previous_price:'1599',
-        size:['Onesize','20mm','22mm','24mm'],
-        color:['Blue'],
         pattern:'Rubber',
     },
     {
         id:5,
-        image:Men103,
+        image:[Men103],
         category:'Smart Wearables',
         brand:'Noise',
         name:'Bluetooth Smartwatch',
@@ -69,7 +30,7 @@ const mens_gadgets=[
     },
     {
         id:6,
-        image:Men104,
+        image:[Men104],
         category:'Fitness gadgets',
         brand:'Fastrack',
         name:'Bluetooth Smartwatch',
@@ -81,7 +42,7 @@ const mens_gadgets=[
     },
     {
         id:7,
-        image:Men105,
+        image:[Men105],
         category:'Fitness gadgets',
         brand:'Noise',
         name:'Bluetooth Smartwatch',

@@ -1,43 +1,68 @@
 import Men1 from '../../assets/Mens/Men1.png';
+import Men1_1 from '../../assets/Mens/Men1.1.png';
+import Men1_2 from '../../assets/Mens/Men1.2.png';
 import Men2 from '../../assets/Mens/Men2.png';
+import Men2_1 from '../../assets/Mens/Men2.1.png';
+import Men2_2 from '../../assets/Mens/Men2.2.png';
 import Men3 from '../../assets/Mens/Men3.png';
+import Men3_1 from '../../assets/Mens/Men3.1.png';
+import Men3_2 from '../../assets/Mens/Men3.2.png';
 import Men4 from '../../assets/Mens/Men4.png';
-import Men5 from '../../assets/Mens/Men5.png';
+import Men4_1 from '../../assets/Mens/Men4.1.png';
+import Men4_2 from '../../assets/Mens/Men4.2.png';
 import Men6 from '../../assets/Mens/Men6.png';
-import Men7 from '../../assets/Mens/Men7.png';
+import Men6_1 from '../../assets/Mens/Men6.1.png';
+import Men6_2 from '../../assets/Mens/Men6.2.png';
+import Men6_3 from '../../assets/Mens/Men6.3.png';
 import Men8 from '../../assets/Mens/Men8.png';
-import Men9 from '../../assets/Mens/Men9.png';
-import Men10 from '../../assets/Mens/Men10.png';
-import Men11 from '../../assets/Mens/Men11.png';
-import Men12 from '../../assets/Mens/Men12.png';
-import Men13 from '../../assets/Mens/Men13.png';
-import Men14 from '../../assets/Mens/Men14.png';
-import Men15 from '../../assets/Mens/Men15.png';
-import Men16 from '../../assets/Mens/Men16.png';
+import Men8_1 from '../../assets/Mens/Men8.1.png';
+import Men8_2 from '../../assets/Mens/Men8.2.png';
+import Men8_3 from '../../assets/Mens/Men8.3.png';
 import Men17 from '../../assets/Mens/Men17.png';
+import Men17_1 from '../../assets/Mens/Men17.1.png';
+import Men17_2 from '../../assets/Mens/Men17.2.png';
 import Men18 from '../../assets/Mens/Men18.png';
+import Men18_1 from '../../assets/Mens/Men18.1.png';
+import Men18_2 from '../../assets/Mens/Men18.2.png';
 import Men19 from '../../assets/Mens/Men19.png';
-import Men20 from '../../assets/Mens/Men20.png';
+import Men19_1 from '../../assets/Mens/Men19.1.png';
+import Men19_2 from '../../assets/Mens/Men19.2.png';
 import Men21 from '../../assets/Mens/Men21.png';
-import Men22 from '../../assets/Mens/Men22.png';
+import Men21_1 from '../../assets/Mens/Men21.1.png';
+import Men21_2 from '../../assets/Mens/Men21.2.png';
 import Men23 from '../../assets/Mens/Men23.png';
-import Men24 from '../../assets/Mens/Men24.png';
+import Men23_1 from '../../assets/Mens/Men23.1.png';
+import Men23_2 from '../../assets/Mens/Men23.2.png';
+import Men23_3 from '../../assets/Mens/Men23.3.png';
 import Men25 from '../../assets/Mens/Men25.png';
-import Men26 from '../../assets/Mens/Men26.png';
+import Men25_1 from '../../assets/Mens/Men25.1.png';
+import Men25_2 from '../../assets/Mens/Men25.2.png';
+import Men25_3 from '../../assets/Mens/Men25.3.png';
 import Men27 from '../../assets/Mens/Men27.png';
+import Men27_1 from '../../assets/Mens/Men27.1.png';
+import Men27_2 from '../../assets/Mens/men27.2.png';
+import Men27_3 from '../../assets/Mens/Men27.3.png';
 import Men28 from '../../assets/Mens/Men28.png';
+import Men28_1 from '../../assets/Mens/Men28.1.png';
+import Men28_2 from '../../assets/Mens/Men28.2.png';
+import Men28_3 from '../../assets/Mens/Men28.3.png';
 import Men29 from '../../assets/Mens/Men29.png';
-import Men30 from '../../assets/Mens/Men30.png';
-import Men31 from '../../assets/Mens/Men31.png';
+import Men29_1 from '../../assets/Mens/Men29.1.png';
+import Men29_2 from '../../assets/Mens/Men29.2.png';
 import Men32 from '../../assets/Mens/Men32.png';
+import Men32_1 from '../../assets/Mens/Men32.1.png';
+import Men32_2 from '../../assets/Mens/Men32.2.png';
+import Men32_3 from '../../assets/Mens/Men32.3.png';
 import Men33 from '../../assets/Mens/Men33.png';
-import Men34 from '../../assets/Mens/Men34.png';
-import Men35 from '../../assets/Mens/Men35.png';
+import Men33_1 from '../../assets/Mens/Men33.1.png';
+import Men33_2 from '../../assets/Mens/Men33.2.png';
 import Men36 from '../../assets/Mens/Men36.png';
+import Men36_1 from '../../assets/Mens/Men36.1.png';
+import Men36_2 from '../../assets/Mens/Men36.2.png';
 const top_wear_collection=[
   {
     id:1,
-    image:Men1,
+    image:[Men1,Men1_1,Men1_2],
     category:'Casual Shirts',
     brand:'WROGN',
     name:'Mens slim fit & casual shirt',
@@ -49,7 +74,7 @@ const top_wear_collection=[
   },
   {
     id:2,
-    image:Men2,
+    image:[Men2,Men2_1,Men2_2],
     category:'Casual Shirts',
     brand:'The Indian Garage Co',
     name:'Mens slim fit & casual shirt',
@@ -61,7 +86,7 @@ const top_wear_collection=[
   },
   {
     id:3,
-    image:Men3,
+    image:[Men3,Men3_1,Men3_2],
     category:'Casual Shirts',
     brand:'HERE & NOW',
     name:'Mens slim fit & casual shirt',
@@ -73,7 +98,7 @@ const top_wear_collection=[
   },
   {
     id:4,
-    image:Men4,
+    image:[Men4,Men4_1,Men4_2],
     category:'Casual Shirts',
     brand:'HIGHLANDER',
     name:'Mens slim fit & casual shirt',
@@ -84,20 +109,8 @@ const top_wear_collection=[
     pattern:'Solid',
   },
   {
-    id:5,
-    image:Men5,
-    category:'Casual Shirts',
-    brand:'RoadSter',
-    name:'Mens slim fit & casual shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['White','Green','Teal'],
-    pattern:'Floral',
-  },
-  {
     id:6,
-    image:Men6,
+    image:[Men6,Men6_1,Men6_2,Men6_3],
     category:'Casual Shirts',
     brand:'The Indian Garage Co',
     name:'Mens slim fit & casual shirt',
@@ -108,20 +121,8 @@ const top_wear_collection=[
     pattern:'Floral',
   },
   {
-    id:7,
-    image:Men7,
-    category:'Casual Shirts',
-    brand:'RoadSter',
-    name:'Mens slim fit & casual shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['Black','Grey'],
-    pattern:'Printed',
-  },
-  {
     id:8,
-    image:Men8,
+    image:[Men8,Men8_1,Men8_2,Men8_3],
     category:'Casual Shirts',
     brand:'HERE & NOW',
     name:'Mens slim fit & casual shirt',
@@ -132,104 +133,8 @@ const top_wear_collection=[
     pattern:'Floral',
   },
   {
-    id:9,
-    image:Men9,
-    category:'Casual Shirts',
-    brand:'WROGN',
-    name:'Mens slim fit & casual shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S'],
-    color:['White','Blue'],
-    pattern:'Checked',
-  },
-  {
-    id:10,
-    image:Men10,
-    category:'Casual Shirts',
-    brand:'The Indian Garage Co',
-    name:'Mens slim fit & casual shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['White'],
-    pattern:'Solid',
-  },
-  {
-    id:11,
-    image:Men11,
-    category:'Casual Shirts',
-    brand:'The Indian Garage Co',
-    name:'Mens slim fit & casual shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['Red','Blue','Black'],
-    pattern:'Checked',
-  },
-  {
-    id:12,
-    image:Men12,
-    category:'Casual Shirts',
-    brand:'The Indian Garage Co',
-    name:'Mens slim fit & casual shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['Pink'],
-    pattern:'Solid',
-  },
-  {
-    id:13,
-    image:Men13,
-    category:'Casual Shirts',
-    brand:'The Indian Garage Co',
-    name:'Mens slim fit & casual shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['White','Blue'],
-    pattern:'Stripe',
-  },
-  {
-    id:14,
-    image:Men14,
-    category:'Casual Shirts',
-    brand:'The Indian Garage Co',
-    name:'Mens slim fit & casual shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['Blue'],
-    pattern:'Solid',
-  },
-  {
-    id:15,
-    image:Men15,
-    category:'Casual Shirts',
-    brand:'The Indian Garage Co',
-    name:'Mens slim fit & casual shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['White','Black'],
-    pattern:'Stripe',
-  },
-  {
-    id:16,
-    image:Men16,
-    category:'Casual Shirts',
-    brand:'The Indian Garage Co',
-    name:'Mens slim fit & casual shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['Blue'],
-    pattern:'Solid',
-  },
-  {
     id:17,
-    image:Men17,
+    image:[Men17,Men17_1,Men17_2],
     category:'T-Shirts',
     brand:'WROGN',
     name:'Mens slim fit T-shirt',
@@ -241,7 +146,7 @@ const top_wear_collection=[
   },
   {
     id:18,
-    image:Men18,
+    image:[Men18,Men18_1,Men18_2],
     category:'T-Shirts',
     brand:'The Indian Garage Co',
     name:'Mens slim fit T-shirt',
@@ -253,7 +158,7 @@ const top_wear_collection=[
   },
   {
     id:19,
-    image:Men19,
+    image:[Men19,Men19_1,Men19_2],
     category:'T-Shirts',
     brand:'HERE & NOW',
     name:'Mens slim fit T-shirt',
@@ -264,20 +169,8 @@ const top_wear_collection=[
     pattern:'Floral',
   },
   {
-    id:20,
-    image:Men20,
-    category:'T-Shirts',
-    brand:'HIGHLANDER',
-    name:'Mens slim fit T-shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['Pink'],
-    pattern:'Solid',
-  },
-  {
     id:21,
-    image:Men21,
+    image:[Men21,Men21_1,Men21_2],
     category:'T-Shirts',
     brand:'RoadSter',
     name:'Mens slim fit T-shirt',
@@ -288,20 +181,8 @@ const top_wear_collection=[
     pattern:'Stripe',
   },
   {
-    id:22,
-    image:Men22,
-    category:'T-Shirts',
-    brand:'The Indian Garage Co',
-      name:'Mens slim fit T-shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['White','Red','Blue'],
-    pattern:'Stripe',
-  },
-  {
     id:23,
-    image:Men23,
+    image:[Men23,Men23_1,Men23_2,Men23_3],
     category:'Formal Shirts',
     brand:'RoadSter',
     name:'Mens Formal shirt',
@@ -312,20 +193,8 @@ const top_wear_collection=[
     pattern:'Solid',
   },
   {
-    id:24,
-    image:Men24,
-    category:'Formal Shirts',
-    brand:'HERE & NOW',
-    name:'Mens Formal shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['Blue'],
-    pattern:'Solid',
-  },
-  {
     id:25,
-    image:Men25,
+    image:[Men25,Men25_1,Men25_2,Men25_3],
     category:'Formal Shirts',
     brand:'WROGN',
     name:'Mens Formal shirt',
@@ -336,20 +205,8 @@ const top_wear_collection=[
     pattern:'Solid',
   },
   {
-    id:26,
-    image:Men26,
-    category:'Formal Shirts',
-    brand:'The Indian Garage Co',
-    name:'Mens Formal shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['Grey'],
-    pattern:'Solid',
-  },
-  {
     id:27,
-    image:Men27,
+    image:[Men27,Men27_1,Men27_2,Men27_3],
     category:'Blazers',
     brand:'The Indian Garage Co',
     name:'Mens Occasional Suit',
@@ -361,7 +218,7 @@ const top_wear_collection=[
   },
   {
     id:28,
-    image:Men28,
+    image:[Men28,Men28_1,Men28_2,Men28_3],
     category:'Blazers',
     brand:'The Indian Garage Co',
     name:'Mens Occasional Suit',
@@ -373,7 +230,7 @@ const top_wear_collection=[
   },
   {
     id:29,
-    image:Men29,
+    image:[Men29,Men29_1,Men29_2],
     category:'Blazers',
     brand:'The Indian Garage Co',
     name:'Mens Occasional Suit',
@@ -384,32 +241,8 @@ const top_wear_collection=[
     pattern:'Solid',
   },
   {
-    id:30,
-    image:Men30,
-    category:'Blazers',
-    brand:'The Indian Garage Co',
-    name:'Mens Occasional Suit',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['Pink'],
-    pattern:'Solid',
-  },
-  {
-    id:31,
-    image:Men31,
-    category:'Blazers',
-    brand:'The Indian Garage Co',
-    name:'Mens Occasional Suit',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['Black'],
-    pattern:'Solid',
-  },
-  {
     id:32,
-    image:Men32,
+    image:[Men32,Men32_1,Men32_2,Men32_3],
     category:'Blazers',
     brand:'The Indian Garage Co',
     name:'Mens Occasional Suit',
@@ -421,7 +254,7 @@ const top_wear_collection=[
   },
   {
     id:33,
-    image:Men33,
+    image:[Men33,Men33_1,Men33_2],
     category:'Jackets',
     brand:'The Indian Garage Co',
     name:'Mens Occasional Suit',
@@ -432,32 +265,8 @@ const top_wear_collection=[
     pattern:'Solid',
   },
   {
-    id:34,
-    image:Men34,
-    category:'Jackets',
-    brand:'The Indian Garage Co',
-    name:'Mens Occasional Suit',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['Grey'],
-    pattern:'Solid',
-  },
-  {
-    id:35,
-    image:Men35,
-    category:'Jackets',
-    brand:'The Indian Garage Co',
-    name:'Mens Occasional Suit',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['White'],
-    pattern:'Solid',
-  },
-  {
     id:36,
-    image:Men36,
+    image:[Men36,Men36_1,Men36_2],
     category:'Jackets',
     brand:'The Indian Garage Co',
     name:'Mens Occasional Suit',

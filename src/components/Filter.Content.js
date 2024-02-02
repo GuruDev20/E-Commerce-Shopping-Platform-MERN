@@ -80,7 +80,7 @@ function FilterContent({ val,category }) {
         {visibleItemsData.map((item) => (
           <Link to={`/cloths/men-top-wear/details/${category}/${item.id}`} className='link-to-more' key={item.id}>
             <section className='card-list'>
-              <img src={item.image} alt='' className='card-img-result' />
+              <img src={item.image[0]} alt='' className='card-img-result' />
               <div className='card-details'>
                 <h3 className='card-title'>{item.brand}</h3>
                 <h5 className='card-title'>{item.name}</h5>

@@ -9,7 +9,7 @@ import Men1 from '../assets/Mens/Men1.png';
 import Men2 from '../assets/Mens/Men2.png';
 import Men3 from '../assets/Mens/Men3.png';
 import Men4 from '../assets/Mens/Men4.png';
-import Men5 from '../assets/Mens/Men5.png';
+import Men7 from '../assets/Mens/Men7.png';
 import Men6 from '../assets/Mens/Men6.png';
 function Men() {
     const sliderRef = useRef(null);
@@ -68,7 +68,7 @@ function Men() {
                         <img src={Men4} alt='menimage' className='card-img' />
                     </div>
                     <div className='cards'>
-                        <img src={Men5} alt='menimage' className='card-img' />
+                        <img src={Men7} alt='menimage' className='card-img' />
                     </div>
                     <div className='cards'>
                         <img src={Men6} alt='menimage' className='card-img' />
