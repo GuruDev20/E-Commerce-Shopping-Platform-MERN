@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useState} from "react";
 import Navbar from './Navbar'
 import Footer from './Footer'
+import '../styles/ProductDetails.css'
 import { useParams } from "react-router-dom";
 import { top_wear_collection } from './data/Men.Topwear';
 import { bottom_wear_collection } from './data/Men.Bottomwear';
@@ -15,9 +16,12 @@ import { women_accessories } from './data/Women.Accessories';
 import {kids_boys} from './data/Boys';
 import {kids_girls} from './data/Girls';
 import {kids_footwear} from './data/Footwear';
+import { FaShoppingCart } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
 function ProductDetails() {
   const { id } = useParams();
   const{category}=useParams();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const getCollection = () => {
     switch (category) {
       case 'Mens-Top-wear':
@@ -51,16 +55,77 @@ function ProductDetails() {
     }
   };
   const item = getCollection(category).find((item) => item.id ===Number(id));
+  const handleImageClick = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % item.image.length);
+  };
+
   return (
     <div>
-      <Navbar/>
-      <h3>{item.brand}</h3>
-      <h5>{item.name}</h5>
-      <img src={item.image[0]} alt="" />
-      <h3>{category}</h3>
+      <Navbar />
+      <div className="product">
+        <div className="product-left">
+          <div className="product-main">
+            <img src={item.image[currentImageIndex]} alt="" />
+          </div>
+          <div className="product-images">
+            {item.image.map((imageData, index) => (
+              <img
+                key={index}
+                src={imageData}
+                alt={`Product ${index + 1}`}
+                className={`product-image ${index === currentImageIndex ? 'yes' : ''}`}
+                onClick={() => handleImageClick(index)}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="product-right">
+          <div className="product-brand">{item.brand}</div>
+          <div className="product-name">{item.name}</div>
+          <div className="product-ratings">4.1K</div>
+          <div className="horizontal-divider"></div>
+          <div className="selected-product-price">
+            <div className="product-price">&#8377;{item.price}</div>
+            <div className="product-previous-price">&#8377;{item.previous_price}</div>
+          </div>
+          <div className="product-color">
+            {item.color.map((colordata,index)=>(
+              <div key={index} className="list-color">
+                <div className="color-product" style={{ background: colordata.toLowerCase() }}></div>
+                <div className="color-product-name">{colordata}</div>
+              </div>
+            ))}
+          </div>
+          <div className="product-size">
+            {item.size.map((sizedata,index)=>(
+              <div className="sizes" key={index}>{sizedata}</div>
+            ))}
+          </div>
+          <div className="product-buttons">
+            <div className="two-button-same-line">
+              <button className="addToBag"><FaShoppingCart size={25} className="button-icon "/>Add to bag</button>
+              <button className="whislist-product"><CiHeart size={25} className="button-icon "/>WishList</button>
+            </div>
+            <div className="buy-button">
+              <button className="buy">Buy Now</button>
+            </div>
+          </div>
+          <div className="horizontal-divider"></div>
+          <div className="more-product-details">
+            <div className="product-name">{item.name}</div>
+            <div className="product-pattern">Pattern: {item.pattern}</div>
+          </div>
+          <div className="product-description">
+            A men's slim-fit shirt is a tailored and form-fitting garment designed to complement the body's natural contours, providing a sleek and modern appearance. Characterized by a narrower cut through the chest, waist, and sleeves, the slim-fit shirt offers a more tailored silhouette compared to regular or traditional fit shirts.
+
+            These shirts are designed to enhance a man's physique and create a polished, contemporary look. They typically feature a narrower shoulder width, higher armholes, and a tapered waistline, contributing to a more streamlined and stylish appearance. The sleeves of a men's slim-fit shirt are also narrower, providing a well-proportioned fit.
+
+            Men's slim-fit shirts are versatile and can be worn for various occasions, ranging from formal settings when paired with dress pants or a suit, to more casual environments when combined with jeans or chinos. The modern and tailored design makes them a popular choice for those who prefer a more fitted and fashionable look in their clothing. Available in a variety of fabrics, colors, and patterns, men's slim-fit shirts offer a contemporary style while maintaining a classic and timeless appeal.
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   );
 }
-
-export default ProductDetails;
+export default ProductDetails

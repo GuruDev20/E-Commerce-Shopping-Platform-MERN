@@ -1,0 +1,208 @@
+.product {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5em;
+}
+
+.product-left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4em;
+}
+
+.product-main {
+    margin-left: 5em;
+    margin-top: 20px;
+    padding-left: 20px;
+    width: 20rem;
+    height: 40em;
+}
+
+.product-images {
+    width: 40em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 4em;
+}
+
+.product-image {
+    height: 13em;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.product-image.yes {
+    opacity: 0.5;
+    border: none;
+}
+
+.product-i {
+    height: 13em;
+    cursor: pointer;
+}
+
+.product-right {
+    margin-left: 13em;
+    padding: 1em;
+    padding-top: 2em;
+    width: 50em;
+}
+
+.product-brand {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.product-name {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.selected-product-price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.product-ratings {
+    color: #ffd700;
+    margin-bottom: 0.5em;
+}
+
+.product-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.product-previous-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    padding-left: 7px;
+}
+
+.product-color {
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.list-color {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.color-product {
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+    border: 3px solid white;
+    outline: 1px solid black;
+}
+
+.color-product-name {
+    font-size: 20px;
+}
+
+.product-size {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.sizes {
+    font-size: 20px;
+    margin-right: 15px;
+    border-radius: 40%;
+    border: 2px solid #ff758f;
+    padding: 20px;
+    margin-bottom: 1em;
+}
+
+.product-buttons {
+    margin-bottom: 2em;
+}
+
+.more-product-details {
+    margin-top: 1em;
+}
+
+.horizontal-divider {
+    border-bottom: 1px solid #ddd;
+    margin: 1em 0;
+}
+.addToBag{
+    width: 90%;
+    background-color: #ff758f;
+    color: #fff;
+    padding: 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+.whislist-product{
+    width: 90%;
+    color: black;
+    padding: 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+.buy {
+    width: 99%;
+    color:black;
+    padding: 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.addToBag:hover,
+.whislist-product:hover,
+.buy:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+.button-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.two-button-same-line {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.buy-button {
+    margin-top: 1em;
+}
+.product-pattern{
+    font-size: 20px;
+    margin-bottom: 2em;
+}
+.product-description{
+    font-size: 18px;
+}
