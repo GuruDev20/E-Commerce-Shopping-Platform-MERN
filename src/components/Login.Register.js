@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import '../styles/LoginRegister.css';
+import { RiUserFill } from "react-icons/ri";
+import { IoMdLock } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
+import { MdLocalPhone } from "react-icons/md";
 function LoginRegister() {
   const [isLoginForm, setIsLoginForm] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
   const [mobile, setMobile] = useState('');
+  const [role, setRole] = useState('');
   const [emailValidation, setEmailValidation] = useState({ isValid: null, message: '' });
   const [passwordValidation, setPasswordValidation] = useState({ isValid: null, message: '' });
   const [usernameValidation, setUsernameValidation] = useState({ isValid: null, message: '' });
   const [mobileValidation, setMobileValidation] = useState({ isValid: null, message: '' });
+  const [roleValidation, setRoleValidation] = useState({ isValid: null, message: '' });
 
   const handleToggleForm = () => {
     setIsLoginForm(!isLoginForm);
@@ -17,10 +23,12 @@ function LoginRegister() {
     setPasswordValidation({ isValid: null, message: '' });
     setUsernameValidation({ isValid: null, message: '' });
     setMobileValidation({ isValid: null, message: '' });
+    setRoleValidation({ isValid: null, message: '' });
     setEmail('');
     setPassword('');
     setUsername('');
     setMobile('');
+    setRole('');
   };
   
   const validateEmail = (value) => {
@@ -46,18 +54,41 @@ function LoginRegister() {
     const message = isValid ? 'Correct' : 'Invalid mobile number';
     setMobileValidation({ isValid, message });
   };
+  const validateRole = (value) => {
+    const isValid = value.trim() !== '';
+    const message = isValid ? 'Correct' : 'Please select a role';
+    setRoleValidation({ isValid, message });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setEmail('');
-    setEmailValidation({ isValid: null, message: '' });
-    setPassword('');
-    setPasswordValidation({ isValid: null, message: '' });
-    setUsername('');
-    setUsernameValidation({ isValid: null, message: '' });
-    setMobile('');
-    setMobileValidation({ isValid: null, message: '' });
-    console.log(email+" "+password+" "+username+" "+mobile);
+    if(isLoginForm){
+      setEmail('');
+      setEmailValidation({ isValid: null, message: '' });
+      setPassword('');
+      setPasswordValidation({ isValid: null, message: '' });
+      console.log(email + " " + password);
+    }
+    else{
+      if (role.trim() === '') {
+        setRoleValidation({ isValid: false, message: 'Please select a role' });
+        return;
+      }
+      setEmail('');
+      setEmailValidation({ isValid: null, message: '' });
+      setPassword('');
+      setPasswordValidation({ isValid: null, message: '' });
+      setUsername('');
+      setUsernameValidation({ isValid: null, message: '' });
+      setMobile('');
+      setMobileValidation({ isValid: null, message: '' });
+      setRole('');
+      setRoleValidation({ isValid: null, message: '' });
+      console.log(email + " " + password + " " + username + " " + mobile + " " + role);
+    }
+
   };
+
   
   return (
     <div>
@@ -72,9 +103,9 @@ function LoginRegister() {
             <div className='login-inputs'>
               <form onSubmit={handleSubmit}>
                 <h2 className='login-header'>Sign In</h2>
-                <input type='text' placeholder='Email' className='login-email' value={email} onChange={(e) => {setEmail(e.target.value);validateEmail(e.target.value);}}/>
+                <input type='text' placeholder='Email' className='login-email' value={email} onChange={(e) => {setEmail(e.target.value);validateEmail(e.target.value);}}/><MdEmail size={22} className='login-register-icon1'/>
                 <span className={`validation-message ${emailValidation.isValid === true ? 'valid' : emailValidation.isValid === false ? 'invalid' : ''}`}>{emailValidation.message}</span>
-                <input type='password' placeholder='Password' className='login-password' value={password} onChange={(e) => {setPassword(e.target.value); validatePassword(e.target.value);}} />
+                <input type='password' placeholder='Password' className='login-password' value={password} onChange={(e) => {setPassword(e.target.value); validatePassword(e.target.value);}} /><IoMdLock size={22} className='login-register-icon2'/>
                 <span className={`validation-message ${passwordValidation.isValid === true ? 'valid' : passwordValidation.isValid === false ? 'invalid' : ''}`}>{passwordValidation.message}</span>
                 <input type='submit' className='login-submit' value='Login'/>
               </form>
@@ -92,14 +123,20 @@ function LoginRegister() {
           <div className='register-inputs'>
             <form onSubmit={handleSubmit}>
               <h2 className='register-header'>Sign Up</h2>
-              <input type='text' placeholder='Username' className='register-username' value={username} onChange={(e) => { setUsername(e.target.value);validateUsername(e.target.value);}}/>
+              <input type='text' placeholder='Username' className='register-username' value={username} onChange={(e) => { setUsername(e.target.value);validateUsername(e.target.value);}}/><RiUserFill size={22} className='login-register-icon3'/>
               <span className={`validation-message ${usernameValidation.isValid === true ? 'valid' : usernameValidation.isValid === false ? 'invalid' : ''}`}>{usernameValidation.message}</span>
-              <input type='text' placeholder='Email' className='register-email' value={email} onChange={(e) => {setEmail(e.target.value);validateEmail(e.target.value);}}/>
+              <input type='text' placeholder='Email' className='register-email' value={email} onChange={(e) => {setEmail(e.target.value);validateEmail(e.target.value);}}/><MdEmail size={22} className='login-register-icon4'/>
               <span className={`validation-message ${emailValidation.isValid === true ? 'valid' : emailValidation.isValid === false ? 'invalid' : ''}`}>{emailValidation.message}</span>
-              <input type='password' placeholder='Password' className='register-password' value={password}onChange={(e) => {setPassword(e.target.value);validatePassword(e.target.value);}}/>
+              <input type='password' placeholder='Password' className='register-password' value={password}onChange={(e) => {setPassword(e.target.value);validatePassword(e.target.value);}}/><IoMdLock size={22} className='login-register-icon5'/>
               <span className={`validation-message ${passwordValidation.isValid === true ? 'valid' : passwordValidation.isValid === false ? 'invalid' : ''}`}>{passwordValidation.message}</span>
-              <input type='tel'placeholder='Mobile'className='register-mobile'value={mobile}onChange={(e) => {setMobile(e.target.value);validateMobile(e.target.value);}}/>
+              <input type='tel'placeholder='Mobile'className='register-mobile'value={mobile}onChange={(e) => {setMobile(e.target.value);validateMobile(e.target.value);}}/><MdLocalPhone size={22} className='login-register-icon6'/>
               <span className={`validation-message ${mobileValidation.isValid === true ? 'valid' : mobileValidation.isValid === false ? 'invalid' : ''}`}>{mobileValidation.message}</span>
+              <select name="role" id="role" className='register-role' value={role} onChange={(e) => { setRole(e.target.value); validateRole(e.target.value); }}>
+                <option value="">Select Role</option>
+                <option value="Dealer">Dealer</option>
+                <option value="User">User</option>
+              </select>
+              <span className={`validation-message ${roleValidation.isValid === true ? 'valid' : roleValidation.isValid === false ? 'invalid' : ''}`}>{roleValidation.message}</span>
               <input type='submit' className='register-submit' value='Register'/>
             </form>
           </div>

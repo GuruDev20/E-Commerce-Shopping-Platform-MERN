@@ -18,14 +18,14 @@ body {
 
 .register-container {
   position: absolute;
-  top: 15%;
+  top: 12%;
   left: 38%;
   width: 25em;
   background-color: whitesmoke;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  height: 65vh;
+  height: 70vh;
 }
 
 .login-inputs,
@@ -48,7 +48,9 @@ body {
 .register-mobile {
   width: 80%;
   margin-bottom: 10px;
-  padding: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   outline: none;
   margin-top: 15px;
   font-size: 16px;
@@ -65,17 +67,51 @@ body {
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  margin-top: 25px;
+  margin-top: 45px;
   margin-bottom: 28px;
   font-size: 16px;
   width: 8em;
 }
-
 .login-submit:hover,
 .register-submit:hover {
   background-color: #00509d;
 }
-
+.login-register-icon1 {
+  color: grey;
+  position: absolute;
+  right: 70px;
+  top: 140px;
+}
+.login-register-icon2 {
+  color: grey;
+  position: absolute;
+  right: 70px;
+  top: 220px;
+}
+.login-register-icon3 {
+  color: grey;
+  position: absolute;
+  right: 70px;
+  top: 140px;
+}
+.login-register-icon4 {
+  color: grey;
+  position: absolute;
+  right: 70px;
+  top: 220px;
+}
+.login-register-icon5 {
+  color: grey;
+  position: absolute;
+  right: 70px;
+  top: 300px;
+}
+.login-register-icon6 {
+  color: grey;
+  position: absolute;
+  right: 70px;
+  top: 380px;
+}
 .login-optionals,
 .register-optionals {
   text-align: center;
@@ -141,7 +177,19 @@ body {
 .validation-message.invalid {
   color: red;
 }
-
+.register-role {
+  width: 87%;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: none;
+  margin-top: 15px;
+  font-size: 16px;
+  background-color: whitesmoke;
+  border: none;
+  border-bottom: 2px solid #03045e;
+}
 @media (max-width: 768px) {
 
   .login-container,

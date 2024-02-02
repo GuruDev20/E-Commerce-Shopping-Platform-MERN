@@ -54,12 +54,17 @@ function FilterContent({ val,category }) {
   };
 
   const filteredItems = getCollection().filter((item) => {
+    const priceRange = val.price.length > 0 ? val.price[0].split('-').map(Number) : null;
+    const isPriceInRange = priceRange
+      ? item.price >= priceRange[0] && item.price <= priceRange[1]
+      : true;
+
     return (
       (val.category.length === 0 || val.category.includes(item.category)) &&
       (val.size.length === 0 || val.size.some((size) => item.size.includes(size))) &&
       (val.color.length === 0 || val.color.some((color) => item.color.includes(color))) &&
       (val.pattern.length === 0 || val.pattern.includes(item.pattern)) &&
-      (val.price.length === 0 || (item.price >= val.price[0] && item.price <= val.price[1]))
+      isPriceInRange
     );
   });
 
@@ -73,7 +78,7 @@ function FilterContent({ val,category }) {
     <div>
       <section className='card-container'>
         {visibleItemsData.map((item) => (
-          <Link to={`/cloths/men-top-wear/details/${item.id}`} className='link-to-more' key={item.id}>
+          <Link to={`/cloths/men-top-wear/details/${category}/${item.id}`} className='link-to-more' key={item.id}>
             <section className='card-list'>
               <img src={item.image} alt='' className='card-img-result' />
               <div className='card-details'>
@@ -101,9 +106,9 @@ function FilterContent({ val,category }) {
       </section>
       {visibleItems < filteredItems.length && (
         <div className='explore-more-container'>
-        <button className='explore-more-results' onClick={handleExploreMore}>
-          Explore more
-        </button>
+          <button className='explore-more-results' onClick={handleExploreMore}>
+            Explore more
+          </button>
         </div>
       )}
     </div>

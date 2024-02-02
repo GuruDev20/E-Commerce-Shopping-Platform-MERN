@@ -56,7 +56,7 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          {true ? (
+          {false ? (
             <div className='profile'>
               <IoPersonCircleSharp size={40} onClick={toggleProfileDropdown} />
               {isProfileDropdownOpen && (

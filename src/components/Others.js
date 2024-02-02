@@ -47,13 +47,13 @@ function Others() {
                     >
                         <img src={category.img} alt={`otherimg${index}`} className='otherimg' />
                         {category.category === 'newarrivals' ? (
-                            <Link to={`/${category.category}`}>
+                            <Link to={`/${category.category}`} reloadDocument>
                                 <div className='overlay'>
                                     Shop Now
                                 </div>
                             </Link>
                         ) : (
-                            <Link to={`/cloths/${category.category}`}>
+                            <Link to={`/cloths/${category.category}`} reloadDocument>
                                 <div className='overlay'>
                                     Shop Now
                                 </div>

@@ -55,7 +55,7 @@ function App() {
       <Route path="/cloths/kids-footwear" element={<Dresses sort="Kids-Footwear"/>} />
       <Route path="/newarrivals" element={<Latest />} />
       <Route path="/loginregister" element={<LoginRegister/>} />
-      <Route path="/cloths/men-top-wear/details" element={<ProductDetails/>} />
+      <Route path="/cloths/men-top-wear/details/:category/:id" element={<ProductDetails/>} />
       <Route path="/cart" element={<Cart/>} />
       <Route path='/whislist' element={<WhistList/>} />
       <Route path='/myprofile' element={<Profile/>} />

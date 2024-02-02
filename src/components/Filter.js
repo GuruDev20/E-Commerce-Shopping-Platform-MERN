@@ -20,7 +20,21 @@ const categoriesData = {
   'Kids-Girls':['T-Shirts','Tops','Jeans','Sweatshirts'],
   'Kids-Footwear':['Sport Shoes', 'Casual Shoes'],
 };
-
+const pricesData={
+  'Mens-Top-wear': ['0-500','500-1000','1000-2000','2000-4000'],
+  'Mens-Bottom-wear': ['0-500','500-1000','1000-2000','2000-4000'],
+  'Mens-Footwear': ['0-500','500-1000','1000-2000','2000-4000'],
+  'Mens-Gadgets': ['0-500','500-1000','1000-2000','2000-4000'],
+  'Mens-Accessories': ['0-500','500-1000','1000-2000','2000-4000'],
+  'Womens-Top-wear':['0-500','500-1000','1000-2000','2000-4000'],
+  'Womens-Bottom-wear':['0-500','500-1000','1000-2000','2000-4000'],
+  'Womens-Footwear':['0-500','500-1000','1000-2000','2000-4000'],
+  'Womens-Gadgets':['0-500','500-1000','1000-2000','2000-4000'],
+  'Womens-Accessories':['0-500','500-1000','1000-2000','2000-4000'],
+  'Kids-Boys':['0-500','500-1000','1000-2000','2000-4000'],
+  'Kids-Girls':['0-500','500-1000','1000-2000','2000-4000'],
+  'Kids-Footwear':['0-500','500-1000','1000-2000','2000-4000'],
+};
 const sizesData = {
   'Mens-Top-wear': ['S', 'M', 'L', 'XL', 'XXL'],
   'Mens-Bottom-wear': ['28', '30', '32', '34', '36', '38', '40'],
@@ -79,7 +93,7 @@ function Filter(props) {
   const [selectedSize, setSelectedSize] = useState([]);
   const [selectedColor, setSelectedColor] = useState([]);
   const [selectedPattern, setSelectedPattern] = useState([]);
-  const [priceRange, setPriceRange] = useState({ min: 0, max: 50000 });
+  const [selectedPrice, setSelectedPrice] = useState([]);
   const [checkedItems, setCheckedItems] = useState({
     category: [],
     size: [],
@@ -88,26 +102,16 @@ function Filter(props) {
     price: [],
   });
 
-  const renderPriceRange = () => (
-    <div className='price-range-container'>
-      <span>&#8377;{priceRange.min}</span>
+  const renderPriceItem = (item) => (
+    <div className='price-item'>
+      {item}
       <input
-        type='range'
-        min={0}
-        max={50000}
-        value={priceRange.min}
-        onChange={(e) => setPriceRange({ ...priceRange, min: parseInt(e.target.value) })}
-        className='price-range'
+        type='checkbox'
+        value={item}
+        className='checkbox-right'
+        onChange={() => handleCheckboxChange(item, selectedPrice, setSelectedPrice, 'price')}
+        checked={checkedItems.price.includes(item)}
       />
-      <input
-        type='range'
-        min={0}
-        max={50000}
-        value={priceRange.max}
-        onChange={(e) => setPriceRange({ ...priceRange, max: parseInt(e.target.value) })}
-        className='price-range'
-      />
-      <span>&#8377;{priceRange.max}</span>
     </div>
   );
   const renderCategoryItem = (item) => (
@@ -162,29 +166,20 @@ function Filter(props) {
       />
     </div>
   );
-
-   const handleCheckboxChange = (item, selectedList, setSelectedList, filterType) => {
+  const handleCheckboxChange = (item, selectedList, setSelectedList, filterType) => {
     const updatedList = selectedList.includes(item)
       ? selectedList.filter((selectedItem) => selectedItem !== item)
       : [...selectedList, item];
     setSelectedList(updatedList);
-    if (filterType === 'price') {
-      setCheckedItems({ ...checkedItems, [filterType]: [priceRange.min, priceRange.max] });
-    } else {
-      const updatedCheckedItems = { ...checkedItems, [filterType]: updatedList };
-      setCheckedItems(updatedCheckedItems);
-    }
+    const updatedCheckedItems = { ...checkedItems, [filterType]: updatedList };
+    setCheckedItems(updatedCheckedItems);
   };
 
   const deleteSelectedItem = (item, selectedList, setSelectedList, filterType) => {
     const updatedList = selectedList.filter((selectedItem) => selectedItem !== item);
     setSelectedList(updatedList);
-    if (filterType === 'price') {
-      setCheckedItems({ ...checkedItems, [filterType]: [priceRange.min, priceRange.max] });
-    } else {
       const updatedCheckedItems = { ...checkedItems, [filterType]: updatedList };
       setCheckedItems(updatedCheckedItems);
-    }
 
     const checkbox = document.querySelector(`input[type="checkbox"][value="${item}"]`);
     if (checkbox) {
@@ -198,6 +193,9 @@ function Filter(props) {
           <div className='selected-list'>
             {selectedCategory.map((item) => (
               <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedCategory, setSelectedCategory,'category')}/></span>
+            ))}
+            {selectedPrice.map((item) => (
+              <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item, selectedPrice, setSelectedPrice, 'price')}/></span>
             ))}
             {selectedSize.map((item) => (
               <span key={item} className='selected'>{item} <IoClose  className='close' onClick={() => deleteSelectedItem(item,selectedSize, setSelectedSize,'size')}/></span>
@@ -215,13 +213,9 @@ function Filter(props) {
             </div>
             {showCategoryDropdown && <DropdownContent items={categoriesData[props.sort]} renderItem={renderCategoryItem} />}
             <div className='price' onClick={() => setShowPriceDropdown(!showPriceDropdown)}>
-              Price{showPriceDropdown ? <IoMdArrowDropup className='drop-icon' /> : <IoMdArrowDropdown className='drop-icon' />}
+              Prices{showPriceDropdown ? <IoMdArrowDropup className='drop-icon' /> : <IoMdArrowDropdown className='drop-icon' />}
             </div>
-            {showPriceDropdown && (
-              <div className='dropdown-content'>
-                {renderPriceRange()}
-              </div>
-            )}
+            {showPriceDropdown && <DropdownContent items={pricesData[props.sort]} renderItem={renderPriceItem} />}
             <div className='size' onClick={() => setShowSizeDropdown(!showSizeDropdown)}>
               Size{showSizeDropdown ? <IoMdArrowDropup className='drop-icon' /> : <IoMdArrowDropdown className='drop-icon' />}
             </div>
