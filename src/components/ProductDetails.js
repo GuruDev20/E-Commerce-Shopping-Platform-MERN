@@ -59,7 +59,7 @@ function ProductDetails() {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % item.image.length);
   };
   const addToCart = () => {
-    console.log("Adding " + id);
+    console.log("Adding " + id + " to cart");
   };
 
   const addToWishlist = () => {
@@ -127,9 +127,7 @@ function ProductDetails() {
           </div>
           <div className="product-description">
             A men's slim-fit shirt is a tailored and form-fitting garment designed to complement the body's natural contours, providing a sleek and modern appearance. Characterized by a narrower cut through the chest, waist, and sleeves, the slim-fit shirt offers a more tailored silhouette compared to regular or traditional fit shirts.
-
             These shirts are designed to enhance a man's physique and create a polished, contemporary look. They typically feature a narrower shoulder width, higher armholes, and a tapered waistline, contributing to a more streamlined and stylish appearance. The sleeves of a men's slim-fit shirt are also narrower, providing a well-proportioned fit.
-
             Men's slim-fit shirts are versatile and can be worn for various occasions, ranging from formal settings when paired with dress pants or a suit, to more casual environments when combined with jeans or chinos. The modern and tailored design makes them a popular choice for those who prefer a more fitted and fashionable look in their clothing. Available in a variety of fabrics, colors, and patterns, men's slim-fit shirts offer a contemporary style while maintaining a classic and timeless appeal.
           </div>
         </div>

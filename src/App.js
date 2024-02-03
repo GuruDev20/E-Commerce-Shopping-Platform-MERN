@@ -8,6 +8,7 @@ import Cart from "./components/Cart";
 import WhistList from "../src/components/WhistList";
 import Latest from "./components/Latest";
 import Profile from './components/Profile'
+import Admin from "./components/Admin/Admin";
 function App() {
   window.addEventListener("scroll", reveal);
   function reveal() {
@@ -59,6 +60,7 @@ function App() {
       <Route path="/cart" element={<Cart/>} />
       <Route path='/whislist' element={<WhistList/>} />
       <Route path='/myprofile' element={<Profile/>} />
+      <Route path='/admin' element={<Admin/>} />
     </Routes>
   );
 }

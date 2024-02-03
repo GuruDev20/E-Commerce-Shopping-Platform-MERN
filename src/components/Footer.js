@@ -49,9 +49,6 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className='search-products'>
-        <input type='search' placeholder='Search for more products' className='search'/>
-      </div>
       <div className='footer-copy'>&copy; Shopify India, All Rights Reserved</div>
     </div>
   );
