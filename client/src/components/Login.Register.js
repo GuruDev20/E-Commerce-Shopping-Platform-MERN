@@ -70,6 +70,15 @@ function LoginRegister() {
         console.log('Response:', response);
         if (response && response.data) {
             console.log(response.data);
+            if(response.data.role==='Admin'){
+              navigate('/admin')
+            }
+            else if(response.data.role==='Dealer'){
+              navigate('/dealers')
+            }
+            else if(response.data.role==='User'){
+              navigate('/')
+            }
         } else {
             console.error('Invalid response:', response);
         }

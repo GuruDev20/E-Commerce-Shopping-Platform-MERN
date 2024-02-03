@@ -9,6 +9,7 @@ import { CgProfile } from "react-icons/cg";
 import { MdLogout } from "react-icons/md";
 function Navbar() {
   const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(false);
+  const [isLoggedIn,setIsLoggedIn] = useState(false);
   const toggleProfileDropdown = () => {
     setProfileDropdownOpen(!isProfileDropdownOpen);
   };
@@ -56,7 +57,7 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          {false ? (
+          {isLoggedIn ? (
             <div className='profile'>
               <IoPersonCircleSharp size={40} onClick={toggleProfileDropdown} />
               {isProfileDropdownOpen && (
