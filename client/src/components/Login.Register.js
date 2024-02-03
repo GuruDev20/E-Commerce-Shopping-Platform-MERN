@@ -16,7 +16,6 @@ function LoginRegister() {
   const [usernameValidation, setUsernameValidation] = useState({ isValid: null, message: '' });
   const [mobileValidation, setMobileValidation] = useState({ isValid: null, message: '' });
   const [roleValidation, setRoleValidation] = useState({ isValid: null, message: '' });
-
   const handleToggleForm = () => {
     setIsLoginForm(!isLoginForm);
     setEmailValidation({ isValid: null, message: '' });
@@ -60,7 +59,7 @@ function LoginRegister() {
     setRoleValidation({ isValid, message });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if(isLoginForm){
       setEmail('');
@@ -84,7 +83,6 @@ function LoginRegister() {
       setMobileValidation({ isValid: null, message: '' });
       setRole('');
       setRoleValidation({ isValid: null, message: '' });
-      console.log(email + " " + password + " " + username + " " + mobile + " " + role);
     }
 
   };
