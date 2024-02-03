@@ -4,7 +4,10 @@ import { RiUserFill } from "react-icons/ri";
 import { IoMdLock } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { MdLocalPhone } from "react-icons/md";
+import {useNavigate } from 'react-router-dom'
+import axios from 'axios'
 function LoginRegister() {
+  const navigate = useNavigate();
   const [isLoginForm, setIsLoginForm] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -62,16 +65,41 @@ function LoginRegister() {
   const handleSubmit = async(e) => {
     e.preventDefault();
     if(isLoginForm){
+      try{
+        const response = await axios.post('http://localhost:4000/api/login',{email,password});
+        console.log('Response:', response);
+        if (response && response.data) {
+            console.log(response.data);
+        } else {
+            console.error('Invalid response:', response);
+        }
+      }
+      catch(err){
+        console.log(err.response.data)
+      }
       setEmail('');
       setEmailValidation({ isValid: null, message: '' });
       setPassword('');
       setPasswordValidation({ isValid: null, message: '' });
-      console.log(email + " " + password);
     }
     else{
       if (role.trim() === '') {
         setRoleValidation({ isValid: false, message: 'Please select a role' });
         return;
+      }
+      try{
+        const response = await axios.post('http://localhost:4000/api/register',{username,email,password,mobile,role});
+        console.log('Response:', response);
+        if (response && response.data) {
+            const { email, token } = response.data;
+            localStorage.setItem('user', JSON.stringify({ email, token }));
+            navigate("/loginregister");
+        } else {
+            console.error('Invalid response:', response);
+        }
+      }
+      catch(err){
+        console.log(err.response.data)
       }
       setEmail('');
       setEmailValidation({ isValid: null, message: '' });

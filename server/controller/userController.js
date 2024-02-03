@@ -18,6 +18,7 @@ const loginUser=async(req,res)=>{
 }
 const signupUser=async(req,res)=>{
     const{username,email,password,mobile,role}=req.body;
+    console.log('Received Registration Request:', { username, email, password, mobile, role });
     try{
         const user=await User.signup(username,email,password,mobile,role)
         const token=createToken(user._id)
