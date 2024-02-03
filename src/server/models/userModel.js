@@ -46,4 +46,20 @@ UserSchema.statics.signup=async(username,email,password,mobile,role)=>{
     const user=await this.create({username,email,password:hash,mobile,role})
     return user
 }
+
+UserSchema.statics.login=async function(email,password){
+    if(!email || !password){
+        throw Error('All fields must be filled')
+    }
+    const user=await this.findOne({email})
+    if(!user){
+        throw Error('Incorrect Email')
+    }
+    const match=await bcrypt.compare(password,user.password)
+    if(!match){
+        throw Error('Incorrect Password');
+    }
+    return user
+}   
+
 module.exports=mongoose.model('User',UserSchema,'User')
