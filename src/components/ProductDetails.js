@@ -91,14 +91,14 @@ function ProductDetails() {
         </div>
         <div className="product-right">
           <div className="product-brand">{item.brand}</div>
-          <div className="product-name">{item.name}</div>
+          <div className="product-names">{item.name}</div>
           <div className="product-ratings">4.1K</div>
           <div className="horizontal-divider"></div>
           <div className="selected-product-price">
             <div className="product-price">&#8377;{item.price}</div>
             <div className="product-previous-price">&#8377;{item.previous_price}</div>
           </div>
-          <div className="product-color">
+          <div className="product-colors">
             {item.color.map((colordata,index)=>(
               <div key={index} className="list-color">
                 <div className="color-product" style={{ background: colordata.toLowerCase() }}></div>
@@ -106,7 +106,7 @@ function ProductDetails() {
               </div>
             ))}
           </div>
-          <div className="product-size">
+          <div className="product-sizes">
             {item.size.map((sizedata,index)=>(
               <div className="sizes" key={index}>{sizedata}</div>
             ))}
@@ -122,10 +122,10 @@ function ProductDetails() {
           </div>
           <div className="horizontal-divider"></div>
           <div className="more-product-details">
-            <div className="product-name">{item.name}</div>
-            <div className="product-pattern">Pattern: {item.pattern}</div>
+            <div className="product-names">{item.name}</div>
+            <div className="product-patterns">Pattern: {item.pattern}</div>
           </div>
-          <div className="product-description">
+          <div className="product-descriptions">
             A men's slim-fit shirt is a tailored and form-fitting garment designed to complement the body's natural contours, providing a sleek and modern appearance. Characterized by a narrower cut through the chest, waist, and sleeves, the slim-fit shirt offers a more tailored silhouette compared to regular or traditional fit shirts.
             These shirts are designed to enhance a man's physique and create a polished, contemporary look. They typically feature a narrower shoulder width, higher armholes, and a tapered waistline, contributing to a more streamlined and stylish appearance. The sleeves of a men's slim-fit shirt are also narrower, providing a well-proportioned fit.
             Men's slim-fit shirts are versatile and can be worn for various occasions, ranging from formal settings when paired with dress pants or a suit, to more casual environments when combined with jeans or chinos. The modern and tailored design makes them a popular choice for those who prefer a more fitted and fashionable look in their clothing. Available in a variety of fabrics, colors, and patterns, men's slim-fit shirts offer a contemporary style while maintaining a classic and timeless appeal.

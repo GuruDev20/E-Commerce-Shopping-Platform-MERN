@@ -212,7 +212,7 @@ function Filter(props) {
               Categories{showCategoryDropdown ? <IoMdArrowDropup className='drop-icon' /> : <IoMdArrowDropdown className='drop-icon' />}
             </div>
             {showCategoryDropdown && <DropdownContent items={categoriesData[props.sort]} renderItem={renderCategoryItem} />}
-            <div className='price' onClick={() => setShowPriceDropdown(!showPriceDropdown)}>
+            <div className='p-price' onClick={() => setShowPriceDropdown(!showPriceDropdown)}>
               Prices{showPriceDropdown ? <IoMdArrowDropup className='drop-icon' /> : <IoMdArrowDropdown className='drop-icon' />}
             </div>
             {showPriceDropdown && <DropdownContent items={pricesData[props.sort]} renderItem={renderPriceItem} />}

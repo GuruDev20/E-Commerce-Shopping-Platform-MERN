@@ -7,7 +7,6 @@
 .dashboard-left {
     background-color: #415a77;
     color: white;
-    overflow-y: auto;
 }
 
 .dashboard-header {
@@ -24,14 +23,15 @@
 .dash-logout {
     color: white;
 }
-
+.dashboard-right{
+    background-color: whitesmoke;
+}
 .divider-content {
     border-top: 1px solid #ccc;
     width: 90%;
     height: 0;
     margin: auto;
 }
-
 .dashboard-body {
     margin-top: 5px;
     padding: 20px;
@@ -49,7 +49,6 @@
 
 .dashboard-right {
     background-color: whitesmoke;
-
 }
 
 .d-right-header {
@@ -64,65 +63,64 @@
 .notifications {
     padding-left: 30px;
 }
-
 .dashboard-container.dark-theme {
-    background-color: #111;
-    color: #fff;
+    --background-color: #14213d;
+    --text-color: white;
+    --card-color: #415a77;
+    --border-color: #edf2f4;
+    --input-selection-color: #778da9;
+    --upload-div-color: #778da9;
 }
 
-.dashboard-left.dark-theme {
-    background-color: #1b263b;
-    color: #fff;
+.dashboard-container.dark-theme .dashboard-left {
+    background-color: #023047;
 }
 
-.dashboard-right.dark-theme {
-    background-color: black;
-    color: #fff;
+.dashboard-container.dark-theme .dashboard-right {
+    background-color: #14213d;
+    color: white;
 }
-
-.dashboard-header.dark-theme {
-    color: #fff;
-}
-
-.dashboard-body.dark-theme {
-    background-color: #1b263b;
-    color: #fff;
-}
-
-.dashboard-body.dark-theme:hover {
-    background-color: #33455d;
-}
-
-.product-total {
+.product-total{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    border: 1px solid wheat;
 }
-
 .product-card1,
 .product-card2,
 .product-card3 {
     width: 25%;
     height: 100px;
-    background-color: #ffe5d9;
+    background-color: var(--card-color);
     border-radius: 5px;
     padding: 30px;
     margin: 30px;
+    border: 1px solid var(--border-color);
 }
-
-.addproducts {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    padding: 20px;
-}
-
-.add-left {
+.addproducts{
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.add-right{
+    margin-left: 30px;
+}
+.input-field,
+.select-field {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: var(--input-selection-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-field:focus,
+.select-field:focus {
+    outline: none;
+    border-color: #14213d;
 }
 
 .select-file {
@@ -131,105 +129,52 @@
     justify-content: center;
     width: 330px;
     height: 330px;
-    border: 2px dotted #1b263b;
+    border: 2px dotted var(--upload-div-color);
     margin-left: 50px;
     margin-top: 40px;
     border-radius: 5px;
     font-size: 20px;
 }
 
+.select-file:hover {
+    background-color: var(--upload-div-color);
+}
+
 .file-img {
     padding-right: 10px;
 }
 
-.add-right {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.description-product {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.product-name,
-.brand,
-.price,
-.product-category,
-.product-size,
-.product-color,
-.product-pattern,
-.product-description {
-    width: 80%;
-    margin-bottom: 10px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    outline: none;
-    margin-top: 15px;
-    font-size: 16px;
-    background-color: whitesmoke;
-    border: none;
-    border-bottom: 2px solid #03045e;
-}
-
-.input-field {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 12px;
-    font-size: 16px;
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.input-field:focus {
-    outline: none;
-    border-color: #14213d;
-}
-
-.select-field {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 12px;
-    font-size: 16px;
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.select-field:focus {
-    outline: none;
-    border-color: #14213d;
-}
-.input-field::placeholder{
-    color: black;
-}
-.right-header-title{
+.right-header-title {
     font-size: 22px;
     padding-left: 20px;
 }
-.card1-title,.card2-title,.card3-title{
+
+.card1-title,
+.card2-title,
+.card3-title {
     font-size: 30px;
     padding-bottom: 10px;
 }
-.card1-count,.card2-count,.card3-count{
+
+.card1-count,
+.card2-count,
+.card3-count {
     font-size: 25px;
     padding-top: 10px;
 }
+
 .divider-content1 {
     border-top: 2px solid #ccc;
     width: 100%;
     height: 0;
     margin: auto;
 }
-.display-custom-products,.list-available{
+
+.display-custom-products,
+.list-available {
     padding: 20px;
 }
+
 .select-field1 {
     width: 50%;
     margin-bottom: 15px;
@@ -246,12 +191,13 @@
     border-color: #14213d;
 }
 
-.product-revenue{
+.product-revenue {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.product-available{
+
+.product-available {
     margin-bottom: 15px;
     padding: 12px;
     font-size: 16px;
@@ -262,17 +208,62 @@
     margin-right: 20em;
     margin-top: 3em;
 }
-.select-img{
+
+.select-img {
     width: 330px;
     height: 330px;
 }
-.selected-images-list{
+
+.selected-images-list {
     display: flex;
     flex-direction: column;
 }
-.delete-button{
+
+.delete-button {
     margin-top: 10px;
     padding: 10px;
     width: 150px;
     margin-left: 60px;
+}
+
+.addItemsToStorage {
+    padding: 10px;
+    width: 100px;
+    margin-left: 50%;
+    color: white;
+    background-color: #52b788;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.input-field::placeholder {
+    color: black;
+}
+.dashboard-container:not(.dark-theme) .product-card1,
+.dashboard-container:not(.dark-theme) .product-card2,
+.dashboard-container:not(.dark-theme) .product-card3 {
+    background-color: wheat;
+    color: black;
+}
+
+.addproducts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.add-right {
+    margin-left: 30px;
+}
+.dashboard-container:not(.dark-theme) .select-file {
+    border: 2px dotted navy;
+}
+
+.dashboard-container:not(.dark-theme) .input-field,
+.dashboard-container:not(.dark-theme) .select-field {
+    background-color: #f2f2f2;
+    border: 1px solid rgb(179, 178, 178);
+    color: black;
 }

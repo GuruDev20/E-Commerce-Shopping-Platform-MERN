@@ -6,14 +6,10 @@ import { IoMdSunny } from "react-icons/io";
 import { IoMoon } from "react-icons/io5";
 import { IoMdNotifications } from "react-icons/io";
 import { FiUploadCloud } from "react-icons/fi";
-// import { useEffect } from 'react';
-// import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 function Dashboard() {
     const [isLightTheme, setIsLightTheme] = useState(true);
     const [selectedImages, setSelectedImages] = useState([]);
     const [displayedImage, setDisplayedImage] = useState(null);
-    //   const [timeline, setTimeline] = useState('7days');
-    //   const [revenueData, setRevenueData] = useState([]);
     const toggleTheme = () => {
         setIsLightTheme(prevTheme => !prevTheme);
     };
@@ -53,12 +49,9 @@ function Dashboard() {
         setSelectedImages([]);
         setDisplayedImage(null);
     };
-//    const fetchRevenueData = async () => {
-    
-//   };
-//   useEffect(() => {
-//     fetchRevenueData();
-//   }, [timeline]);
+    const storeToDb=()=>{
+        
+    }
   return (
     <div className={`dashboard-container ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
       <div className='dashboard-left'>
@@ -189,28 +182,10 @@ function Dashboard() {
                             <option value="">Wove Design</option>
                         </select>
                         <input type='text' placeholder='Description' className='input-field product-description'/>
+                        <button className='addItemsToStorage' onClick={storeToDb()}>Add Item</button>
                     </div>
                 </div>
             </div>
-            {/* <div className='product-revenue'>
-                <div className='revenue-left'>
-                <BarChart width={800} height={400} data={revenueData}>
-                    <CartesianGrid strokeDasharray='3 3' />
-                    <XAxis dataKey='day' />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Bar dataKey='revenue' fill='#8884d8' />
-                </BarChart>
-                </div>
-                <div className='revenue-right'>
-                <select name='timeline' className='product-available' onChange={(e) => setTimeline(e.target.value)}value={timeline}>
-                    <option value='7days'>Past 7 days</option>
-                    <option value='6months'>Past 6 months</option>
-                    <option value='1year'>Past year</option>
-                </select>
-                </div>
-            </div> */}
             <div className='display-custom-products'>
                 <h3 className='list-available'>Available Products</h3>
                 <div className='list-options'>

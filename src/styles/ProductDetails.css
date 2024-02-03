@@ -56,7 +56,7 @@
     margin-bottom: 0.5em;
 }
 
-.product-name {
+.product-names {
     font-size: 1.5em;
     margin-bottom: 0.5em;
 }
@@ -87,7 +87,7 @@
     padding-left: 7px;
 }
 
-.product-color {
+.product-colors {
     margin-bottom: 2em;
     display: flex;
     flex-direction: row;
@@ -112,7 +112,7 @@
     font-size: 20px;
 }
 
-.product-size {
+.product-sizes {
     display: flex;
     margin-bottom: 1em;
 }
@@ -199,7 +199,7 @@
 .buy-button {
     margin-top: 1em;
 }
-.product-pattern{
+.product-patterns{
     font-size: 20px;
     margin-bottom: 2em;
 }
