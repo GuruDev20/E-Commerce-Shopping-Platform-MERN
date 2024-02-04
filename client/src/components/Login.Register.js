@@ -71,12 +71,18 @@ function LoginRegister() {
         if (response && response.data) {
             console.log(response.data);
             if(response.data.role==='Admin'){
+              const { email, token,role } = response.data;
+              localStorage.setItem('admin', JSON.stringify({ email, token,role }));
               navigate('/admin')
             }
             else if(response.data.role==='Dealer'){
+              const { email, token,role } = response.data;
+              localStorage.setItem('dealer', JSON.stringify({ email, token,role }));
               navigate('/dealers')
             }
             else if(response.data.role==='User'){
+              const { email, token ,role} = response.data;
+              localStorage.setItem('user', JSON.stringify({ email, token,role }));
               navigate('/')
             }
         } else {

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import Welcome from "../src/components/Welcome";
 import { Routes, Route } from "react-router-dom";
 import Dresses from "../src/components/Dresses";
@@ -37,7 +37,7 @@ function App() {
       }
     }
   }
-  
+
   return (
     <Routes>
       <Route path="/" element={<Welcome />} />
