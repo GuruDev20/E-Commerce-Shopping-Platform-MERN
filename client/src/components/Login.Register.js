@@ -65,33 +65,22 @@ function LoginRegister() {
   const handleSubmit = async(e) => {
     e.preventDefault();
     if(isLoginForm){
-      try{
-        const response = await axios.post('http://localhost:4000/api/login',{email,password});
-        console.log('Response:', response);
-        if (response && response.data) {
-            console.log(response.data);
-            if(response.data.role==='Admin'){
-              const { email, token,role } = response.data;
-              localStorage.setItem('admin', JSON.stringify({ email, token,role }));
-              navigate('/admin')
-            }
-            else if(response.data.role==='Dealer'){
-              const { email, token,role } = response.data;
-              localStorage.setItem('dealer', JSON.stringify({ email, token,role }));
-              navigate('/dealers')
-            }
-            else if(response.data.role==='User'){
-              const { email, token ,role} = response.data;
-              localStorage.setItem('user', JSON.stringify({ email, token,role }));
-              navigate('/')
-            }
-        } else {
-            console.error('Invalid response:', response);
+      axios.defaults.withCredentials=true;
+      axios.post('http://localhost:4000/login',{email,password})
+      .then(res=>{
+        if(res.data.status==='Success'){
+          if(res.data.role==='Admin'){
+            navigate('/admin');
+          }
+          else if(res.data.role==='User'){
+            navigate('/');
+          }
+          else if(res.data.role==='Dealer'){
+            navigate('/dealers');
+          }
         }
-      }
-      catch(err){
-        console.log(err.response.data)
-      }
+      })
+      .catch(err=>console.log(err))
       setEmail('');
       setEmailValidation({ isValid: null, message: '' });
       setPassword('');
@@ -102,20 +91,11 @@ function LoginRegister() {
         setRoleValidation({ isValid: false, message: 'Please select a role' });
         return;
       }
-      try{
-        const response = await axios.post('http://localhost:4000/api/register',{username,email,password,mobile,role});
-        console.log('Response:', response);
-        if (response && response.data) {
-            const { email, token } = response.data;
-            localStorage.setItem('user', JSON.stringify({ email, token }));
-            navigate("/loginregister");
-        } else {
-            console.error('Invalid response:', response);
-        }
-      }
-      catch(err){
-        console.log(err.response.data)
-      }
+      axios.post('http://localhost:4000/register',{username,email,password,mobile,role})
+      .then(res=>{
+        navigate('/loginregister')
+      })
+      .catch(err=>console.log(err))
       setEmail('');
       setEmailValidation({ isValid: null, message: '' });
       setPassword('');

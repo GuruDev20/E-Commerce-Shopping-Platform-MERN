@@ -6,6 +6,7 @@ import { IoMdSunny } from "react-icons/io";
 import { IoMoon } from "react-icons/io5";
 import { IoMdNotifications } from "react-icons/io";
 import { FiUploadCloud } from "react-icons/fi";
+import axios from 'axios'
 function Dashboard() {
     const [isLightTheme, setIsLightTheme] = useState(true);
     const [selectedImages, setSelectedImages] = useState([]);
@@ -31,6 +32,7 @@ function Dashboard() {
             }
         }
         console.log(updatedImages)
+
     };
     const accessFileUpload = (e) => {
         e.preventDefault();
@@ -49,8 +51,30 @@ function Dashboard() {
         setSelectedImages([]);
         setDisplayedImage(null);
     };
-    const storeToDb=()=>{
-        
+    const storeToDb = async () => {
+        try {
+            const productData = {
+                name: document.querySelector('.product-name').value,
+                brand: document.querySelector('.brand').value,
+                price: document.querySelector('.price').value,
+                category: document.querySelector('.product-category').value,
+                size: document.querySelector('.product-size').value,
+                color: document.querySelector('.product-color').value,
+                pattern: document.querySelector('.product-pattern').value,
+                description: document.querySelector('.product-description').value,
+                images: selectedImages,
+            };
+
+            const response = await axios.post('http://localhost:4000/api/addCollection', productData);
+
+            if (response.status === 200) {
+                console.log('Product added successfully');
+            } else {
+                console.log("Failed to add product");
+            }
+        } catch (error) {
+            console.log(error);
+        }
     }
   return (
     <div className={`dashboard-container ${isLightTheme ? 'light-theme' : 'dark-theme'}`}>
@@ -182,7 +206,7 @@ function Dashboard() {
                             <option value="">Wove Design</option>
                         </select>
                         <input type='text' placeholder='Description' className='input-field product-description'/>
-                        <button className='addItemsToStorage' onClick={storeToDb()}>Add Item</button>
+                        <button className='addItemsToStorage' onClick={storeToDb}>Add Item</button>
                     </div>
                 </div>
             </div>

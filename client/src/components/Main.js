@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/Main.css'
 import { Link } from 'react-scroll';
 import shopping from '../assets/shop.svg';
-function view1() {
+function View1() {
   return (
     <div className='content'>
         <div className='left'>
@@ -11,10 +11,10 @@ function view1() {
             <Link to='men-container' smooth={true} duration={700}><button className='explore-btn'>Explore</button></Link>
         </div>
         <div className='right'>
-          <img src={shopping} alt='shopping' className='shopping'/>
+          <img src={shopping} alt='shopping' className='shopping' />
         </div>
     </div>
   )
 }
 
-export default view1
+export default View1

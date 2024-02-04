@@ -10,6 +10,7 @@ import Latest from "./components/Latest";
 import Profile from './components/Profile'
 import Admin from "./components/Admin/Admin";
 import Dealers from "./components/Dealers/Dealers";
+import NotFound from './components/404NotFound';
 function App() {
   window.addEventListener("scroll", reveal);
   function reveal() {
@@ -41,7 +42,6 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Welcome />} />
-      <Route path="/shop" element={<Welcome />} />
       <Route path="/cloths/men-top-wear" element={<Dresses sort="Mens-Top-wear"/>} />
       <Route path="/cloths/men-bottom-wear" element={<Dresses sort="Mens-Bottom-wear"/>} />
       <Route path="/cloths/men-footwear" element={<Dresses sort="Mens-Footwear"/>} />
@@ -63,6 +63,7 @@ function App() {
       <Route path='/myprofile' element={<Profile/>} />
       <Route path='/admin' element={<Admin/>} />
       <Route path="/dealers" element={<Dealers/>} />
+      <Route path="/notfound" element={<NotFound/>} />
     </Routes>
   );
 }

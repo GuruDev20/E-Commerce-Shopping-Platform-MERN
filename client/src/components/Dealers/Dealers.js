@@ -1,26 +1,28 @@
-import React from 'react'
-import '../../styles/Dealers.css'
+import React, { useEffect, useState } from 'react'
+import Dashboard from './Dashboard'
+import axios from 'axios'
+import {useNavigate } from 'react-router-dom'
 function Dealers() {
+  const navigate = useNavigate();
+  const[suc,setSuc]=useState();
+  axios.defaults.withCredentials=true;
+  useEffect(() => {
+  axios.get('http://localhost:4000/dealers/dashboard')
+    .then(res => {
+      if (res.data === 'Dealers Dashboard Success') {
+        setSuc("Success ok");
+      } else {
+        navigate('/notfound');
+      }
+    })
+    .catch(err => console.log(err));
+  }, [navigate]);
   return (
-    <div className='dealers'>
-      <div className='dealers-left'>
-        <div className='dealers-header'>
-          <div className='dealers-name'>Dealers</div>
-          <div className='dealers-log'>Logouticon</div>
-        </div>
-        <div className='divider'></div>
-        <div className='dealers-dash'>Dashboard</div>
-      </div>
-      <div className='dealers-right'>
-        <div className='dealers-right-header'>
-          {/* toggle icon
-          message icon */}
-        </div>
-        <div className='dealers-body'>
-          <div className='dealers-products-list'></div>
-        </div>
-      </div>
-    </div>
+    <>
+      <Dashboard/>
+      <div>{suc}</div>
+    </>
+    
   )
 }
 

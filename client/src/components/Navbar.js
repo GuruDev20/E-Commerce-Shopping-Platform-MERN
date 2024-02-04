@@ -1,6 +1,5 @@
-import React,{useState,useEffect } from 'react'
+import React,{useState} from 'react'
 import '../styles/Welcome.css'
-import { useNavigate  } from 'react-router-dom';
 import { GiShoppingBag } from "react-icons/gi";
 import { FaShoppingCart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
@@ -8,37 +7,13 @@ import { Link} from 'react-router-dom';
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { MdLogout } from "react-icons/md";
-function Navbar() {
-	const navigate = useNavigate();
+import Cookie from 'js-cookie'
+function Navbar() {	
 	const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(false);
 	const [isLoggedIn,setIsLoggedIn] = useState(false);
 	const toggleProfileDropdown = () => {
 		setProfileDropdownOpen(!isProfileDropdownOpen);
 	};
-	useEffect(() => {
-		const checkTokenSetLogin = () => {
-			const isTokenGenerated = checkToken();
-				if (isTokenGenerated) {
-					setIsLoggedIn(true);
-				}
-			};
-			const checkToken = () => {
-				const token = localStorage.getItem('user');
-				return !!token;
-			};
-			checkTokenSetLogin();
-			const handlePopstate = () => {
-				if (!isLoggedIn) {
-					navigate('/');
-				}
-			};
-			window.addEventListener('popstate', handlePopstate);
-				return () => {
-					window.removeEventListener('popstate', handlePopstate);
-				};
-			},
-		[navigate, isLoggedIn]
-	);
 	const handleLogout=()=>{
 		localStorage.removeItem('user');
 		setIsLoggedIn(false);
@@ -58,34 +33,34 @@ function Navbar() {
 				</li>
 				<li>
 					<div className='dropdown'>
-						<Link to={localStorage.getItem('user')?("/cloths/men-top-wear"):('/loginregister')} className='nav-link' reloadDocument >Top wear</Link>
-						<Link to={localStorage.getItem('user')?("/cloths/men-bottom-wear"):('/loginregister')} className='nav-link' reloadDocument>Bottom wear</Link>
-						<Link to={localStorage.getItem('user')?("/cloths/men-footwear"):('/loginregister')} className='nav-link' reloadDocument>Footwear</Link>
-						<Link to={localStorage.getItem('user')?("/cloths/men-gadgets"):('/loginregister')} className='nav-link' reloadDocument>Gadgets</Link>
-						<Link to={localStorage.getItem('user')?("/cloths/men-accessories"):('/loginregister')} className='nav-link' reloadDocument>Accessories</Link>
+						<Link to={Cookie.get('token')?("/cloths/men-top-wear"):('/loginregister')} className='nav-link' reloadDocument >Top wear</Link>
+						<Link to={Cookie.get('token')?("/cloths/men-bottom-wear"):('/loginregister')} className='nav-link' reloadDocument>Bottom wear</Link>
+						<Link to={Cookie.get('token')?("/cloths/men-footwear"):('/loginregister')} className='nav-link' reloadDocument>Footwear</Link>
+						<Link to={Cookie.get('token')?("/cloths/men-gadgets"):('/loginregister')} className='nav-link' reloadDocument>Gadgets</Link>
+						<Link to={Cookie.get('token')?("/cloths/men-accessories"):('/loginregister')} className='nav-link' reloadDocument>Accessories</Link>
 					</div>
 					<div className='nav-link-items'>Mens</div>
 				</li>
 				<li>
 					<div className='dropdown'>
-					<Link to={localStorage.getItem('user')?('/cloths/women-top-wear'):('/loginregister')} className='nav-link' reloadDocument>Top wear</Link>
-					<Link to={localStorage.getItem('user')?('/cloths/women-bottom-wear'):('/loginregister')} className='nav-link' reloadDocument>Bottom wear</Link>
-					<Link to={localStorage.getItem('user')?('/cloths/women-footwear'):('/loginregister')} className='nav-link' reloadDocument>Footwear</Link>
-					<Link to={localStorage.getItem('user')?('/cloths/women-gadgets'):('/loginregister')} className='nav-link' reloadDocument>Gadgets</Link>
-					<Link to={localStorage.getItem('user')?('/cloths/women-accessories'):('/loginregister')} className='nav-link' reloadDocument>Accessories</Link>
+					<Link to={Cookie.get('token')?('/cloths/women-top-wear'):('/loginregister')} className='nav-link' reloadDocument>Top wear</Link>
+					<Link to={Cookie.get('token')?('/cloths/women-bottom-wear'):('/loginregister')} className='nav-link' reloadDocument>Bottom wear</Link>
+					<Link to={Cookie.get('token')?('/cloths/women-footwear'):('/loginregister')} className='nav-link' reloadDocument>Footwear</Link>
+					<Link to={Cookie.get('token')?('/cloths/women-gadgets'):('/loginregister')} className='nav-link' reloadDocument>Gadgets</Link>
+					<Link to={Cookie.get('token')?('/cloths/women-accessories'):('/loginregister')} className='nav-link' reloadDocument>Accessories</Link>
 					</div>
 					<div className='nav-link-items'>Womens</div>
 				</li>
 				<li>
 					<div className='dropdown'>
-						<Link to={localStorage.getItem('user')?('/cloths/kids-boys'):('/loginregister')} className='nav-link' reloadDocument >Boys</Link>
-						<Link to={localStorage.getItem('user')?('/cloths/kids-girls'):('/loginregister')} className='nav-link' reloadDocument>Girls</Link>
-						<Link to={localStorage.getItem('user')?('/cloths/kids-footwear'):('/loginregister')} className='nav-link' reloadDocument>Foot wear</Link>
+						<Link to={Cookie.get('token')?('/cloths/kids-boys'):('/loginregister')} className='nav-link' reloadDocument >Boys</Link>
+						<Link to={Cookie.get('token')?('/cloths/kids-girls'):('/loginregister')} className='nav-link' reloadDocument>Girls</Link>
+						<Link to={Cookie.get('token')?('/cloths/kids-footwear'):('/loginregister')} className='nav-link' reloadDocument>Foot wear</Link>
 					</div>
 					<div className='nav-link-items'>Kids</div>
 				</li>
 				<li>
-					<Link to='/newarrivals' className='nav-link' reloadDocument>New Arrivals</Link>
+					<Link to={Cookie.get('token')?('/newarrivals'):('/loginregister')} className='nav-link' reloadDocument>New Arrivals</Link>
 				</li>
 				</ul>
 			</div>
