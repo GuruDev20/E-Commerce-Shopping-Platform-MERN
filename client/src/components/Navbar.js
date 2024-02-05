@@ -8,16 +8,17 @@ import { IoPersonCircleSharp } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { MdLogout } from "react-icons/md";
 import Cookie from 'js-cookie'
+import {useNavigate} from 'react-router-dom'
 function Navbar() {	
+	const navigate=useNavigate();
 	const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(false);
-	const [isLoggedIn,setIsLoggedIn] = useState(false);
 	const toggleProfileDropdown = () => {
 		setProfileDropdownOpen(!isProfileDropdownOpen);
 	};
 	const handleLogout=()=>{
-		localStorage.removeItem('user');
-		setIsLoggedIn(false);
-		console.log(isLoggedIn)
+		localStorage.clear()
+		Cookie.remove('token');
+		navigate('/')
 	}
 
 	return (
@@ -64,7 +65,7 @@ function Navbar() {
 				</li>
 				</ul>
 			</div>
-			{isLoggedIn || localStorage.getItem('user')? (
+			{localStorage.getItem('token')? (
 				<div className='profile'>
 				<IoPersonCircleSharp size={40} onClick={toggleProfileDropdown} />
 				{isProfileDropdownOpen && (

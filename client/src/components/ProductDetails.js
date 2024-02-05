@@ -1,4 +1,6 @@
-import React,{useState} from "react";
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import {useNavigate } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import '../styles/ProductDetails.css'
@@ -19,6 +21,21 @@ import {kids_footwear} from './data/Footwear';
 import { FaShoppingCart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 function ProductDetails() {
+  const navigate = useNavigate();
+  const[suc,setSuc]=useState();
+  axios.defaults.withCredentials=true;
+  useEffect(() => {
+  axios.get('http://localhost:4000/users/', { withCredentials: true })
+    .then(res => {
+      if (res.data === 'Users Dashboard Success') {
+        setSuc("Success ok");
+      } else {
+        navigate('/notfound');
+      }
+    })
+    .catch(err => console.log(err));
+  }, [navigate]);
+  
   const { id } = useParams();
   const{category}=useParams();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -70,7 +87,7 @@ function ProductDetails() {
     console.log("Buy " + id);
   };
   return (
-    <div>
+    <div val={{suc}}>
       <Navbar />
       <div className="product">
         <div className="product-left">

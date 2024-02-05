@@ -90,6 +90,7 @@ li {
     font-size: 18px;
     display: flex;
     align-items: center; 
+    cursor: pointer;
 }
 .divider {
     border-top: 1px solid #ccc;

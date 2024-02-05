@@ -17,43 +17,77 @@ app.use(cookieParser());
 const UserModel=require('./models/userModel')
 mongoose.connect(process.env.MONGO_URI)
 
-const verifyUser=(req,res,next)=>{
-    const token=req.cookies.token;
-    if(!token){
-        return res.json("Token is missing")
-    }
-    else{
-        jwt.verify(token,process.env.SECRET,(err,decoded)=>{
-            if(err){
-                return res.json("Error with token")
-            }
-            else{
+const verifyAdmin = (req, res, next) => {
+    const token = req.cookies.token;
+    if (!token) {
+        return res.json("Token is missing");
+    } else {
+        jwt.verify(token, process.env.SECRET, (err, decoded) => {
+            if (err) {
+                return res.json("Error with token");
+            } else {
                 if (decoded.role === "Admin" && req.path.startsWith("/admin")) {
                     next();
-                } 
-                else if (decoded.role === "Dealer" && req.path.startsWith("/dealers")) {
+                } else if (decoded.role === "Dealer" && req.path.startsWith("/dealers")) {
                     next();
-                }
-                 else if (decoded.role === "User" && req.path.startsWith("/shop")) {
+                } else if (decoded.role === "User" && (
+                    req.path.startsWith("/shop") ||
+                    req.path.startsWith("/cloths/") ||
+                    req.path.startsWith("/newarrivals") ||
+                    req.path.startsWith("/cart") ||
+                    req.path.startsWith("/whislist") ||
+                    req.path.startsWith("/myprofile")
+                )) {
                     next();
-                }
-                else{
-                    return res.json("Not Admin")
+                } else {
+                    return res.json("Not Authorized");
                 }
             }
-        })
+        });
     }
-}
+};
 
-app.get('/admin/dashboard',verifyUser,(req,res)=>{
-    res.json("Admin Dashboard Success")
-})
-app.get('/dealers/dashboard',verifyUser,(req,res)=>{
-    res.json("Dealers Dashboard Success")
-})
-app.get('/users/dashboard',verifyUser,(req,res)=>{
-    res.json("Users Dashboard Success")
-})
+const verifyUser = (req, res, next) => {
+    const token = req.cookies.token;
+    if (!token) {
+        return res.json("Token is missing");
+    } else {
+        jwt.verify(token, process.env.SECRET, (err, decoded) => {
+            if (err) {
+                return res.json("Error with token");
+            } else {
+                if (decoded.role === "Admin" && req.path.startsWith("/admin")) {
+                    next();
+                } else if (decoded.role === "Dealer" && req.path.startsWith("/dealers")) {
+                    next();
+                } else if (decoded.role === "User" && (
+                    req.path.startsWith("/shop") ||
+                    req.path.startsWith("/cloths/") ||
+                    req.path.startsWith("/newarrivals") ||
+                    req.path.startsWith("/cart") ||
+                    req.path.startsWith("/whislist") ||
+                    req.path.startsWith("/myprofile")
+                )) {
+                    next();
+                } else {
+                    return res.json("Not Authorized");
+                }
+            }
+        });
+    }
+};
+
+app.get('/admin/dashboard', verifyUser, (req, res) => {
+    res.json("Admin Dashboard Success");
+});
+
+app.get('/dealers/dashboard', verifyUser, (req, res) => {
+    res.json("Dealers Dashboard Success");
+});
+
+app.get('/users/cloths/', verifyUser, (req, res) => {
+    res.json("Users Dashboard Success");
+});
 
 app.post('/register',(req,res)=>{
     const{username,email,password,mobile,role}=req.body;
@@ -66,27 +100,27 @@ app.post('/register',(req,res)=>{
     .catch(err=>res.json(err))
 })
 
-app.post('/login',(req,res)=>{
-    const{email,password}=req.body;
-    UserModel.findOne({email:email})
-    .then(user=>{
-        if(user){
-            bcrypt.compare(password,user.password,(err,response)=>{
-                if(response){
-                    const token=jwt.sign({email:user.email,role:user.role},process.env.SECRET,{expiresIn:'1hr'})
-                    res.cookie('token',token)
-                    return res.json({status:'Success',role:user.role})
-                }
-                else{
-                    return res.json("Password Incorrect")
-                }
-            })
+app.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+    try{
+        const user = await UserModel.findOne({ email });
+        if (!user) {
+            return res.json("No record exists");
         }
-        else{
-            return res.json("No record existed");
+        const passwordMatch = await bcrypt.compare(password, user.password);
+        if (passwordMatch) {
+            const token = jwt.sign({ email: user.email, role: user.role }, process.env.SECRET, { expiresIn: '1hr' });
+            res.cookie('token', token);
+            return res.json({ status: 'Success', role: user.role, token });
+        } 
+        else {
+            return res.json("Password Incorrect");
         }
-    })
-})
+    } catch (error) {
+        console.error(error);
+        res.status(500).json(error);
+    }
+});
 
 app.listen(process.env.PORT,()=>{
     console.log("Server is running")

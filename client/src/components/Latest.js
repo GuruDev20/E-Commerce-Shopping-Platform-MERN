@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import {useNavigate } from 'react-router-dom'
 import '../styles/Latest.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { new_arrivals, latest_deals, coming_soon } from '../components/data/Newarrivals';
 
 function Latest() {
+  const navigate = useNavigate();
+  const[suc,setSuc]=useState();
+  axios.defaults.withCredentials=true;
+  useEffect(() => {
+  axios.get('http://localhost:4000/users/', { withCredentials: true })
+    .then(res => {
+      if (res.data === 'Users Dashboard Success') {
+        setSuc("Success ok");
+      } else {
+        navigate('/notfound');
+      }
+    })
+    .catch(err => console.log(err));
+  }, [navigate]);
+  
   const renderItems = (items, additionalClassName = '') => {
     return items.map((item) => (
       <div key={item.id} className={`card ${additionalClassName}`}>
@@ -16,7 +33,7 @@ function Latest() {
   };
 
   return (
-    <div>
+    <div val={{suc}}>
       <Navbar />
       <div className='new-arrivals'>
         <div className='new-title'>New Arrivals</div>
