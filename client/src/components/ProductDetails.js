@@ -123,9 +123,9 @@ function ProductDetails() {
               </div>
             ))}
           </div>
-          <div className="product-sizes">
+          <div className="product-sizess">
             {item.size.map((sizedata,index)=>(
-              <div className="sizes" key={index}>{sizedata}</div>
+              <div className="sizess" key={index}>{sizedata}</div>
             ))}
           </div>
           <div className="product-buttons">

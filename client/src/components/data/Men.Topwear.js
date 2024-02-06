@@ -1,9 +1,6 @@
 import Men1 from '../../assets/Mens/Men1.png';
 import Men1_1 from '../../assets/Mens/Men1.1.png';
 import Men1_2 from '../../assets/Mens/Men1.2.png';
-import Men2 from '../../assets/Mens/Men2.png';
-import Men2_1 from '../../assets/Mens/Men2.1.png';
-import Men2_2 from '../../assets/Mens/Men2.2.png';
 import Men3 from '../../assets/Mens/Men3.png';
 import Men3_1 from '../../assets/Mens/Men3.1.png';
 import Men3_2 from '../../assets/Mens/Men3.2.png';
@@ -64,18 +61,6 @@ const top_wear_collection=[
     size:['S','M','L'],
     color:['Blue'],
     pattern:'Stripe',
-  },
-  {
-    id:2,
-    image:[Men2,Men2_1,Men2_2],
-    category:'Casual Shirts',
-    brand:'The Indian Garage Co',
-    name:'Mens slim fit & casual shirt',
-    price:'1000',
-    previous_price:'1200',
-    size:['S','M','L'],
-    color:['Blue','White'],
-    pattern:'Floral',
   },
   {
     id:3,

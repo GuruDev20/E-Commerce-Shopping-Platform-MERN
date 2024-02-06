@@ -16,6 +16,27 @@
     padding: 20px;
 }
 
+#myfileSingle {
+    display: none;
+}
+
+.custom-file-input {
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 330px;
+    height: 330px;
+    border: 2px dotted var(--upload-div-color);
+    margin-top: 40px;
+    margin-right: 50px;
+    font-size: 20px;
+}
+
 .dashboard-name {
     font-size: 22px;
 }
@@ -101,6 +122,9 @@
     justify-content: center;
     align-items: center;
     padding: 30px;
+}
+.input-field.product-name {
+    margin-right: 60px;
 }
 .add-right{
     margin-left: 30px;
@@ -210,8 +234,8 @@
 }
 
 .select-img {
-    width: 330px;
-    height: 330px;
+    width: 18rem;
+    margin-bottom: 1rem;
 }
 
 .selected-images-list {
@@ -266,4 +290,38 @@
     background-color: #f2f2f2;
     border: 1px solid rgb(179, 178, 178);
     color: black;
+}
+
+.drop {
+    color: black;
+    font-size: 24px;
+    margin-left: auto;
+}
+
+.size-items,
+.color-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+}
+
+.sizes,
+.colors{
+    width: 100%;
+    color: white;
+    background-color: #1d3557;
+}
+.checkbox-right {
+    margin-left: auto;
+    width:10px
+}
+.add-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 330px;
+    height: 330px;
+    margin-bottom: 6em;
 }

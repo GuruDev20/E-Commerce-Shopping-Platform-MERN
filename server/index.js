@@ -5,7 +5,9 @@ const cors=require('cors');
 const bcrypt= require('bcrypt');
 const jwt= require('jsonwebtoken');
 const cookieParser= require('cookie-parser');
-const app=express();
+const app = express();
+const multer = require('multer');
+const upload = multer();
 app.use(express.json())
 app.use(cors({
     origin:["http://localhost:3000"],
@@ -15,37 +17,8 @@ app.use(cors({
 }));
 app.use(cookieParser());
 const UserModel=require('./models/userModel')
+const CollectionModel=require('./models/collectionModel')
 mongoose.connect(process.env.MONGO_URI)
-
-const verifyAdmin = (req, res, next) => {
-    const token = req.cookies.token;
-    if (!token) {
-        return res.json("Token is missing");
-    } else {
-        jwt.verify(token, process.env.SECRET, (err, decoded) => {
-            if (err) {
-                return res.json("Error with token");
-            } else {
-                if (decoded.role === "Admin" && req.path.startsWith("/admin")) {
-                    next();
-                } else if (decoded.role === "Dealer" && req.path.startsWith("/dealers")) {
-                    next();
-                } else if (decoded.role === "User" && (
-                    req.path.startsWith("/shop") ||
-                    req.path.startsWith("/cloths/") ||
-                    req.path.startsWith("/newarrivals") ||
-                    req.path.startsWith("/cart") ||
-                    req.path.startsWith("/whislist") ||
-                    req.path.startsWith("/myprofile")
-                )) {
-                    next();
-                } else {
-                    return res.json("Not Authorized");
-                }
-            }
-        });
-    }
-};
 
 const verifyUser = (req, res, next) => {
     const token = req.cookies.token;
@@ -120,6 +93,30 @@ app.post('/login', async (req, res) => {
         console.error(error);
         res.status(500).json(error);
     }
+});
+
+app.post('/products', upload.array('images', 10), async (req, res) => {
+  try {
+    const { name, brand, price, category, size, color, pattern, description,images } = req.body;
+    const product = new CollectionModel({
+      name,
+      brand,
+      price,
+      category,
+      size: JSON.parse(size),
+      color: JSON.parse(color),
+      pattern,
+      description,
+      images:JSON.parse(images)
+    });
+
+    await product.save();
+    console.log('Product saved successfully');
+    res.status(201).json({ message: 'Product saved successfully' });
+  } catch (error) {
+    console.error('Error storing data:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
 });
 
 app.listen(process.env.PORT,()=>{
