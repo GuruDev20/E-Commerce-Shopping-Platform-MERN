@@ -34,21 +34,21 @@ function Navbar() {
 				</li>
 				<li className='nav-list' >
 					<div className='dropdown'>
-						<Link to={Cookie.get('token')?("/cloths/men-top-wear"):('/loginregister')} className='nav-link' reloadDocument >Top wear</Link>
-						<Link to={Cookie.get('token')?("/cloths/men-bottom-wear"):('/loginregister')} className='nav-link' reloadDocument>Bottom wear</Link>
-						<Link to={Cookie.get('token')?("/cloths/men-footwear"):('/loginregister')} className='nav-link' reloadDocument>Footwear</Link>
-						<Link to={Cookie.get('token')?("/cloths/men-gadgets"):('/loginregister')} className='nav-link' reloadDocument>Gadgets</Link>
-						<Link to={Cookie.get('token')?("/cloths/men-accessories"):('/loginregister')} className='nav-link' reloadDocument>Accessories</Link>
+						<Link to={Cookie.get('token')?("/cloths/Men-top-wear"):('/loginregister')} className='nav-link' reloadDocument >Top wear</Link>
+						<Link to={Cookie.get('token')?("/cloths/Men-bottom-wear"):('/loginregister')} className='nav-link' reloadDocument>Bottom wear</Link>
+						<Link to={Cookie.get('token')?("/cloths/Men-footwear"):('/loginregister')} className='nav-link' reloadDocument>Footwear</Link>
+						<Link to={Cookie.get('token')?("/cloths/Men-gadgets"):('/loginregister')} className='nav-link' reloadDocument>Gadgets</Link>
+						<Link to={Cookie.get('token')?("/cloths/Men-accessories"):('/loginregister')} className='nav-link' reloadDocument>Accessories</Link>
 					</div>
 					<div className='nav-link-items'>Mens</div>
 				</li>
 				<li className='nav-list'>
 					<div className='dropdown'>
-					<Link to={Cookie.get('token')?('/cloths/women-top-wear'):('/loginregister')} className='nav-link' reloadDocument>Top wear</Link>
-					<Link to={Cookie.get('token')?('/cloths/women-bottom-wear'):('/loginregister')} className='nav-link' reloadDocument>Bottom wear</Link>
-					<Link to={Cookie.get('token')?('/cloths/women-footwear'):('/loginregister')} className='nav-link' reloadDocument>Footwear</Link>
-					<Link to={Cookie.get('token')?('/cloths/women-gadgets'):('/loginregister')} className='nav-link' reloadDocument>Gadgets</Link>
-					<Link to={Cookie.get('token')?('/cloths/women-accessories'):('/loginregister')} className='nav-link' reloadDocument>Accessories</Link>
+					<Link to={Cookie.get('token')?('/cloths/Women-top-wear'):('/loginregister')} className='nav-link' reloadDocument>Top wear</Link>
+					<Link to={Cookie.get('token')?('/cloths/Women-bottom-wear'):('/loginregister')} className='nav-link' reloadDocument>Bottom wear</Link>
+					<Link to={Cookie.get('token')?('/cloths/Women-footwear'):('/loginregister')} className='nav-link' reloadDocument>Footwear</Link>
+					<Link to={Cookie.get('token')?('/cloths/Women-gadgets'):('/loginregister')} className='nav-link' reloadDocument>Gadgets</Link>
+					<Link to={Cookie.get('token')?('/cloths/Women-accessories'):('/loginregister')} className='nav-link' reloadDocument>Accessories</Link>
 					</div>
 					<div className='nav-link-items'>Womens</div>
 				</li>

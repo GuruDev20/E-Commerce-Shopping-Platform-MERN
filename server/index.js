@@ -129,21 +129,28 @@ app.get('/items', async (req, res) => {
 
 app.delete('/items/:itemId', async (req, res) => {
   const { itemId } = req.params;
-
   try {
-    // Check if the item exists
     const item = await ItemModel.findById(itemId);
     if (!item) {
       return res.status(404).json({ message: 'Item not found' });
     }
-
-    // Delete the item
     await ItemModel.findByIdAndDelete(itemId);
     return res.json({ message: 'Item deleted successfully' });
   } catch (error) {
     console.error('Error deleting item:', error);
     return res.status(500).json({ message: 'Internal server error' });
   }
+});
+
+app.get('/items/:category', async (req, res) => {
+    const { category } = req.params;
+    try {
+        const items = await ItemModel.find({ category: category });
+        res.json(items);
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
 });
 
 app.listen(process.env.PORT,()=>{

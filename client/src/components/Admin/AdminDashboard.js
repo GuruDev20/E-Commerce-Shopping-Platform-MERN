@@ -10,7 +10,6 @@ import { IoMailOutline } from "react-icons/io5";
 import Dashboard from './Dashboard';
 import Dealers from './Dealers';
 import Stocks from './Stocks';
-import Revenue from './Revenue';
 import axios from 'axios'
 import Cookie from 'js-cookie'
 function AdminDashboard() {
@@ -51,7 +50,6 @@ function AdminDashboard() {
 						<Link to='dashboard-body' smooth={true} duration={700}><li className='admin-control'>Dashboard</li></Link>
 						<Link to='dealers-body' smooth={true} duration={700}><li className='admin-control'>Dealers</li></Link>
 						<Link to='stocks-body' smooth={true} duration={700}><li className='admin-control'>Stocks</li></Link>
-						<Link to='revenue-body' smooth={true} duration={700}><li className='admin-control'>Revenue</li></Link>
 					</ul>
 				</div>
 			</div>
@@ -65,7 +63,6 @@ function AdminDashboard() {
 					<div className='dashboard-body'><Dashboard name="Home"/></div>
 					<div className='dealers-body'><Dealers name="Dealers"/></div>
 					<div className='stocks-body'><Stocks name="Stocks"/></div>
-					<div className='revenue-body'><Revenue name="Revenue"/></div>
 				</div>
 			</div>
 		</div>

@@ -42,22 +42,22 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Welcome />} />
-      <Route path="/cloths/men-top-wear" element={<Dresses sort="Mens-Top-wear"/>} />
-      <Route path="/cloths/men-bottom-wear" element={<Dresses sort="Mens-Bottom-wear"/>} />
-      <Route path="/cloths/men-footwear" element={<Dresses sort="Mens-Footwear"/>} />
-      <Route path="/cloths/men-gadgets" element={<Dresses sort="Mens-Gadgets"/>} />
-      <Route path="/cloths/men-accessories" element={<Dresses sort="Mens-Accessories"/>} />
-      <Route path="/cloths/women-top-wear" element={<Dresses sort="Womens-Top-wear"/>} />
-      <Route path="/cloths/women-bottom-wear" element={<Dresses sort="Womens-Bottom-wear"/>} />
-      <Route path="/cloths/women-footwear" element={<Dresses sort="Womens-Footwear"/>} />
-      <Route path="/cloths/women-gadgets" element={<Dresses sort="Womens-Gadgets"/>} />
-      <Route path="/cloths/women-accessories" element={<Dresses sort="Womens-Accessories"/>} />
-      <Route path="/cloths/kids-boys" element={<Dresses sort="Kids-Boys"/>} />
-      <Route path="/cloths/kids-girls" element={<Dresses sort="Kids-Girls"/>} />
-      <Route path="/cloths/kids-footwear" element={<Dresses sort="Kids-Footwear"/>} />
-      <Route path="/newarrivals" element={<Latest />} />
+      <Route path="/cloths/Men-top-wear" element={<Dresses sort="Mens-Top-Wear"/>} />
+      <Route path="/cloths/Men-bottom-wear" element={<Dresses sort="Mens-Bottom-Wear"/>} />
+      <Route path="/cloths/Men-footwear" element={<Dresses sort="Mens-Footwear"/>} />
+      <Route path="/cloths/Men-gadgets" element={<Dresses sort="Mens-Gadgets"/>} />
+      <Route path="/cloths/Men-accessories" element={<Dresses sort="Mens-Accessories"/>} />
+      <Route path="/cloths/Women-top-wear" element={<Dresses sort="Womens-Top-wear"/>} />
+      <Route path="/cloths/Women-bottom-wear" element={<Dresses sort="Womens-Bottom-wear"/>} />
+      <Route path="/cloths/Women-footwear" element={<Dresses sort="Womens-Footwear"/>} />
+      <Route path="/cloths/Women-gadgets" element={<Dresses sort="Womens-Gadgets"/>} />
+      <Route path="/cloths/Women-accessories" element={<Dresses sort="Womens-Accessories"/>} />
+      <Route path="/cloths/Kids-boys" element={<Dresses sort="Kids-Boys"/>} />
+      <Route path="/cloths/Kids-girls" element={<Dresses sort="Kids-Girls"/>} />
+      <Route path="/cloths/Kids-footwear" element={<Dresses sort="Kids-Footwear"/>} />
+      <Route path="/Newarrivals" element={<Latest />} />
       <Route path="/loginregister" element={<LoginRegister/>} />
-      <Route path="/cloths/men-top-wear/details/:category/:id" element={<ProductDetails/>} />
+      <Route path="/cloths/Men-top-wear/details/:category/:id" element={<ProductDetails/>} />
       <Route path="/cart" element={<Cart/>} />
       <Route path='/whislist' element={<WhistList/>} />
       <Route path='/myprofile' element={<Profile/>} />
