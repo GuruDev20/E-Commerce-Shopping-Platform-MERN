@@ -3,14 +3,14 @@ import Slider from 'react-slick';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../styles/Men.css';
-import Menimage from '../assets/Mens/men1.jpg';
-import Men1 from '../assets/Mens/Men1.png';
-import Men2 from '../assets/Mens/Men2.png';
-import Men3 from '../assets/Mens/Men3.png';
-import Men4 from '../assets/Mens/Men4.png';
-import Men7 from '../assets/Mens/Men7.png';
-import Men6 from '../assets/Mens/Men6.png';
+import '../../styles/Men.css';
+import Menimage from '../../assets/Mens/men1.jpg';
+import Men1 from '../../assets/Mens/Men1.png';
+import Men2 from '../../assets/Mens/Men2.png';
+import Men3 from '../../assets/Mens/Men3.png';
+import Men4 from '../../assets/Mens/Men4.png';
+import Men7 from '../../assets/Mens/Men7.png';
+import Men6 from '../../assets/Mens/Men6.png';
 function Men() {
     const sliderRef = useRef(null);
 
@@ -55,22 +55,22 @@ function Men() {
             </div>
             <div className='men-slider revv'>
                 <Slider {...settings} className='men-center' ref={sliderRef}>
-                    <div className='cards'>
+                    <div className='cardsi'>
                         <img src={Men1} alt='menimage' className='card-img' />
                     </div>
-                    <div className='cards'>
+                    <div className='cardsi'>
                         <img src={Men2} alt='menimage' className='card-img' />
                     </div>
-                    <div className='cards'>
+                    <div className='cardsi'>
                         <img src={Men3} alt='menimage' className='card-img' />
                     </div>
-                    <div className='cards'>
+                    <div className='cardsi'>
                         <img src={Men4} alt='menimage' className='card-img' />
                     </div>
-                    <div className='cards'>
+                    <div className='cardsi'>
                         <img src={Men7} alt='menimage' className='card-img' />
                     </div>
-                    <div className='cards'>
+                    <div className='cardsi'>
                         <img src={Men6} alt='menimage' className='card-img' />
                     </div>
                 </Slider>

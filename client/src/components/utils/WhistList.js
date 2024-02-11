@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import {useNavigate } from 'react-router-dom'
-import '../styles/WhistList.css'
+import '../../styles/WhistList.css'
 function WhistList() {
     const navigate = useNavigate();
     const[suc,setSuc]=useState();

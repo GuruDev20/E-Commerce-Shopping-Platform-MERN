@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import {useNavigate } from 'react-router-dom'
-import '../styles/Latest.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { new_arrivals, latest_deals, coming_soon } from '../components/data/Newarrivals';
+import '../../styles/Latest.css';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import { new_arrivals, latest_deals, coming_soon } from '../data/Newarrivals';
 
 function Latest() {
   const navigate = useNavigate();

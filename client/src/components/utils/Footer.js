@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Footer.css';
+import '../../styles/Footer.css';
 import { BsTelephone } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
@@ -27,7 +27,7 @@ function Footer() {
         <div className='vertical-divider'></div>
         <div className='foot-center'>
           <div className='center-head'>ONLINE SHOPPING</div>
-          <ul>
+          <ul className='footer-list'>
             <li>Men</li>
             <li>Women</li>
             <li>Foods & Drinks</li>
@@ -41,7 +41,7 @@ function Footer() {
         <div className='foot-right'>
           <div className='right-head'>SOCIAL</div>
           <div className='social'>
-            <ul>
+            <ul className='social-list'>
               <li><FaInstagram size={30} /></li>
               <li><FaFacebook size={30}/></li>
               <li><FaYoutube size={30} /></li>

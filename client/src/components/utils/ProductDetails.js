@@ -3,21 +3,21 @@ import axios from 'axios'
 import {useNavigate } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import '../styles/ProductDetails.css'
+import '../../styles/ProductDetails.css'
 import { useParams } from "react-router-dom";
-import { top_wear_collection } from './data/Men.Topwear';
-import { bottom_wear_collection } from './data/Men.Bottomwear';
-import {mens_footwear} from './data/Mens.Footwear';
-import {mens_gadgets} from './data/Mens.Gadgets';
-import {men_accessories} from './data/Mens.Accesories';
-import {women_top_wear} from './data/Women.Topwear';
-import {women_bottom_wear} from './data/Women.Bottomwear';
-import {women_foot_wear} from './data/Women.Footwear';
-import { women_gadgets } from './data/Women.Gadgets';
-import { women_accessories } from './data/Women.Accessories';
-import {kids_boys} from './data/Boys';
-import {kids_girls} from './data/Girls';
-import {kids_footwear} from './data/Footwear';
+import { top_wear_collection } from '../data/Men.Topwear';
+import { bottom_wear_collection } from '../data/Men.Bottomwear';
+import {mens_footwear} from '../data/Mens.Footwear';
+import {mens_gadgets} from '../data/Mens.Gadgets';
+import {men_accessories} from '../data/Mens.Accesories';
+import {women_top_wear} from '../data/Women.Topwear';
+import {women_bottom_wear} from '../data/Women.Bottomwear';
+import {women_foot_wear} from '../data/Women.Footwear';
+import { women_gadgets } from '../data/Women.Gadgets';
+import { women_accessories } from '../data/Women.Accessories';
+import {kids_boys} from '../data/Boys';
+import {kids_girls} from '../data/Girls';
+import {kids_footwear} from '../data/Footwear';
 import { FaShoppingCart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 function ProductDetails() {

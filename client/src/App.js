@@ -1,16 +1,16 @@
 import React from 'react'
-import Welcome from "../src/components/Welcome";
+import Welcome from "../src/components/utils/Welcome";
 import { Routes, Route } from "react-router-dom";
-import Dresses from "../src/components/Dresses";
-import LoginRegister from "./components/Login.Register";
-import ProductDetails from "../src/components/ProductDetails";
-import Cart from "./components/Cart";
-import WhistList from "../src/components/WhistList";
-import Latest from "./components/Latest";
-import Profile from './components/Profile'
+import Dresses from "../src/components/utils/Dresses";
+import LoginRegister from "./components/utils/Login.Register";
+import ProductDetails from "../src/components/utils/ProductDetails";
+import Cart from "./components/utils/Cart";
+import WhistList from "../src/components/utils/WhistList";
+import Latest from "./components/utils/Latest";
+import Profile from './components/utils/Profile'
 import Admin from "./components/Admin/Admin";
 import Dealers from "./components/Dealers/Dealers";
-import NotFound from './components/404NotFound';
+import NotFound from './components/utils/404NotFound';
 function App() {
   window.addEventListener("scroll", reveal);
   function reveal() {

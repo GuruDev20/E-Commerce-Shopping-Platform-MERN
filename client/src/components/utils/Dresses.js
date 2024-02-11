@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import {useNavigate } from 'react-router-dom'
-import '../styles/Dresses.css';
+import '../../styles/Dresses.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Filter from './Filter';

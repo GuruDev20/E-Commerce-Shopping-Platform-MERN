@@ -45,7 +45,7 @@
     font-weight: bold;
     margin-bottom: 15px;
     padding-bottom: 10px;
-    margin-left: 19em;
+    margin-left: 14em;
 }
 
 .social ul {
@@ -72,7 +72,7 @@
 }
 
 .right-head {
-    margin-left: 7em;
+    margin-left: 8em;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -99,6 +99,20 @@
 }
 .foot-center ul{
     margin-right: 4em;
+}
+.footer-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 70px;
+}
+.social-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
 }
 @media (max-width: 768px) {
     .foot-container {

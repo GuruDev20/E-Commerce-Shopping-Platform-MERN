@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import '../styles/Others.css';
-import Women10 from '../assets/Womens/Women10.png'
-import Boys11 from '../assets/kids/Boys11.png'
-import Men7 from '../assets/Mens/Men7.png'
-import Girls3 from '../assets/kids/Girls3.png'
-import Men3 from '../assets/new/Men3.png'
+import '../../styles/Others.css';
+import Women10 from '../../assets/Womens/Women10.png'
+import Boys11 from '../../assets/kids/Boys11.png'
+import Men7 from '../../assets/Mens/Men7.png'
+import Girls3 from '../../assets/kids/Girls3.png'
+import Men3 from '../../assets/new/Men3.png'
 import { Link } from 'react-router-dom';
 
 function Others() {

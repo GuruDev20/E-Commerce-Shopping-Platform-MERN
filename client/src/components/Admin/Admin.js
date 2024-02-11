@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Dashboard from './Dashboard'
+import AdminDashboard from './AdminDashboard'
 import axios from 'axios'
 import {useNavigate } from 'react-router-dom'
 function Admin() {
@@ -18,9 +18,7 @@ function Admin() {
     .catch(err => console.log(err));
   }, [navigate]);
   return (
-    <div className='admin'>
-        <Dashboard sort={{suc}}/>
-    </div>
+    <div val={{suc}}><AdminDashboard/></div>
   )
 }
 

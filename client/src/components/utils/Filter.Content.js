@@ -1,21 +1,21 @@
 import React,{useState} from 'react'
-import '../styles/FilterContent.css'
+import '../../styles/FilterContent.css'
 import { FaStar } from "react-icons/fa";
 import { BsBagHeartFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
-import { top_wear_collection } from './data/Men.Topwear';
-import { bottom_wear_collection } from './data/Men.Bottomwear';
-import {mens_footwear} from './data/Mens.Footwear';
-import {mens_gadgets} from './data/Mens.Gadgets';
-import {men_accessories} from './data/Mens.Accesories';
-import {women_top_wear} from './data/Women.Topwear';
-import {women_bottom_wear} from './data/Women.Bottomwear';
-import {women_foot_wear} from './data/Women.Footwear';
-import { women_gadgets } from './data/Women.Gadgets';
-import { women_accessories } from './data/Women.Accessories';
-import {kids_boys} from './data/Boys';
-import {kids_girls} from './data/Girls';
-import {kids_footwear} from './data/Footwear';
+import { top_wear_collection } from '../data/Men.Topwear';
+import { bottom_wear_collection } from '../data/Men.Bottomwear';
+import {mens_footwear} from '../data/Mens.Footwear';
+import {mens_gadgets} from '../data/Mens.Gadgets';
+import {men_accessories} from '../data/Mens.Accesories';
+import {women_top_wear} from '../data/Women.Topwear';
+import {women_bottom_wear} from '../data/Women.Bottomwear';
+import {women_foot_wear} from '../data/Women.Footwear';
+import { women_gadgets } from '../data/Women.Gadgets';
+import { women_accessories } from '../data/Women.Accessories';
+import {kids_boys} from '../data/Boys';
+import {kids_girls} from '../data/Girls';
+import {kids_footwear} from '../data/Footwear';
 function FilterContent({ val,category }) {
   const itemsPerPage = 12;
   const [visibleItems, setVisibleItems] = useState(itemsPerPage);

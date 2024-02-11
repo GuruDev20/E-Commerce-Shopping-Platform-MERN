@@ -58,7 +58,7 @@ const top_wear_collection=[
     name:'Mens slim fit & casual shirt',
     price:'1000',
     previous_price:'1200',
-    size:['S','M','L'],
+    size:['S','M','L','XL'],
     color:['Blue'],
     pattern:'Stripe',
   },

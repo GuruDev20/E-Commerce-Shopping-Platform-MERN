@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import '../styles/LoginRegister.css';
+import React, { useState,useEffect } from 'react';
+import '../../styles/LoginRegister.css';
 import { RiUserFill } from "react-icons/ri";
 import { IoMdLock } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
@@ -32,7 +32,13 @@ function LoginRegister() {
     setMobile('');
     setRole('');
   };
-  
+  useEffect(() => {
+    const tokenExpiration = setTimeout(() => {
+      localStorage.removeItem('token');
+    }, 3600000);
+
+    return () => clearTimeout(tokenExpiration);
+  }, []);
   const validateEmail = (value) => {
     const isValid = /^[^\s@]+@[^\s@]+\.(com|in|ac\.in)$/.test(value);
     const message = isValid ? 'Correct' : 'Invalid email address';

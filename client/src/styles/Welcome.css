@@ -38,7 +38,7 @@ span {
     transition: margin-top 0.3s ease-in-out;
 }
 
-ul {
+.nav-content {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -46,7 +46,7 @@ ul {
     padding: 0;
 }
 
-li {
+.nav-list{
     position: relative;
     margin-right: 20px;
     padding: 10px;
@@ -102,18 +102,18 @@ li {
     margin-left: auto; 
 }
 
-li:hover .dropdown {
+.nav-list:hover .dropdown {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-li:hover {
+.nav-list:hover {
     color: maroon;
 }
 
-li::before {
+.nav-list::before {
     content: "";
     position: absolute;
     width: 0;
@@ -126,7 +126,7 @@ li::before {
     transition: width 0.3s ease-out;
 }
 
-li:hover::before {
+.nav-list:hover::before {
     width: 100%;
 }
 
@@ -219,18 +219,18 @@ li:hover::before {
         display: none;
     }
 
-    .navbar li:hover .dropdown {
+    .navbar .nav-list:hover .dropdown {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .navbar li:hover {
+    .navbar .nav-list:hover {
         color: maroon;
     }
 
-    .navbar li::before {
+    .navbar .nav-list::before {
         content: "";
         position: absolute;
         width: 0;
@@ -243,7 +243,7 @@ li:hover::before {
         transition: width 0.3s ease-out;
     }
 
-    .navbar li:hover::before {
+    .navbar .nav-list:hover::before {
         width: 100%;
     }
 

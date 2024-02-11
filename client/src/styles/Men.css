@@ -43,7 +43,7 @@
 .men-slider {
     position: absolute;
     left: 20%;
-    top: 130%;
+    top: 125%;
     width: 60%;
 }
 
@@ -80,7 +80,7 @@
     overflow: hidden;
 }
 
-.cards {
+.cardsi {
     padding: 0 10px;
 }
 

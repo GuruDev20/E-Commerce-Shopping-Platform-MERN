@@ -1,12 +1,12 @@
 import React, { useEffect, useState,useRef } from 'react'
 import axios from 'axios'
 import {useNavigate } from 'react-router-dom'
-import '../styles/Newarrivals.css'
-import Men1 from '../assets/new/Men1.png'
-import Men2 from '../assets/new/Men2.png'
-import Women1 from '../assets/new/Women1.png'
-import Women3 from '../assets/new/Women3.png'
-import Girl from '../assets/new/Girl.png'
+import '../../styles/Newarrivals.css'
+import Men1 from '../../assets/new/Men1.png'
+import Men2 from '../../assets/new/Men2.png'
+import Women1 from '../../assets/new/Women1.png'
+import Women3 from '../../assets/new/Women3.png'
+import Girl from '../../assets/new/Girl.png'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

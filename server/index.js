@@ -5,19 +5,18 @@ const cors=require('cors');
 const bcrypt= require('bcrypt');
 const jwt= require('jsonwebtoken');
 const cookieParser= require('cookie-parser');
-const app = express();
 const multer = require('multer');
-const upload = multer();
+const app = express();
 app.use(express.json())
 app.use(cors({
     origin:["http://localhost:3000"],
-    methods:["GET","POST"],
+    methods:["GET","POST","DELETE"],
     credentials:true,
     optionsSuccessStatus:204
 }));
 app.use(cookieParser());
 const UserModel=require('./models/userModel')
-const CollectionModel=require('./models/collectionModel')
+const ItemModel=require('./models/collectionModel')
 mongoose.connect(process.env.MONGO_URI)
 
 const verifyUser = (req, res, next) => {
@@ -95,27 +94,55 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app.post('/products', upload.array('images', 10), async (req, res) => {
-  try {
-    const { name, brand, price, category, size, color, pattern, description,images } = req.body;
-    const product = new CollectionModel({
-      name,
-      brand,
-      price,
-      category,
-      size: JSON.parse(size),
-      color: JSON.parse(color),
-      pattern,
-      description,
-      images:JSON.parse(images)
-    });
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, '../client/src/uploads');
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname);
+    },
+});
 
-    await product.save();
-    console.log('Product saved successfully');
-    res.status(201).json({ message: 'Product saved successfully' });
+const upload = multer({ storage: storage });
+app.post('/store', upload.array('images', 5), async (req, res) => {
+    try {
+        const { brand, name, price, category,type,size, color, pattern, description } = req.body;
+        const images = req.files.map((file) => file.originalname);
+        const newItem = new ItemModel({brand,name,price,category,type,size: JSON.parse(size),color: JSON.parse(color),pattern,description,images,});
+        await newItem.save();
+        res.status(201).json({ message: 'Item created successfully' });
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+app.get('/items', async (req, res) => {
+    try {
+        const items = await ItemModel.find();
+        res.json(items);
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
+
+app.delete('/items/:itemId', async (req, res) => {
+  const { itemId } = req.params;
+
+  try {
+    // Check if the item exists
+    const item = await ItemModel.findById(itemId);
+    if (!item) {
+      return res.status(404).json({ message: 'Item not found' });
+    }
+
+    // Delete the item
+    await ItemModel.findByIdAndDelete(itemId);
+    return res.json({ message: 'Item deleted successfully' });
   } catch (error) {
-    console.error('Error storing data:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error('Error deleting item:', error);
+    return res.status(500).json({ message: 'Internal server error' });
   }
 });
 

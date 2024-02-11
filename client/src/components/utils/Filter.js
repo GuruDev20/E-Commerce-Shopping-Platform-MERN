@@ -3,8 +3,8 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 import DropdownContent from './DropdownContent';
 import { IoClose } from "react-icons/io5";
 import FilterContent from './Filter.Content';
-import '../styles/Dresses.css'
-import '../styles/FilterContent.css'
+import '../../styles/Dresses.css'
+import '../../styles/FilterContent.css'
 const categoriesData = {
   'Mens-Top-wear': ['Casual Shirts', 'Formal Shirts', 'Blazers', 'T-Shirts', 'Jackets'],
   'Mens-Bottom-wear': ['Jeans', 'Casual trousers', 'Formal Trousers', 'Shorts', 'Track Pants'],
