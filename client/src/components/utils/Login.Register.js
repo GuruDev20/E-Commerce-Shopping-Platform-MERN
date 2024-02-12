@@ -75,7 +75,7 @@ function LoginRegister() {
       axios.post('http://localhost:4000/login',{email,password})
       .then(res=>{
         if(res.data.status==='Success'){
-          localStorage.setItem('token', res.data.token);
+          localStorage.setItem('token', [res.data.token,email]);
           if(res.data.role==='Admin'){
             navigate('/admin');
           }

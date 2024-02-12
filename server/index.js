@@ -17,6 +17,7 @@ app.use(cors({
 app.use(cookieParser());
 const UserModel=require('./models/userModel')
 const ItemModel=require('./models/collectionModel')
+const CartModel=require('./models/cartModel')
 mongoose.connect(process.env.MONGO_URI)
 
 const verifyUser = (req, res, next) => {
@@ -150,6 +151,23 @@ app.get('/items/:category', async (req, res) => {
     } catch (error) {
         console.error('Error:', error);
         res.status(500).json({ message: 'Server error' });
+    }
+});
+
+app.get('/products/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            return res.status(400).json({ message: 'Invalid product ID' });
+        }
+        const product = await ItemModel.findById(id);
+        if (!product) {
+            return res.status(404).json({ message: 'Product not found' });
+        }
+        res.status(200).json(product);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal server error' });
     }
 });
 
