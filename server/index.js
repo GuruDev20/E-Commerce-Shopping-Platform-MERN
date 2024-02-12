@@ -18,6 +18,8 @@ app.use(cookieParser());
 const UserModel=require('./models/userModel')
 const ItemModel=require('./models/collectionModel')
 const CartModel=require('./models/cartModel')
+const ReviewModel=require('./models/reviewModel')
+const WishListModel=require('./models/wishListModel');
 mongoose.connect(process.env.MONGO_URI)
 
 const verifyUser = (req, res, next) => {
@@ -168,6 +170,93 @@ app.get('/products/:id', async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+app.post('/addToCart', async (req, res) => {
+    try {
+        const { userEmail, productId } = req.body;
+        if (!userEmail || !productId) {
+            return res.status(400).json({ message: 'User email and product ID are required' });
+        }
+        const existingCartItem = await CartModel.findOne({ userEmail, productId });
+        if (existingCartItem) {
+            return res.status(400).json({ message: 'Item already exists in the cart' });
+        }
+        const newCartItem = new CartModel({
+            userEmail: userEmail,
+            productId: productId
+        });
+        await newCartItem.save();
+        return res.status(200).json({ message: 'Item added to cart successfully' });
+    } catch (error) {
+        console.error('Error adding item to cart:', error);
+        return res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+app.get('/itemsExcept/:category/:id', async (req, res) => {
+    const { category,id } = req.params;
+    try {
+        const items = await ItemModel.find({ category: category, _id: { $ne: id } });
+        res.json(items);
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
+app.post('/addReview', async (req, res) => {
+    try {
+        const { productId, review, userEmail } = req.body;
+        const user = await UserModel.findOne({ email: userEmail });
+        if (!user) {
+            return res.status(400).json({ error: 'User not found' });
+        }
+        const newReview = new ReviewModel({
+            productId,
+            review,
+            userEmail,
+            username: user.username,
+        });
+        await newReview.save();
+        res.status(200).json({ message: 'Review added successfully' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+app.get('/reviews/:productId', async (req, res) => {
+    try {
+        const productId = req.params.productId;
+        const reviews = await ReviewModel.find({ productId });
+        res.status(200).json(reviews);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+app.post('/wishlist', async (req, res) => {
+    try {
+        const { userEmail, productId } = req.body;
+        if (!userEmail || !productId) {
+            return res.status(400).json({ message: 'User email and product ID are required' });
+        }
+        const existingWishListItem = await WishListModel.findOne({ userEmail, productId });
+        if (existingWishListItem) {
+            return res.status(400).json({ message: 'Item already exists in the wishlist' });
+        }
+        const newWishListItem = new WishListModel({
+            userEmail: userEmail,
+            productId: productId
+        });
+        await newWishListItem.save();
+        return res.status(200).json({ message: 'Item added to wishlist successfully' });
+    } catch (error) {
+        console.error('Error adding item to wishlist:', error);
+        return res.status(500).json({ message: 'Internal server error' });
     }
 });
 

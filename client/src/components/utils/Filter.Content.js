@@ -4,8 +4,9 @@ import '../../styles/FilterContent.css';
 import { FaStar } from 'react-icons/fa';
 import { BsBagHeartFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-
+import {useNavigate} from 'react-router-dom'
 function FilterContent({ val, category }) {
+    const navigate=useNavigate();
     const [items, setItems] = useState([]);
     const [visibleItems, setVisibleItems] = useState(12);
 
@@ -58,8 +59,7 @@ function FilterContent({ val, category }) {
                 userEmail: userEmail,
                 productId: itemId
             });
-
-            alert('Item added to cart successfully!');
+            navigate('/cart')
         } catch (error) {
             console.error('Error adding item to cart:', error);
         }
@@ -69,30 +69,30 @@ function FilterContent({ val, category }) {
         <div>
             <section className="card-container">
                 {visibleItemsData.map((item) => (
-                    <Link to={`/cloths/men-top-wear/details/${category}/${item._id}`} className="link-to-more" key={item.id}>
-                        <section className="card-list" key={item.id}>
+                    <section className="card-list" key={item.id}>
+                        <Link to={`/cloths/men-top-wear/details/${category}/${item._id}`} className="link-to-more" key={item.id}>
                             <img src={require(`../../../src/uploads/${item.images[0]}`)} alt={item.name} className='card-img-result' />
-                            <div className="card-details">
-                                <h3 className="card-title">{item.brand}</h3>
-                                <h5 className="card-title">{item.name}</h5>
-                                <section className="card-reviews">
-                                    <FaStar className="ratings-start" />
-                                    <FaStar className="ratings-start" />
-                                    <FaStar className="ratings-start" />
-                                    <FaStar className="ratings-start" />
-                                    <span className="total-reviews">4</span>
-                                </section>
-                                <section className="card-price">
-                                    <div className="price-item">
-                                        &#8377;{item.price}
-                                    </div>
-                                    <div className="bag" onClick={() => addToCart(item._id)}>
-                                        <BsBagHeartFill className="bag-icon" size={20} />
-                                    </div>
-                                </section>
-                            </div>
-                        </section>
-                    </Link>
+                        </Link>
+                        <div className="card-details">
+                            <h3 className="card-title">{item.brand}</h3>
+                            <h5 className="card-title">{item.name}</h5>
+                            <section className="card-reviews">
+                                <FaStar className="ratings-start" />
+                                <FaStar className="ratings-start" />
+                                <FaStar className="ratings-start" />
+                                <FaStar className="ratings-start" />
+                                <span className="total-reviews">4</span>
+                            </section>
+                            <section className="card-price">
+                                <div className="price-item">
+                                    &#8377;{item.price}
+                                </div>
+                                <div className="bag" onClick={() => addToCart(item._id)}>
+                                    <BsBagHeartFill className="bag-icon" size={20} />
+                                </div>
+                            </section>
+                        </div>
+                    </section>
                 ))}
             </section>
             {visibleItems < filteredItems.length && (
