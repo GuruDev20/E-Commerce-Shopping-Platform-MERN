@@ -6,7 +6,6 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 import { IoClose } from 'react-icons/io5';
-
 function Cart() {
     const navigate = useNavigate();
     const [suc, setSuc] = useState();
@@ -14,7 +13,7 @@ function Cart() {
     const [cart, setCart] = useState([]);
     const [products, setProducts] = useState([]);
     const [selectedSizes, setSelectedSizes] = useState([]);
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState({});
     const [showAddressForm, setShowAddressForm] = useState(false);
     const [address, setAddress] = useState('');
     const [showPaymentSelection, setShowPaymentSelection] = useState(false);
@@ -75,13 +74,19 @@ function Cart() {
         }
     };
 
-    const increaseCount = () => {
-        setCount(prevCount => prevCount + 1);
+    const increaseCount = (productId) => {
+        setCount(prevCounts => ({
+            ...prevCounts,
+            [productId]: (prevCounts[productId] || 0) + 1
+        }));
     };
 
-    const decreaseCount = () => {
-        if (count > 1) {
-            setCount(prevCount => prevCount - 1);
+    const decreaseCount = (productId) => {
+        if (count[productId] && count[productId] > 1) {
+            setCount(prevCounts => ({
+                ...prevCounts,
+                [productId]: prevCounts[productId] - 1
+            }));
         }
     };
 
@@ -108,12 +113,12 @@ function Cart() {
         if (paymentType === 'online') {
             const total = cart.reduce((total, item) => {
                 const product = products.find(p => p._id === item.productId);
-                return total + (product ? product.price * item.quantity : 0);
+                return total + (product ? (count[item.productId] || 0) * product.price * item.quantity : 0);
             }, 0);
             var options = {
                 key: "rzp_test_D6uvdHaGMJkfge",
                 key_secret: "9ndBhyXumgmepSEjHigyA1sH",
-                amount: total * count * 100,
+                amount: total * 100,
                 currency: "INR",
                 name: "E-Commerce",
                 description: "for testing purpose",
@@ -206,12 +211,12 @@ function Cart() {
                                                     </div>
                                                     <div className='count-header'>Qty:</div>
                                                     <div className='cart-quantity'>
-                                                        <button className='decrease-count' onClick={() => decreaseCount()}>-</button>
-                                                        <div className='quantity-count'>{count}</div>
-                                                        <button className='increase-count' onClick={() => increaseCount()}>+</button>
+                                                        <button className='decrease-count' onClick={() => decreaseCount(product._id)}>-</button>
+                                                        <div className='quantity-count'>{count[product._id] || 0}</div>
+                                                        <button className='increase-count' onClick={() => increaseCount(product._id)}>+</button>
                                                     </div>
                                                 </div>
-                                                <p className='cart-price'>&#8377;{product.price * count}</p>
+                                                <p className='cart-price'>&#8377;{count[product._id]>=1?product.price * count[product._id]:product.price}</p>
                                             </div>
                                             <div className='cart-last'>
                                                 <IoClose size={22} color='#124559' onClick={() => { deleteCartProduct(product._id, email) }} />
@@ -238,9 +243,10 @@ function Cart() {
                                 <div className='total-price-products'>
                                     {cart.map(item => {
                                         const product = products.find(p => p._id === item.productId);
+                                        const totalPrice = product? (item.quantity === 0 ? product.price : product.price * item.quantity) : 0;
                                         return (
                                             <div className='pro-name' key={item.productId}>
-                                                &#8377;{product && product.price*item.quantity}
+                                                &#8377;{totalPrice}
                                             </div>
                                         );
                                     })}
@@ -251,9 +257,9 @@ function Cart() {
                                 <div className='t-amount'>TOTAL AMOUNT</div>
                                 <div className='t-price'>
                                     <div className='t-price'>
-                                        &#8377;{cart.reduce((total, item) => {
+                                         &#8377;{cart.reduce((total, item) => {
                                             const product = products.find(p => p._id === item.productId);
-                                            return total + (product ? count*product.price * item.quantity : 0);
+                                            return total + (product ? (count[item.productId] || 0) * product.price * item.quantity : 0);
                                         }, 0)}
                                     </div>
                                 </div>

@@ -275,7 +275,7 @@ app.get('/userWishlist/:email', async (req, res) => {
 app.get('/products/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        const product = await CollectionModel.findById(id);
+        const product = await ItemModel.findById(id);
         if (!product) {
             return res.status(404).json({ message: 'Product not found' });
         }
@@ -333,11 +333,25 @@ app.post('/orders', async (req, res) => {
     try {
         const newOrder = await OrderModel.create(req.body);
         res.status(201).json(newOrder);
-    } catch (error) {
+    } 
+    catch (error) {
         console.error("Error creating order:", error);
         res.status(500).json({ error: 'Server error' });
     }
 });
+
+app.get('/ordersDetails/:email', async (req, res) => {
+    try {
+        const { email } = req.params;
+        const orders = await OrderModel.find({ email:email });
+        res.json(orders);
+    } 
+    catch (error) {
+        console.error('Error fetching orders:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
 app.listen(process.env.PORT,()=>{
     console.log("Server is running")
 })
