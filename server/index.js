@@ -260,6 +260,47 @@ app.post('/wishlist', async (req, res) => {
     }
 });
 
+app.get('/userWishlist/:email', async (req, res) => {
+    const { email } = req.params;
+    try {
+        const items = await WishListModel.find({ userEmail: email });
+        res.json(items);
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
+app.get('/products/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const product = await CollectionModel.findById(id);
+        if (!product) {
+            return res.status(404).json({ message: 'Product not found' });
+        }
+        res.status(200).json(product);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+app.delete('/wishlist/:productId/:userEmail', async (req, res) => {
+    const { productId,userEmail } = req.params;
+    try {
+        const existingWishListItem = await WishListModel.findOne({ userEmail, productId });
+        if (!existingWishListItem) {
+            return res.status(404).json({ message: 'Product not found in wishlist' });
+        }
+        await WishListModel.findOneAndDelete({ userEmail, productId });
+        res.status(200).json({ message: 'Product removed from wishlist successfully' });
+    } 
+    catch (error) {
+        console.error('Error removing product from wishlist:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
 app.listen(process.env.PORT,()=>{
     console.log("Server is running")
 })
