@@ -20,6 +20,7 @@ const ItemModel=require('./models/collectionModel')
 const CartModel=require('./models/cartModel')
 const ReviewModel=require('./models/reviewModel')
 const WishListModel=require('./models/wishListModel');
+const OrderModel=require('./models/orderModel')
 mongoose.connect(process.env.MONGO_URI)
 
 const verifyUser = (req, res, next) => {
@@ -301,6 +302,42 @@ app.delete('/wishlist/:productId/:userEmail', async (req, res) => {
     }
 });
 
+app.get('/userCart/:email',async(req,res)=>{
+    const { email } = req.params;
+    try {
+        const items = await CartModel.find({ userEmail: email });
+        res.json(items);
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+})
+
+app.delete('/cart/:productId/:userEmail',async(req,res)=>{
+    const { productId,userEmail } = req.params;
+    try {
+        const existingCartItem = await CartModel.findOne({ userEmail, productId });
+        if (!existingCartItem) {
+            return res.status(404).json({ message: 'Product not found in cart' });
+        }
+        await CartModel.findOneAndDelete({ userEmail, productId });
+        res.status(200).json({ message: 'Product removed from cart successfully' });
+    } 
+    catch (error) {
+        console.error('Error removing product from cart:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+})
+
+app.post('/orders', async (req, res) => {
+    try {
+        const newOrder = await OrderModel.create(req.body);
+        res.status(201).json(newOrder);
+    } catch (error) {
+        console.error("Error creating order:", error);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
 app.listen(process.env.PORT,()=>{
     console.log("Server is running")
 })

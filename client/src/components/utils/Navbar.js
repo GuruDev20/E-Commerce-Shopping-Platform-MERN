@@ -88,10 +88,10 @@ function Navbar() {
 				</div>
 			)}
 			<div className='whislist'>
-				<Link to ='/whislist' reloadDocument className='nav-link'><CiHeart size={40} color='#e56b6f'/></Link>
+				<Link to={Cookie.get('token')?('/whislist'):('/loginregister')} reloadDocument className='nav-link'><CiHeart size={40} color='#e56b6f'/></Link>
 			</div>
 			<div className='cart'>
-				<Link to='/cart' reloadDocument className='nav-link'><FaShoppingCart size={30}/></Link>
+				<Link to={Cookie.get('token')?('/cart'):('/loginregister')} reloadDocument className='nav-link'><FaShoppingCart size={30}/></Link>
 			</div>
 		</div>
 	)

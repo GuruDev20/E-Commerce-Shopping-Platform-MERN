@@ -30,11 +30,12 @@ function Footer() {
           <ul className='footer-list'>
             <li>Men</li>
             <li>Women</li>
-            <li>Foods & Drinks</li>
-            <li>Home & Living</li>
-            <li>Beauty</li>
-            <li>Gift Cards</li>
-            <li>Furnitures</li>
+            <li>Boys</li>
+            <li>Girls</li>
+            <li>Footwears</li>
+            <li>Gadgets</li>
+            <li>Accessories</li>
+            <li>New Arrivals</li>
           </ul>
         </div>
         <div className='vertical-divider'></div>

@@ -11,6 +11,7 @@ import Profile from './components/utils/Profile'
 import Admin from "./components/Admin/Admin";
 import Dealers from "./components/Dealers/Dealers";
 import NotFound from './components/utils/404NotFound';
+import Orders from './components/utils/Orders';
 function App() {
   window.addEventListener("scroll", reveal);
   function reveal() {
@@ -64,6 +65,7 @@ function App() {
       <Route path='/admin' element={<Admin/>} />
       <Route path="/dealers" element={<Dealers/>} />
       <Route path="/notfound" element={<NotFound/>} />
+      <Route path="/orders" element={<Orders/>} />
     </Routes>
   );
 }
