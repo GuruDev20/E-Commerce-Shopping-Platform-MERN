@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const orderSchema = new mongoose.Schema({
     products: [{
         productId: {
-            type: mongoose.Schema.Types.ObjectId,
+            type:String,
             ref: 'Product',
             required: true
         },
@@ -16,6 +16,10 @@ const orderSchema = new mongoose.Schema({
         }
     }],
     email: {
+        type: String,
+        required: true
+    },
+    address: {
         type: String,
         required: true
     },

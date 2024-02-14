@@ -49,52 +49,74 @@ function Orders() {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const promises = orders.map(order =>axios.get(`http://localhost:4000/products/${order.products.productId}`));
-                const responses = await Promise.all(promises);
-                const productsData = responses.map(response => response.data);
+                const productIds = orders.map(order => order.products.map(product => product.productId));
+                const flattenedProductIds = productIds.flat();
+                const uniqueProductIds = [...new Set(flattenedProductIds)];
+
+                const productsPromises = uniqueProductIds.map(productId =>
+                    axios.get(`http://localhost:4000/products/${productId}`)
+                );
+                const productsResponses = await Promise.all(productsPromises);
+                const productsData = productsResponses.map(response => response.data);
+
                 setProducts(productsData);
-                console.log(productsData);
             } catch (error) {
                 console.error('Error fetching products:', error);
             }
         };
+
         if (orders.length > 0) {
             fetchProducts();
         }
     }, [orders]);
 
     return (
-        <div val={{suc}}>
-            <Navbar />
-            <div className='order-details'>
-                <h2>Your Orders</h2>
-                <ul>
-                    {orders.map((order, orderIndex) => (
-                        <li key={order.id}>
-                            <p>Email: {order.email}</p>
-                            <p>Payment Type: {order.paymentType}</p>
-                            <p>Created At: {new Date(order.createdAt).toLocaleString()}</p>
-                            <h3>Products:</h3>
-                            <ul>
-                                {order.products.map((product, index) => (
-                                    <li key={index}>
-                                        <p>Product ID: {product.productId}</p>
-                                        <p>Quantity: {product.quantity}</p>
-                                        <p>Size: {product.size}</p>
-                                        {products[index] && (
-                                            <>
-                                                <p>Brand: {products[index].brand}</p>
-                                                <p>Name: {products[index].name}</p>
-                                            </>
-                                        )}
-                                    </li>
-                                ))}
-                            </ul>
-                        </li>
-                    ))}
-                </ul>
+        <div val={{ suc }}>
+            <div className='order-top'>
+                <Navbar />
             </div>
-            <Footer />
+            <div className='order-details-list'>
+                <div className='order-left'></div>
+                <div className='order-centre-list'>
+                    <div className='order-main'>
+                        {products.map(product => (
+                            <div className='order-products'>
+                                <div className='order-list' key={product._id}>
+                                    <div className='order-images'>
+                                        <img src={require(`../../../src/uploads/${product.images[0]}`)} alt={product.name} className='order-img-res' />
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className='order-opt'>
+                        {products.map(product => (
+                            <>
+                                <div className='order-brand'>{product.brand}</div>
+                                <div className='order-name'>{product.name}</div>
+                                <div className='order-color'>
+                                    {product.color.map((colordata,index)=>(
+                                        <div key={index} className="list-color">
+                                            <div className="color-product" style={{ background: colordata.toLowerCase() }}></div>
+                                            <div className="color-product-name">{colordata}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </>
+                        ))}
+                        {orders.map(order=>(
+                            <div className='order-option'>
+                                <div className='order-address'>{order.address}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className='order-right'></div>
+            </div>
+            <div className='order-foot'>
+            <   Footer />
+            </div>
         </div>
     );
 }

@@ -130,6 +130,7 @@ function Cart() {
                             size: selectedSizes[item.productId],
                         })),
                         email: email,
+                        address:address,
                         paymentType: 'online',
                     };
 
@@ -164,6 +165,7 @@ function Cart() {
                     size: selectedSizes[item.productId],
                 })),
                 email: email,
+                address:address,
                 paymentType: 'cash',
             };
             try {

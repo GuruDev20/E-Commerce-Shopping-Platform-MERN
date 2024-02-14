@@ -1,0 +1,33 @@
+.order-details-list{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    gap: 10px;
+    background-color: #edf6f9;
+    padding: 20px;
+}
+.order-centre-list{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid grey; */
+    border-radius: 5px;
+    background-color: white;
+}
+.order-main{
+    padding: 20px;
+}
+.order-img-res{
+    width: 13em;
+    border-radius: 3px;
+}
+.order-opt{
+    padding: 20px;
+}
+.order-name,.order-brand,.order-color{
+    padding-top: 15px;
+    font-size: 20px;
+}
+.order-address{
+    padding-top: 15px;
+    color: grey;
+    font-size: 18px;
+}
