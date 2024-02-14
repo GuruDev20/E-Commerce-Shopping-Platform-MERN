@@ -320,14 +320,35 @@
     margin-left: 5px;
 }
 .revenue-total,.user-total,.dealers-total,.stocks-total{
-    height: 8em;
+    height: 4em;
     background-color: #ebf2fa;
     margin: 25px;
     border-radius: 10px;
     border: 1px solid #ced4da;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 600;
 }
 .user-reviews-name,.stocks-name-title{
     padding: 20px;
     font-size: 20px;
     border-bottom: 1px solid #ced4da;
+}
+.rev-products{
+    padding: 20px;
+}
+.product-name{
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.fetch-stocks{
+    margin-top: 5px;
+    padding: 10px;
+    padding-left: 15px;
+}
+.available-stocks-name{
+    max-height: 410px;
+    overflow-y: auto;
+
 }

@@ -376,6 +376,69 @@ app.get('/orderHistory/:email',async(req,res)=>{
     }
 })
 
+app.get('/totalrevenue', async (req, res) => {
+    try {
+        const totalPriceOfOrders = await OrderModel.aggregate([{ $group: { _id: null, totalPrice: { $sum: { $toDouble: "$price" } } } }]);
+        res.json(totalPriceOfOrders[0].totalPrice);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+app.get('/totalUsers', async (req, res) => {
+    try {
+        const role = req.query.role; 
+        const count = await UserModel.countDocuments({ role: role }); 
+        res.json(count);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Internal server error" });
+    }
+});
+
+app.get('/totalDealers', async (req, res) => {
+    try {
+        const role = req.query.role; 
+        const count = await UserModel.countDocuments({ role: role }); 
+        res.json(count);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Internal server error" });
+    }
+});
+
+app.get('/totalStocks', async (req, res) => {
+    try {
+        const itemCount = await ItemModel.countDocuments();
+        res.json(itemCount);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Internal server error" });
+    }
+});
+
+app.get('/fetchReviews', async (req, res) => {
+    try {
+        const reviews = await ReviewModel.find();
+        res.json(reviews);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Internal server error" });
+    }
+});
+
+app.get('/fetchStocks',async (req, res) => {
+    try {
+        const distinctStockTypes = await ItemModel.distinct('type');
+        res.json(distinctStockTypes);
+    } 
+    catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+})
+
 app.listen(process.env.PORT,()=>{
     console.log("Server is running")
 })
