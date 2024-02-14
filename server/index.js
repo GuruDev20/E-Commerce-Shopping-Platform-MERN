@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json())
 app.use(cors({
     origin:["http://localhost:3000"],
-    methods:["GET","POST","DELETE"],
+    methods:["GET","POST","DELETE","PUT"],
     credentials:true,
     optionsSuccessStatus:204
 }));
@@ -438,6 +438,17 @@ app.get('/fetchStocks',async (req, res) => {
         res.status(500).json({ message: 'Server Error' });
     }
 })
+
+app.put('/items/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const updatedItem = await ItemModel.findByIdAndUpdate(id, req.body, { new: true });
+        res.json(updatedItem);
+    } catch (error) {
+        console.error('Error updating item:', error);
+        res.status(500).json({ error: 'Error updating item' });
+    }
+});
 
 app.listen(process.env.PORT,()=>{
     console.log("Server is running")

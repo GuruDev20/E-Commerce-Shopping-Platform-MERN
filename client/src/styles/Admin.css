@@ -56,13 +56,13 @@
 .admin-email,.admin-notifications,.admin-profiles{
     padding: 10px;
 }
-.dashboard-body{
+/* .dashboard-body{
     height: 100vh;
 }
 .dealers-body,.stocks-body,.revenue-body{
     height: 100vh;
     background-color: #edf6f9;
-}
+} */
 .admin-right{
     margin-left: 16%;
 }
@@ -267,6 +267,21 @@
     padding: 10px;
     margin-top: 20px;
 }
+.edit-form{
+    width: 175px;
+}
+.up-brand{
+    margin-bottom: 5px;
+    padding: 7px;
+    width: 158px;
+    border: 1px solid #ced4da;
+}
+.up-products{
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 60px;
+}
+
 
 /* Dashboard.css */
 .dash-admin{

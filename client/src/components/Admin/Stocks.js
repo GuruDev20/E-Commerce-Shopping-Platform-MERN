@@ -39,6 +39,7 @@ function Stocks(props) {
     const [isItemsVisible, setIsItemsVisible] = useState(false);
     const [isDeleteItemsVisible, setDeleteIsItemsVisible] = useState(false);
     const [isUpdate,setIsUpdate] = useState(false);
+    const [editedItem, setEditedItem] = useState(null);
     const addItems = () => {
         setShowAddForm(prevState => !prevState); 
         setIsItemsVisible(false);
@@ -156,6 +157,30 @@ function Stocks(props) {
             console.error('Error deleting item:', error);
         }
     };
+
+    const editSelectedItems = (item) => {
+        setEditedItem(item);
+    };
+
+    const handleEditChange = (e) => {
+        const { name, value } = e.target;
+        setEditedItem(prevItem => ({
+            ...prevItem,
+            [name]: value
+        }));
+    };
+
+    const updateItem = async () => {
+        try {
+            const response = await axios.put(`http://localhost:4000/items/${editedItem._id}`, editedItem);
+            console.log('Updated Item:', response.data);
+            fetchItems();
+            setEditedItem(null);
+        } catch (error) {
+            console.error('Error updating item:', error);
+        }
+    };
+
     return (
         <div className='stocks' val={{suc}}>
             <div className='heading'>{props.name}</div>
@@ -166,6 +191,40 @@ function Stocks(props) {
                     <button className='edit-products' onClick={editItems}>Edit</button>
                     <button className='display-stock' onClick={displayItems}>Display</button>
                 </div>
+                {isUpdate && (
+                    <>
+                        {loading ? (
+                            <div>Loading...</div>
+                        ) : (
+                            <>
+                                <div className='items-container'>
+                                    {items.map((item, index) => (
+                                        <div key={index} className='item'>
+                                            {item.images.length > 0 && (
+                                                <div>
+                                                    <img src={require(`../../../src/uploads/${item.images[0]}`)} alt={item.name} className='item-img'/>
+                                                </div>
+                                            )}
+                                            {editedItem && editedItem._id === item._id ? (
+                                                <div className='edit-form'>
+                                                    <input type='text' name='brand' value={editedItem.brand} onChange={handleEditChange} className='up-brand' />
+                                                    <input type='number' name='price' value={editedItem.price} onChange={handleEditChange} className='up-price'/>
+                                                    <button className='up-products' onClick={updateItem}>Update</button>
+                                                </div>
+                                            ) : (
+                                                <>
+                                                    <p>Brand: {item.brand}</p>
+                                                    <p>Price: {item.price}</p>
+                                                    <button className='del-products' onClick={() => editSelectedItems(item)}>Edit Item</button>
+                                                </>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </>
+                        )}
+                    </>
+                )}
                 {isItemsVisible && (
                     <>
                         {loading ? (
