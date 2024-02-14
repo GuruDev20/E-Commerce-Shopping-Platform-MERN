@@ -49,6 +49,7 @@
 .cart-size{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .product-cart-size{
     padding: 10px;

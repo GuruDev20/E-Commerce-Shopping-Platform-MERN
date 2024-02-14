@@ -352,6 +352,30 @@ app.get('/ordersDetails/:email', async (req, res) => {
     }
 });
 
+app.get('/user/:email',async(req,res)=>{
+    try{
+        const {email}=req.params;
+        const user=await UserModel.findOne({email:email});
+        res.json(user);
+    }
+    catch(error){
+        console.log("Error fetching orders",error);
+        res.status(500).json({error:'Internal server error'});
+    }
+})
+
+app.get('/orderHistory/:email',async(req,res)=>{
+    try{
+        const {email}=req.params;
+        const orders=await OrderModel.find({email:email});
+        res.json(orders);
+    }
+    catch(error){
+        console.log("Error fetching orders",error);
+        res.status(500).json({error:'Internal server error'});
+    }
+})
+
 app.listen(process.env.PORT,()=>{
     console.log("Server is running")
 })

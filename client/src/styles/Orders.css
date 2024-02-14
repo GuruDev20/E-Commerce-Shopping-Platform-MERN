@@ -21,6 +21,8 @@
 }
 .order-opt{
     padding: 20px;
+    display: flex;
+    flex-direction: row;
 }
 .order-name,.order-brand,.order-color{
     padding-top: 15px;
@@ -30,4 +32,14 @@
     padding-top: 15px;
     color: grey;
     font-size: 18px;
+}
+.ord-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ord-details{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
 }

@@ -78,36 +78,28 @@ function Orders() {
             <div className='order-details-list'>
                 <div className='order-left'></div>
                 <div className='order-centre-list'>
-                    <div className='order-main'>
+                    <div className='ord-list'>
                         {products.map(product => (
-                            <div className='order-products'>
-                                <div className='order-list' key={product._id}>
-                                    <div className='order-images'>
-                                        <img src={require(`../../../src/uploads/${product.images[0]}`)} alt={product.name} className='order-img-res' />
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    <div className='order-opt'>
-                        {products.map(product => (
-                            <>
-                                <div className='order-brand'>{product.brand}</div>
-                                <div className='order-name'>{product.name}</div>
-                                <div className='order-color'>
-                                    {product.color.map((colordata,index)=>(
-                                        <div key={index} className="list-color">
-                                            <div className="color-product" style={{ background: colordata.toLowerCase() }}></div>
-                                            <div className="color-product-name">{colordata}</div>
+                            <div className='order-opt'>
+                                <div className='order-products'>
+                                    <div className='order-list' key={product._id}>
+                                        <div className='order-images'>
+                                            <img src={require(`../../../src/uploads/${product.images[0]}`)} alt={product.name} className='order-img-res' />
                                         </div>
-                                    ))}
+                                    </div>
                                 </div>
-                            </>
-                        ))}
-                        {orders.map(order=>(
-                            <div className='order-option'>
-                                <div className='order-address'>{order.address}</div>
+                                <div className='ord-details'>
+                                    <div className='order-brand'>{product.brand}</div>
+                                    <div className='order-name'>{product.name}</div>
+                                    <div className='order-color'>
+                                        {product.color.map((colordata,index)=>(
+                                            <div key={index} className="list-color">
+                                                <div className="color-product" style={{ background: colordata.toLowerCase() }}></div>
+                                                <div className="color-product-name">{colordata}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>
