@@ -9,7 +9,6 @@ import WhistList from "../src/components/utils/WhistList";
 import Latest from "./components/utils/Latest";
 import Profile from './components/utils/Profile'
 import Admin from "./components/Admin/Admin";
-import Dealers from "./components/Dealers/Dealers";
 import NotFound from './components/utils/404NotFound';
 import Orders from './components/utils/Orders';
 function App() {
@@ -63,7 +62,6 @@ function App() {
       <Route path='/whislist' element={<WhistList/>} />
       <Route path='/myprofile' element={<Profile/>} />
       <Route path='/admin' element={<Admin/>} />
-      <Route path="/dealers" element={<Dealers/>} />
       <Route path="/notfound" element={<NotFound/>} />
       <Route path="/orders" element={<Orders/>} />
     </Routes>

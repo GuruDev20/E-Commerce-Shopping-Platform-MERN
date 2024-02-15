@@ -56,13 +56,13 @@
 .admin-email,.admin-notifications,.admin-profiles{
     padding: 10px;
 }
-/* .dashboard-body{
+.dashboard-body{
     height: 100vh;
 }
 .dealers-body,.stocks-body,.revenue-body{
     height: 100vh;
-    background-color: #edf6f9;
-} */
+    /* background-color: #edf6f9; */
+}
 .admin-right{
     margin-left: 16%;
 }
@@ -367,3 +367,6 @@
     overflow-y: auto;
 
 }
+
+
+/* Dealers.css */
