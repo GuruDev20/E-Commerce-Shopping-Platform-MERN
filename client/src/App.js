@@ -11,6 +11,8 @@ import Profile from './components/utils/Profile'
 import Admin from "./components/Admin/Admin";
 import NotFound from './components/utils/404NotFound';
 import Orders from './components/utils/Orders';
+import Dealers from './components/Dealers/Dealers';
+import FromDealers from './components/Admin/FromDealers';
 function App() {
   window.addEventListener("scroll", reveal);
   function reveal() {
@@ -64,6 +66,8 @@ function App() {
       <Route path='/admin' element={<Admin/>} />
       <Route path="/notfound" element={<NotFound/>} />
       <Route path="/orders" element={<Orders/>} />
+      <Route path="/dealers" element={<Dealers/>} />
+      <Route path="/from" element={<FromDealers/>} />
     </Routes>
   );
 }

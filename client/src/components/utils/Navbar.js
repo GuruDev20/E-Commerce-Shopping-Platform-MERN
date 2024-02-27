@@ -20,7 +20,7 @@ function Navbar() {
 		Cookie.remove('token');
 		navigate('/')
 	}
-
+	const isLoggedIn = !!localStorage.getItem('token');
 	return (
 		<div className='header'>
 			<div className='icon'>
@@ -65,33 +65,33 @@ function Navbar() {
 				</li>
 				</ul>
 			</div>
-			{localStorage.getItem('token')? (
-				<div className='profile'>
-				<IoPersonCircleSharp size={40} onClick={toggleProfileDropdown} />
-				{isProfileDropdownOpen && (
-					<div className='profile-dropdown'>
-					<Link to='/myprofile' className='nav-link-details'>
-						Profile<CgProfile size={25}/>
-					</Link>
-					<div className='divider'></div>
-					<div className='nav-link-details' onClick={handleLogout}>
-						Logout<MdLogout size={25}/>
-					</div>
-					</div>
-				)}
-				</div>
-			) : (
-				<div className='loginbutton'>
-				<Link to='/loginregister' className='nav-link'>
-					<button className='login'>Login</button>
-				</Link>
-				</div>
-			)}
+			{isLoggedIn ? (
+                <div className='profile'>
+                    <IoPersonCircleSharp size={40} onClick={toggleProfileDropdown} />
+                    {isProfileDropdownOpen && (
+                        <div className='profile-dropdown'>
+                            <Link to='/myprofile' className='nav-link-details'>
+                                Profile<CgProfile size={25}/>
+                            </Link>
+                            <div className='divider'></div>
+                            <div className='nav-link-details' onClick={handleLogout}>
+                                Logout<MdLogout size={25}/>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            ) : (
+                <div className='loginbutton'>
+                    <Link to='/loginregister' className='nav-link'>
+                        <button className='login'>Login</button>
+                    </Link>
+                </div>
+            )}
 			<div className='whislist'>
-				<Link to={Cookie.get('token')?('/whislist'):('/loginregister')} reloadDocument className='nav-link'><CiHeart size={40} color='#e56b6f'/></Link>
+				<Link to={isLoggedIn?('/whislist'):('/loginregister')} reloadDocument className='nav-link'><CiHeart size={40} color='#e56b6f'/></Link>
 			</div>
 			<div className='cart'>
-				<Link to={Cookie.get('token')?('/cart'):('/loginregister')} reloadDocument className='nav-link'><FaShoppingCart size={30}/></Link>
+				<Link to={isLoggedIn?('/cart'):('/loginregister')} reloadDocument className='nav-link'><FaShoppingCart size={30}/></Link>
 			</div>
 		</div>
 	)

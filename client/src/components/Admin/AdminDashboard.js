@@ -1,11 +1,12 @@
 import React, { useState,useEffect } from 'react';
 import {useNavigate } from 'react-router-dom'
 import '../../styles/Admin.css'
-import { Link } from 'react-scroll';
+import { Link as ScrollLink} from 'react-scroll';
 import { GiShoppingBag } from "react-icons/gi";
 import { IoPersonOutline } from "react-icons/io5";
 import { MdLogout } from "react-icons/md";
 import { IoIosNotificationsOutline } from "react-icons/io";
+import {Link} from 'react-router-dom'
 import Dashboard from './Dashboard';
 import Stocks from './Stocks';
 import axios from 'axios'
@@ -45,14 +46,14 @@ function AdminDashboard() {
 				<div className='admin-sep'></div>
 				<div className='admin-controller'>
 					<ul className='admin-list'>
-						<Link to='dashboard-body' smooth={true} duration={700}><li className='admin-control'>Dashboard</li></Link>
-						<Link to='stocks-body' smooth={true} duration={700}><li className='admin-control'>Stocks</li></Link>
+						<ScrollLink to='dashboard-body' smooth={true} duration={700}><li className='admin-control'>Dashboard</li></ScrollLink>
+						<ScrollLink to='stocks-body' smooth={true} duration={700}><li className='admin-control'>Stocks</li></ScrollLink>
 					</ul>
 				</div>
 			</div>
 			<div className='admin-right'>
 				<div className='admin-navbar'>
-					<div className='admin-notifications'><IoIosNotificationsOutline size={25} className='notify'/></div>
+					<Link to='/from'><div className='admin-notifications'><IoIosNotificationsOutline size={25} className='notify'/></div></Link>
 					<div className='admin-profiles' onClick={handleLogout}><MdLogout size={25} className='profile-logo'/></div>
 				</div>
 				<div className='admin-body'>

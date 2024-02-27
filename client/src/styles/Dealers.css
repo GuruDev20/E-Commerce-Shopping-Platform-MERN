@@ -1,0 +1,22 @@
+.store-btn-dealer{
+    background-color: rgb(47, 148, 47);
+    color: white;
+    border: 1px solid rgb(47, 148, 47);
+    border-radius: 5px;
+}
+.custom-file-input-dealers{
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 330px;
+    height: 330px;
+    border: 2px dotted var(--upload-div-color);
+    margin-top: 40px;
+    margin-right: 50px;
+    font-size: 20px;
+}

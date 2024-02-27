@@ -21,6 +21,7 @@ const CartModel=require('./models/cartModel')
 const ReviewModel=require('./models/reviewModel')
 const WishListModel=require('./models/wishListModel');
 const OrderModel=require('./models/orderModel')
+const DealerModel=require('./models/dealerModel');
 mongoose.connect(process.env.MONGO_URI)
 
 const verifyUser = (req, res, next) => {
@@ -120,9 +121,32 @@ app.post('/store', upload.array('images', 5), async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 });
+
+app.post('/storeDealers', upload.array('images', 5), async (req, res) => {
+    try {
+        const { brand, name, price, category,type,size, color, pattern, description,New } = req.body;
+        const images = req.files.map((file) => file.originalname);
+        const newItem = new DealerModel({brand,name,price,category,type,size: JSON.parse(size),color: JSON.parse(color),pattern,description,images,New});
+        await newItem.save();
+        res.status(201).json({ message: 'Item created successfully' });
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
 app.get('/items', async (req, res) => {
     try {
         const items = await ItemModel.find();
+        res.json(items);
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+app.get('/itemsDealers', async (req, res) => {
+    try {
+        const items = await DealerModel.find();
         res.json(items);
     } catch (error) {
         console.error('Error:', error);

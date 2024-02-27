@@ -100,7 +100,7 @@ function LoginRegister() {
       }
       axios.post('http://localhost:4000/register',{username,email,password,mobile,role})
       .then(res=>{
-        navigate('/loginregister')
+        window.location.reload();
       })
       .catch(err=>console.log(err))
       setEmail('');

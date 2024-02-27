@@ -6,8 +6,8 @@ import Men7 from '../../assets/Mens/Men7.png'
 import Girls3 from '../../assets/kids/Girls3.png'
 import Men3 from '../../assets/new/Men3.png'
 import { Link } from 'react-router-dom';
-
 function Others() {
+    const isLoggedIn = !!localStorage.getItem('token');
     const categories = [
         { id: 1, name: 'Mens', img: Men7, category: 'men-top-wear' },
         { id: 2, name: 'Womens', img: Women10, category: 'women-top-wear' },
@@ -47,13 +47,13 @@ function Others() {
                     >
                         <img src={category.img} alt={`otherimg${index}`} className='otherimg' />
                         {category.category === 'newarrivals' ? (
-                            <Link to={`/${category.category}`} reloadDocument>
+                            <Link to={isLoggedIn?(`/${category.category}`):('/loginregister')} reloadDocument>
                                 <div className='overlay'>
                                     Shop Now
                                 </div>
                             </Link>
                         ) : (
-                            <Link to={`/cloths/${category.category}`} reloadDocument>
+                            <Link to={isLoggedIn?(`/cloths/${category.category}`):('/loginregister')} reloadDocument>
                                 <div className='overlay'>
                                     Shop Now
                                 </div>
