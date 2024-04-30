@@ -239,12 +239,12 @@
 .store-btn{
     width: 100px;
     padding: 10px;
-    background-color: darkseagreen;
+    background-color: black;
     border: 2px solid darkseagreen;
     color: white;
     border-radius: 5px;
     position: absolute;
-    top: 260%;
+    top: 150%;
     left: 70%;
 }
 .items-container{
