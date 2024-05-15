@@ -112,7 +112,7 @@ function Cart() {
     const handlePaymentSelection = async (paymentType) => {
         const total = cart.reduce((total, item) => {
             const product = products.find(p => p._id === item.productId);
-            return total + (product ? (count[item.productId] || 0) * product.price * item.quantity : 0);
+            return total + (product ? (count[item.productId] || 0) * product.price * item.quantity : 1);
         }, 0);
         if (paymentType === 'online') {
             var options = {
